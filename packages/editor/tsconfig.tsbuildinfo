@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/bridge.ts","./src/main.tsx","./src/screenshot.ts","./src/board/board.tsx","./src/board/nodeview.tsx","./src/board/primitives.tsx","./src/panels/pagestree.tsx","./src/panels/properties.tsx","./src/panels/tokenspanel.tsx"],"version":"5.9.3"}

@@ -1,0 +1,6 @@
+---
+description: Cursor Design canvas files
+globs: ["**/*.design.json"]
+alwaysApply: false
+---
+`*.design.json` files are Cursor Design documents rendered live in the editor. Do not edit them with file-edit tools; use the `design_*` MCP tools (`design_guide` explains the schema and ops). Reference design tokens as `"$name"` instead of hardcoding colors, spacing or type.

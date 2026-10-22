@@ -1,0 +1,12 @@
+node_modules
+dist
+out
+*.vsix
+*.log
+.DS_Store
+apps/extension/media
+/mockups/dist
+.test-out
+apps/extension/README.md
+test/out
+.vscode-test

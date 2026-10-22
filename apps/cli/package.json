@@ -1,0 +1,22 @@
+{
+  "name": "@cursor-design/cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "cursor-design": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node esbuild.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@cursor-design/core": "workspace:*",
+    "@cursor-design/mcp": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "playwright-core": "^1.55.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

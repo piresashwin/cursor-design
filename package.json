@@ -1,0 +1,21 @@
+{
+  "name": "cursor-design-monorepo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Open-source, Cursor-native design canvas: a Figma-like editor as a Cursor extension, driven by the Cursor agent over MCP.",
+  "license": "MIT",
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "build": "pnpm -r --filter './packages/*' --filter './apps/*' run build",
+    "test": "pnpm -r run test",
+    "typecheck": "pnpm -r run typecheck",
+    "package": "pnpm --filter @cursor-design/extension run package",
+    "dev:cursor": "bash scripts/dev-cursor.sh",
+    "install:cursor": "/Applications/Cursor.app/Contents/Resources/app/bin/cursor --install-extension cursor-design.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

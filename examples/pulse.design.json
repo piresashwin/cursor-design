@@ -1,0 +1,2382 @@
+{
+  "schemaVersion": 1,
+  "name": "Pulse",
+  "tokens": {
+    "color.bg": {
+      "type": "color",
+      "value": "#0B1F1A",
+      "modes": {
+        "dark": "#061410"
+      },
+      "group": "color"
+    },
+    "color.surface": {
+      "type": "color",
+      "value": "#12302A",
+      "group": "color"
+    },
+    "color.text": {
+      "type": "color",
+      "value": "#E8F5F0",
+      "group": "color"
+    },
+    "color.muted": {
+      "type": "color",
+      "value": "#7A9E93",
+      "group": "color"
+    },
+    "color.accent": {
+      "type": "color",
+      "value": "#2DD4A8",
+      "modes": {
+        "dark": "#5EE4C1"
+      },
+      "group": "color"
+    },
+    "color.onAccent": {
+      "type": "color",
+      "value": "#04241C",
+      "group": "color"
+    },
+    "space.2": {
+      "type": "number",
+      "value": 8,
+      "group": "space"
+    },
+    "space.4": {
+      "type": "number",
+      "value": 16,
+      "group": "space"
+    },
+    "space.6": {
+      "type": "number",
+      "value": 24,
+      "group": "space"
+    },
+    "radius.md": {
+      "type": "number",
+      "value": 12,
+      "group": "radius"
+    },
+    "type.display": {
+      "type": "font",
+      "family": "Syne, system-ui, sans-serif",
+      "size": 28,
+      "weight": 700,
+      "group": "type"
+    },
+    "type.body": {
+      "type": "font",
+      "family": "IBM Plex Sans, system-ui, sans-serif",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 1.45,
+      "group": "type"
+    },
+    "type.label": {
+      "type": "font",
+      "family": "IBM Plex Sans, system-ui, sans-serif",
+      "size": 15,
+      "weight": 600,
+      "group": "type"
+    },
+    "kiln.bg": {
+      "type": "color",
+      "value": "#F0F0EE",
+      "group": "color",
+      "description": "Cool stone"
+    },
+    "kiln.surface": {
+      "type": "color",
+      "value": "#FFFFFF",
+      "group": "color"
+    },
+    "kiln.ink": {
+      "type": "color",
+      "value": "#0A0A0A",
+      "group": "color"
+    },
+    "kiln.muted": {
+      "type": "color",
+      "value": "#6B6B6B",
+      "group": "color"
+    },
+    "kiln.pine": {
+      "type": "color",
+      "value": "#0A0A0A",
+      "group": "color",
+      "description": "Primary CTA — black"
+    },
+    "kiln.onPine": {
+      "type": "color",
+      "value": "#FFFFFF",
+      "group": "color"
+    },
+    "kiln.roast": {
+      "type": "color",
+      "value": "#0A0A0A",
+      "group": "color",
+      "description": "Dark band"
+    },
+    "kiln.space.sm": {
+      "type": "number",
+      "value": 12,
+      "group": "space"
+    },
+    "kiln.space.md": {
+      "type": "number",
+      "value": 24,
+      "group": "space"
+    },
+    "kiln.space.lg": {
+      "type": "number",
+      "value": 48,
+      "group": "space"
+    },
+    "kiln.space.xl": {
+      "type": "number",
+      "value": 80,
+      "group": "space"
+    },
+    "kiln.radius": {
+      "type": "number",
+      "value": 2,
+      "group": "radius"
+    },
+    "kiln.type.brand": {
+      "type": "font",
+      "family": "Space Grotesk, system-ui, sans-serif",
+      "size": 88,
+      "weight": 700,
+      "lineHeight": 0.95,
+      "letterSpacing": -2,
+      "group": "type"
+    },
+    "kiln.type.display": {
+      "type": "font",
+      "family": "Space Grotesk, system-ui, sans-serif",
+      "size": 48,
+      "weight": 600,
+      "lineHeight": 1.05,
+      "letterSpacing": -1,
+      "group": "type"
+    },
+    "kiln.type.body": {
+      "type": "font",
+      "family": "Manrope, system-ui, sans-serif",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 1.55,
+      "group": "type"
+    },
+    "kiln.type.label": {
+      "type": "font",
+      "family": "Space Grotesk, system-ui, sans-serif",
+      "size": 14,
+      "weight": 600,
+      "group": "type"
+    },
+    "kiln.type.small": {
+      "type": "font",
+      "family": "Manrope, system-ui, sans-serif",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 1.45,
+      "group": "type"
+    },
+    "kiln.soft": {
+      "type": "color",
+      "value": "#A8A8A8",
+      "group": "color"
+    },
+    "kiln.accent": {
+      "type": "color",
+      "value": "#2F6BFF",
+      "group": "color",
+      "description": "Electric blue accent"
+    }
+  },
+  "folderRoot": [
+    "fd_app",
+    "fd_marketing",
+    "fd_kiln"
+  ],
+  "folders": {
+    "fd_app": {
+      "name": "Pulse app",
+      "children": [
+        "pg_sprint"
+      ]
+    },
+    "fd_marketing": {
+      "name": "Marketing",
+      "children": [
+        "pg_web"
+      ]
+    },
+    "fd_kiln": {
+      "name": "Kiln Coffee",
+      "children": [
+        "pg_kiln"
+      ]
+    }
+  },
+  "pages": {
+    "pg_sprint": {
+      "name": "Sprint 12",
+      "frames": [
+        "fr_login"
+      ]
+    },
+    "pg_web": {
+      "name": "Web",
+      "frames": [
+        "fr_landing"
+      ]
+    },
+    "pg_kiln": {
+      "name": "Landing",
+      "frames": [
+        "fr_kiln",
+        "fr_kiln_menu",
+        "fr_kiln_about",
+        "fr_kiln_visit",
+        "fr_kiln_mobile",
+        "fr_kiln_menu_mobile",
+        "fr_kiln_beans",
+        "fr_kiln_catering"
+      ]
+    }
+  },
+  "nodes": {
+    "fr_login": {
+      "id": "fr_login",
+      "type": "frame",
+      "name": "Login",
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "layout": {
+        "direction": "column",
+        "gap": "$space.4",
+        "padding": [
+          "$space.6",
+          "$space.4"
+        ],
+        "align": "stretch",
+        "justify": "start"
+      },
+      "clip": true,
+      "fill": "$color.bg",
+      "preset": "phone",
+      "children": [
+        "tx_title",
+        "tx_sub",
+        "in_email",
+        "in_password",
+        "bt_submit",
+        "sp_fill"
+      ]
+    },
+    "tx_title": {
+      "id": "tx_title",
+      "type": "text",
+      "name": "Title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Welcome back",
+      "font": "$type.display"
+    },
+    "tx_sub": {
+      "id": "tx_sub",
+      "type": "text",
+      "name": "Subtitle",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Sign in to continue your training plan.",
+      "font": "$type.body"
+    },
+    "in_email": {
+      "id": "in_email",
+      "type": "frame",
+      "name": "Email field",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          16
+        ],
+        "align": "center"
+      },
+      "fill": "$color.surface",
+      "radius": "$radius.md",
+      "children": [
+        "tx_email"
+      ]
+    },
+    "tx_email": {
+      "id": "tx_email",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Email",
+      "font": "$type.body"
+    },
+    "in_password": {
+      "id": "in_password",
+      "type": "frame",
+      "name": "Password field",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          16
+        ],
+        "align": "center"
+      },
+      "fill": "$color.surface",
+      "radius": "$radius.md",
+      "children": [
+        "tx_password"
+      ]
+    },
+    "tx_password": {
+      "id": "tx_password",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Password",
+      "font": "$type.body"
+    },
+    "sp_fill": {
+      "id": "sp_fill",
+      "type": "rect",
+      "name": "Spacer",
+      "width": "fill",
+      "height": "fill",
+      "opacity": 0
+    },
+    "bt_submit": {
+      "id": "bt_submit",
+      "type": "frame",
+      "name": "Sign in button",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$color.accent",
+      "radius": "$radius.md",
+      "children": [
+        "tx_submit"
+      ]
+    },
+    "tx_submit": {
+      "id": "tx_submit",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.onAccent",
+      "content": "Sign in",
+      "font": "$type.label"
+    },
+    "fr_landing": {
+      "id": "fr_landing",
+      "type": "frame",
+      "name": "Landing",
+      "x": 467,
+      "y": 63,
+      "width": 1280,
+      "height": 800,
+      "layout": {
+        "direction": "column",
+        "gap": "$space.6",
+        "padding": 64,
+        "align": "start",
+        "justify": "center"
+      },
+      "clip": true,
+      "fill": "$color.bg",
+      "children": [
+        "tx_hero",
+        "tx_hero_sub",
+        "bt_hero"
+      ]
+    },
+    "tx_hero": {
+      "id": "tx_hero",
+      "type": "text",
+      "name": "Hero title",
+      "width": 720,
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Train with a system,\nnot a spreadsheet",
+      "font": {
+        "family": "Syne, system-ui, sans-serif",
+        "size": 56,
+        "weight": 700,
+        "lineHeight": 1.05
+      }
+    },
+    "tx_hero_sub": {
+      "id": "tx_hero_sub",
+      "type": "text",
+      "name": "Hero copy",
+      "width": 520,
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Plans, streaks and progress — built on the same tokens as the app.",
+      "font": "$type.body"
+    },
+    "bt_hero": {
+      "id": "bt_hero",
+      "type": "frame",
+      "name": "Get the app",
+      "width": "hug",
+      "height": 52,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          24
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$color.accent",
+      "radius": "$radius.md",
+      "link": {
+        "to": "fr_login",
+        "transition": "push"
+      },
+      "children": [
+        "tx_hero_cta"
+      ]
+    },
+    "tx_hero_cta": {
+      "id": "tx_hero_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.onAccent",
+      "content": "Get the app",
+      "font": "$type.label"
+    },
+    "fr_kiln": {
+      "id": "fr_kiln",
+      "type": "frame",
+      "name": "Kiln landing",
+      "x": -43,
+      "y": -111,
+      "width": 1440,
+      "height": 2680,
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "align": "stretch",
+        "justify": "start"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "children": [
+        "sec_hero",
+        "sec_menu",
+        "sec_place",
+        "sec_visit"
+      ]
+    },
+    "sec_hero": {
+      "id": "sec_hero",
+      "type": "frame",
+      "name": "Hero",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "align": "stretch"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "children": [
+        "hero_copy",
+        "img_kiln_hero"
+      ]
+    },
+    "hero_copy": {
+      "id": "hero_copy",
+      "type": "frame",
+      "name": "Hero copy",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 20,
+        "padding": [
+          72,
+          80,
+          48,
+          80
+        ],
+        "align": "start"
+      },
+      "fill": "$kiln.bg",
+      "children": [
+        "bar_kiln_accent",
+        "tx_kiln_brand",
+        "tx_kiln_headline",
+        "tx_kiln_sub",
+        "bt_kiln_cta"
+      ]
+    },
+    "tx_kiln_brand": {
+      "id": "tx_kiln_brand",
+      "type": "text",
+      "name": "Brand",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": "$kiln.type.brand"
+    },
+    "tx_kiln_headline": {
+      "id": "tx_kiln_headline",
+      "type": "text",
+      "name": "Headline",
+      "width": 640,
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Coffee,\ncut clean.",
+      "font": "$kiln.type.display"
+    },
+    "tx_kiln_sub": {
+      "id": "tx_kiln_sub",
+      "type": "text",
+      "name": "Supporting",
+      "width": 400,
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Espresso, batch, and beans — designed for the daily loop.",
+      "font": "$kiln.type.body"
+    },
+    "bt_kiln_cta": {
+      "id": "bt_kiln_cta",
+      "type": "frame",
+      "name": "See menu",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln_menu",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_kiln_cta"
+      ]
+    },
+    "tx_kiln_cta": {
+      "id": "tx_kiln_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "View menu",
+      "font": "$kiln.type.label"
+    },
+    "sec_menu": {
+      "id": "sec_menu",
+      "type": "frame",
+      "name": "Menu",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.lg",
+        "padding": [
+          80,
+          80
+        ],
+        "align": "stretch"
+      },
+      "fill": "$kiln.surface",
+      "children": [
+        "tx_menu_title",
+        "tx_menu_sub",
+        "row_menu"
+      ]
+    },
+    "tx_menu_title": {
+      "id": "tx_menu_title",
+      "type": "text",
+      "name": "Menu title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Staples",
+      "font": "$kiln.type.display"
+    },
+    "tx_menu_sub": {
+      "id": "tx_menu_sub",
+      "type": "text",
+      "name": "Menu sub",
+      "width": 520,
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Three staples we pull every morning — nothing seasonal until it's ready.",
+      "font": "$kiln.type.body"
+    },
+    "row_menu": {
+      "id": "row_menu",
+      "type": "frame",
+      "name": "Drinks row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 64,
+        "align": "start",
+        "justify": "start"
+      },
+      "children": [
+        "col_drink1",
+        "col_drink2",
+        "col_drink3"
+      ]
+    },
+    "col_drink1": {
+      "id": "col_drink1",
+      "type": "frame",
+      "name": "House espresso",
+      "width": 360,
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.sm",
+        "align": "start"
+      },
+      "children": [
+        "tx_d1_name",
+        "tx_d1_desc",
+        "tx_d1_price"
+      ]
+    },
+    "tx_d1_name": {
+      "id": "tx_d1_name",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "House espresso",
+      "font": "$kiln.type.label"
+    },
+    "tx_d1_desc": {
+      "id": "tx_d1_desc",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Chocolate, dried cherry, clean finish.",
+      "font": "$kiln.type.small"
+    },
+    "tx_d1_price": {
+      "id": "tx_d1_price",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "4.00",
+      "font": "$kiln.type.body"
+    },
+    "col_drink2": {
+      "id": "col_drink2",
+      "type": "frame",
+      "name": "Oat cortado",
+      "width": 360,
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.sm",
+        "align": "start"
+      },
+      "children": [
+        "tx_d2_name",
+        "tx_d2_desc",
+        "tx_d2_price"
+      ]
+    },
+    "tx_d2_name": {
+      "id": "tx_d2_name",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Oat cortado",
+      "font": "$kiln.type.label"
+    },
+    "tx_d2_desc": {
+      "id": "tx_d2_desc",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Equal parts. Soft foam, no syrup.",
+      "font": "$kiln.type.small"
+    },
+    "tx_d2_price": {
+      "id": "tx_d2_price",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "5.50",
+      "font": "$kiln.type.body"
+    },
+    "col_drink3": {
+      "id": "col_drink3",
+      "type": "frame",
+      "name": "Batch brew",
+      "width": 360,
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.sm",
+        "align": "start"
+      },
+      "children": [
+        "tx_d3_name",
+        "tx_d3_desc",
+        "tx_d3_price"
+      ]
+    },
+    "tx_d3_name": {
+      "id": "tx_d3_name",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Batch brew",
+      "font": "$kiln.type.label"
+    },
+    "tx_d3_desc": {
+      "id": "tx_d3_desc",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Rotating single origin. Ask the bar.",
+      "font": "$kiln.type.small"
+    },
+    "tx_d3_price": {
+      "id": "tx_d3_price",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "3.75",
+      "font": "$kiln.type.body"
+    },
+    "sec_place": {
+      "id": "sec_place",
+      "type": "frame",
+      "name": "Place",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 64,
+        "padding": [
+          80,
+          80
+        ],
+        "align": "center"
+      },
+      "fill": "$kiln.bg",
+      "children": [
+        "img_place",
+        "col_place"
+      ]
+    },
+    "col_place": {
+      "id": "col_place",
+      "type": "frame",
+      "name": "Place copy",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.md",
+        "align": "start"
+      },
+      "children": [
+        "tx_place_title",
+        "tx_place_body"
+      ]
+    },
+    "tx_place_title": {
+      "id": "tx_place_title",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Built for morning light",
+      "font": "$kiln.type.display"
+    },
+    "tx_place_body": {
+      "id": "tx_place_body",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "We roast upstairs twice a week and keep the room quiet enough to hear the grind. Come for a quick shot or stay through the second pour.",
+      "font": "$kiln.type.body"
+    },
+    "sec_visit": {
+      "id": "sec_visit",
+      "type": "frame",
+      "name": "Visit",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.md",
+        "padding": [
+          80,
+          80
+        ],
+        "align": "start"
+      },
+      "fill": "$kiln.roast",
+      "children": [
+        "tx_visit_title",
+        "tx_visit_hours",
+        "bt_visit"
+      ]
+    },
+    "tx_visit_title": {
+      "id": "tx_visit_title",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.surface",
+      "content": "Find us",
+      "font": "$kiln.type.display"
+    },
+    "tx_visit_hours": {
+      "id": "tx_visit_hours",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.soft",
+      "content": "Mon–Fri 7–4  ·  Sat–Sun 8–3\n214 Oak Street, ground floor",
+      "font": "$kiln.type.body"
+    },
+    "bt_visit": {
+      "id": "bt_visit",
+      "type": "frame",
+      "name": "Get directions",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln_visit",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_visit_cta"
+      ]
+    },
+    "tx_visit_cta": {
+      "id": "tx_visit_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "Get directions",
+      "font": "$kiln.type.label"
+    },
+    "img_kiln_hero": {
+      "id": "img_kiln_hero",
+      "type": "image",
+      "name": "Hero photo",
+      "width": "fill",
+      "height": 640,
+      "src": "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1600&q=80",
+      "fit": "cover"
+    },
+    "img_place": {
+      "id": "img_place",
+      "type": "image",
+      "name": "Shop interior",
+      "width": 640,
+      "height": 420,
+      "src": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=80",
+      "fit": "cover"
+    },
+    "fr_kiln_menu": {
+      "id": "fr_kiln_menu",
+      "type": "frame",
+      "name": "Menu",
+      "x": 1584,
+      "y": -54,
+      "width": 1440,
+      "height": 1100,
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "align": "stretch"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "children": [
+        "menu_header",
+        "menu_list"
+      ]
+    },
+    "menu_header": {
+      "id": "menu_header",
+      "type": "frame",
+      "name": "Menu header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.md",
+        "padding": [
+          64,
+          80,
+          40,
+          80
+        ],
+        "align": "start"
+      },
+      "fill": "$kiln.bg",
+      "children": [
+        "tx_menu_brand",
+        "tx_menu_h1",
+        "tx_menu_lead"
+      ]
+    },
+    "tx_menu_brand": {
+      "id": "tx_menu_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": "$kiln.type.label"
+    },
+    "tx_menu_h1": {
+      "id": "tx_menu_h1",
+      "type": "text",
+      "name": "Menu title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "On the bar",
+      "font": "$kiln.type.display"
+    },
+    "tx_menu_lead": {
+      "id": "tx_menu_lead",
+      "type": "text",
+      "width": 480,
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Pulled to order. Milk alternatives available — ask.",
+      "font": "$kiln.type.body"
+    },
+    "menu_list": {
+      "id": "menu_list",
+      "type": "frame",
+      "name": "Menu list",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "padding": [
+          48,
+          80,
+          80,
+          80
+        ],
+        "align": "stretch"
+      },
+      "fill": "$kiln.surface",
+      "children": [
+        "row_m1",
+        "row_m2",
+        "row_m3",
+        "row_m4",
+        "row_m5"
+      ]
+    },
+    "row_m1": {
+      "id": "row_m1",
+      "type": "frame",
+      "name": "Espresso row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 32,
+        "padding": [
+          24,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "col_m1",
+        "tx_m1_p"
+      ]
+    },
+    "col_m1": {
+      "id": "col_m1",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_m1_n",
+        "tx_m1_d"
+      ]
+    },
+    "tx_m1_n": {
+      "id": "tx_m1_n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "House espresso",
+      "font": "$kiln.type.label"
+    },
+    "tx_m1_d": {
+      "id": "tx_m1_d",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Chocolate, dried cherry, clean finish",
+      "font": "$kiln.type.small"
+    },
+    "tx_m1_p": {
+      "id": "tx_m1_p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "4.00",
+      "font": "$kiln.type.body"
+    },
+    "row_m2": {
+      "id": "row_m2",
+      "type": "frame",
+      "name": "Cortado row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 32,
+        "padding": [
+          24,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "col_m2",
+        "tx_m2_p"
+      ]
+    },
+    "col_m2": {
+      "id": "col_m2",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_m2_n",
+        "tx_m2_d"
+      ]
+    },
+    "tx_m2_n": {
+      "id": "tx_m2_n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Oat cortado",
+      "font": "$kiln.type.label"
+    },
+    "tx_m2_d": {
+      "id": "tx_m2_d",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Equal parts. Soft foam, no syrup",
+      "font": "$kiln.type.small"
+    },
+    "tx_m2_p": {
+      "id": "tx_m2_p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "5.50",
+      "font": "$kiln.type.body"
+    },
+    "row_m3": {
+      "id": "row_m3",
+      "type": "frame",
+      "name": "Batch row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 32,
+        "padding": [
+          24,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "col_m3",
+        "tx_m3_p"
+      ]
+    },
+    "col_m3": {
+      "id": "col_m3",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_m3_n",
+        "tx_m3_d"
+      ]
+    },
+    "tx_m3_n": {
+      "id": "tx_m3_n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Batch brew",
+      "font": "$kiln.type.label"
+    },
+    "tx_m3_d": {
+      "id": "tx_m3_d",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Rotating single origin — ask the bar",
+      "font": "$kiln.type.small"
+    },
+    "tx_m3_p": {
+      "id": "tx_m3_p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "3.75",
+      "font": "$kiln.type.body"
+    },
+    "row_m4": {
+      "id": "row_m4",
+      "type": "frame",
+      "name": "Pour over row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 32,
+        "padding": [
+          24,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "col_m4",
+        "tx_m4_p"
+      ]
+    },
+    "col_m4": {
+      "id": "col_m4",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_m4_n",
+        "tx_m4_d"
+      ]
+    },
+    "tx_m4_n": {
+      "id": "tx_m4_n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Pour over",
+      "font": "$kiln.type.label"
+    },
+    "tx_m4_d": {
+      "id": "tx_m4_d",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "V60. One cup, twelve minutes",
+      "font": "$kiln.type.small"
+    },
+    "tx_m4_p": {
+      "id": "tx_m4_p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "6.00",
+      "font": "$kiln.type.body"
+    },
+    "row_m5": {
+      "id": "row_m5",
+      "type": "frame",
+      "name": "Cold brew row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 32,
+        "padding": [
+          24,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "col_m5",
+        "tx_m5_p"
+      ]
+    },
+    "col_m5": {
+      "id": "col_m5",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_m5_n",
+        "tx_m5_d"
+      ]
+    },
+    "tx_m5_n": {
+      "id": "tx_m5_n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Cold brew",
+      "font": "$kiln.type.label"
+    },
+    "tx_m5_d": {
+      "id": "tx_m5_d",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "16-hour steep. Served over ice",
+      "font": "$kiln.type.small"
+    },
+    "tx_m5_p": {
+      "id": "tx_m5_p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "5.00",
+      "font": "$kiln.type.body"
+    },
+    "fr_kiln_about": {
+      "id": "fr_kiln_about",
+      "type": "frame",
+      "name": "About",
+      "x": 3040,
+      "y": 0,
+      "width": 1440,
+      "height": 900,
+      "layout": {
+        "direction": "row",
+        "gap": 64,
+        "padding": 80,
+        "align": "center"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "children": [
+        "about_visual",
+        "about_copy"
+      ]
+    },
+    "about_visual": {
+      "id": "about_visual",
+      "type": "image",
+      "name": "Roastery",
+      "width": 560,
+      "height": 640,
+      "src": "https://images.unsplash.com/photo-1442512595331-e89e7383650e?w=1000&q=80",
+      "fit": "cover"
+    },
+    "about_copy": {
+      "id": "about_copy",
+      "type": "frame",
+      "name": "About copy",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.md",
+        "align": "start"
+      },
+      "children": [
+        "tx_about_brand",
+        "tx_about_h1",
+        "tx_about_body",
+        "bt_about_menu"
+      ]
+    },
+    "tx_about_brand": {
+      "id": "tx_about_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": "$kiln.type.label"
+    },
+    "tx_about_h1": {
+      "id": "tx_about_h1",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Roasted upstairs.\nServed downstairs.",
+      "font": "$kiln.type.display"
+    },
+    "tx_about_body": {
+      "id": "tx_about_body",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Twice a week the drum runs above the shop. Small lots, clear profiles, nothing we wouldn't drink ourselves. The bar downstairs is where it lands — same beans, same hands.",
+      "font": "$kiln.type.body"
+    },
+    "bt_about_menu": {
+      "id": "bt_about_menu",
+      "type": "frame",
+      "name": "To menu",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln_menu",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_about_cta"
+      ]
+    },
+    "tx_about_cta": {
+      "id": "tx_about_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "See the menu",
+      "font": "$kiln.type.label"
+    },
+    "fr_kiln_visit": {
+      "id": "fr_kiln_visit",
+      "type": "frame",
+      "name": "Visit",
+      "x": 1520,
+      "y": 1180,
+      "width": 1440,
+      "height": 800,
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.lg",
+        "padding": 80,
+        "align": "start",
+        "justify": "center"
+      },
+      "clip": true,
+      "fill": "$kiln.roast",
+      "children": [
+        "tx_visit_brand",
+        "tx_visit_h1",
+        "tx_visit_detail",
+        "row_visit_ctas"
+      ]
+    },
+    "tx_visit_brand": {
+      "id": "tx_visit_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.soft",
+      "content": "KILN",
+      "font": "$kiln.type.label"
+    },
+    "tx_visit_h1": {
+      "id": "tx_visit_h1",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.surface",
+      "content": "Find the shop.",
+      "font": "$kiln.type.display"
+    },
+    "tx_visit_detail": {
+      "id": "tx_visit_detail",
+      "type": "text",
+      "width": 420,
+      "height": "hug",
+      "fill": "$kiln.soft",
+      "content": "214 Oak Street, ground floor\nMon–Fri 7–4\nSat–Sun 8–3",
+      "font": "$kiln.type.body"
+    },
+    "row_visit_ctas": {
+      "id": "row_visit_ctas",
+      "type": "frame",
+      "name": "Visit CTAs",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 16,
+        "align": "center"
+      },
+      "children": [
+        "bt_visit_dir",
+        "bt_visit_home"
+      ]
+    },
+    "bt_visit_dir": {
+      "id": "bt_visit_dir",
+      "type": "frame",
+      "name": "Directions",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "children": [
+        "tx_visit_dir"
+      ]
+    },
+    "tx_visit_dir": {
+      "id": "tx_visit_dir",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "Get directions",
+      "font": "$kiln.type.label"
+    },
+    "bt_visit_home": {
+      "id": "bt_visit_home",
+      "type": "frame",
+      "name": "Back home",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "stroke": {
+        "color": "$kiln.soft",
+        "width": 1
+      },
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_visit_home"
+      ]
+    },
+    "tx_visit_home": {
+      "id": "tx_visit_home",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.soft",
+      "content": "Back to Kiln",
+      "font": "$kiln.type.label"
+    },
+    "fr_kiln_mobile": {
+      "id": "fr_kiln_mobile",
+      "type": "frame",
+      "name": "Landing · phone",
+      "x": 0,
+      "y": 2760,
+      "width": 390,
+      "height": 844,
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "align": "stretch"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "preset": "phone",
+      "children": [
+        "mob_copy",
+        "img_mob_hero"
+      ]
+    },
+    "mob_copy": {
+      "id": "mob_copy",
+      "type": "frame",
+      "name": "Mobile copy",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 16,
+        "padding": [
+          40,
+          24,
+          24,
+          24
+        ],
+        "align": "start"
+      },
+      "children": [
+        "tx_mob_brand",
+        "tx_mob_h1",
+        "tx_mob_sub",
+        "bt_mob_menu"
+      ]
+    },
+    "tx_mob_brand": {
+      "id": "tx_mob_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": {
+        "family": "Space Grotesk, system-ui, sans-serif",
+        "size": 56,
+        "weight": 700,
+        "lineHeight": 0.95
+      }
+    },
+    "tx_mob_h1": {
+      "id": "tx_mob_h1",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Coffee,\ncut clean.",
+      "font": {
+        "family": "Space Grotesk, system-ui, sans-serif",
+        "size": 32,
+        "weight": 600,
+        "lineHeight": 1.1
+      }
+    },
+    "tx_mob_sub": {
+      "id": "tx_mob_sub",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Daily espresso and weekend linger.",
+      "font": "$kiln.type.small"
+    },
+    "bt_mob_menu": {
+      "id": "bt_mob_menu",
+      "type": "frame",
+      "name": "Mobile menu CTA",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln_menu_mobile",
+        "transition": "push"
+      },
+      "children": [
+        "tx_mob_cta"
+      ]
+    },
+    "tx_mob_cta": {
+      "id": "tx_mob_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "See today's menu",
+      "font": "$kiln.type.label"
+    },
+    "img_mob_hero": {
+      "id": "img_mob_hero",
+      "type": "image",
+      "name": "Mobile hero",
+      "width": "fill",
+      "height": "fill",
+      "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+      "fit": "cover"
+    },
+    "fr_kiln_menu_mobile": {
+      "id": "fr_kiln_menu_mobile",
+      "type": "frame",
+      "name": "Menu · phone",
+      "x": 470,
+      "y": 2760,
+      "width": 390,
+      "height": 844,
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "align": "stretch"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "preset": "phone",
+      "children": [
+        "mm_header",
+        "mm_list"
+      ]
+    },
+    "mm_header": {
+      "id": "mm_header",
+      "type": "frame",
+      "name": "Mobile menu header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 12,
+        "padding": [
+          40,
+          24,
+          20,
+          24
+        ],
+        "align": "start"
+      },
+      "children": [
+        "tx_mm_brand",
+        "tx_mm_h1"
+      ]
+    },
+    "tx_mm_brand": {
+      "id": "tx_mm_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": "$kiln.type.label"
+    },
+    "tx_mm_h1": {
+      "id": "tx_mm_h1",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "On the bar",
+      "font": {
+        "family": "Space Grotesk, system-ui, sans-serif",
+        "size": 28,
+        "weight": 600
+      }
+    },
+    "mm_list": {
+      "id": "mm_list",
+      "type": "frame",
+      "name": "Mobile menu list",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "direction": "column",
+        "gap": 0,
+        "padding": [
+          8,
+          24,
+          32,
+          24
+        ],
+        "align": "stretch"
+      },
+      "fill": "$kiln.surface",
+      "children": [
+        "mm_r1",
+        "mm_r2",
+        "mm_r3",
+        "mm_r4",
+        "mm_r5",
+        "bt_mm_visit"
+      ]
+    },
+    "mm_r1": {
+      "id": "mm_r1",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "padding": [
+          16,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_mm_r1n",
+        "tx_mm_r1p"
+      ]
+    },
+    "tx_mm_r1n": {
+      "id": "tx_mm_r1n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "House espresso",
+      "font": "$kiln.type.label"
+    },
+    "tx_mm_r1p": {
+      "id": "tx_mm_r1p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "4.00",
+      "font": "$kiln.type.small"
+    },
+    "mm_r2": {
+      "id": "mm_r2",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "padding": [
+          16,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_mm_r2n",
+        "tx_mm_r2p"
+      ]
+    },
+    "tx_mm_r2n": {
+      "id": "tx_mm_r2n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Oat cortado",
+      "font": "$kiln.type.label"
+    },
+    "tx_mm_r2p": {
+      "id": "tx_mm_r2p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "5.50",
+      "font": "$kiln.type.small"
+    },
+    "mm_r3": {
+      "id": "mm_r3",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "padding": [
+          16,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_mm_r3n",
+        "tx_mm_r3p"
+      ]
+    },
+    "tx_mm_r3n": {
+      "id": "tx_mm_r3n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Batch brew",
+      "font": "$kiln.type.label"
+    },
+    "tx_mm_r3p": {
+      "id": "tx_mm_r3p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "3.75",
+      "font": "$kiln.type.small"
+    },
+    "mm_r4": {
+      "id": "mm_r4",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "padding": [
+          16,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_mm_r4n",
+        "tx_mm_r4p"
+      ]
+    },
+    "tx_mm_r4n": {
+      "id": "tx_mm_r4n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Pour over",
+      "font": "$kiln.type.label"
+    },
+    "tx_mm_r4p": {
+      "id": "tx_mm_r4p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "6.00",
+      "font": "$kiln.type.small"
+    },
+    "mm_r5": {
+      "id": "mm_r5",
+      "type": "frame",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "padding": [
+          16,
+          0
+        ],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_mm_r5n",
+        "tx_mm_r5p"
+      ]
+    },
+    "tx_mm_r5n": {
+      "id": "tx_mm_r5n",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Cold brew",
+      "font": "$kiln.type.label"
+    },
+    "tx_mm_r5p": {
+      "id": "tx_mm_r5p",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "5.00",
+      "font": "$kiln.type.small"
+    },
+    "bt_mm_visit": {
+      "id": "bt_mm_visit",
+      "type": "frame",
+      "name": "Visit CTA",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln_visit",
+        "transition": "push"
+      },
+      "children": [
+        "tx_mm_visit"
+      ]
+    },
+    "tx_mm_visit": {
+      "id": "tx_mm_visit",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "Hours & location",
+      "font": "$kiln.type.label"
+    },
+    "fr_kiln_beans": {
+      "id": "fr_kiln_beans",
+      "type": "frame",
+      "name": "Beans",
+      "x": 3040,
+      "y": 980,
+      "width": 1440,
+      "height": 900,
+      "layout": {
+        "direction": "row",
+        "gap": 64,
+        "padding": 80,
+        "align": "center"
+      },
+      "clip": true,
+      "fill": "$kiln.surface",
+      "children": [
+        "beans_visual",
+        "beans_copy"
+      ]
+    },
+    "beans_visual": {
+      "id": "beans_visual",
+      "type": "frame",
+      "name": "Bag visual",
+      "width": 480,
+      "height": 560,
+      "layout": {
+        "direction": "column",
+        "padding": 32,
+        "align": "start",
+        "justify": "end"
+      },
+      "clip": true,
+      "fill": "$kiln.roast",
+      "children": [
+        "tx_beans_tag"
+      ]
+    },
+    "tx_beans_tag": {
+      "id": "tx_beans_tag",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.soft",
+      "content": "12 oz bag",
+      "font": "$kiln.type.label"
+    },
+    "beans_copy": {
+      "id": "beans_copy",
+      "type": "frame",
+      "name": "Beans copy",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.md",
+        "align": "start"
+      },
+      "children": [
+        "tx_beans_brand",
+        "tx_beans_h1",
+        "tx_beans_body",
+        "tx_beans_price",
+        "bt_beans_ask"
+      ]
+    },
+    "tx_beans_brand": {
+      "id": "tx_beans_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": "$kiln.type.label"
+    },
+    "tx_beans_h1": {
+      "id": "tx_beans_h1",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Beans to go.",
+      "font": "$kiln.type.display"
+    },
+    "tx_beans_body": {
+      "id": "tx_beans_body",
+      "type": "text",
+      "width": 480,
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "House blend and rotating singles, roasted upstairs and bagged the same day. Grind on request.",
+      "font": "$kiln.type.body"
+    },
+    "tx_beans_price": {
+      "id": "tx_beans_price",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.accent",
+      "content": "From 18.00",
+      "font": "$kiln.type.label"
+    },
+    "bt_beans_ask": {
+      "id": "bt_beans_ask",
+      "type": "frame",
+      "name": "Ask at bar",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "link": {
+        "to": "fr_kiln_visit",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_beans_cta"
+      ]
+    },
+    "tx_beans_cta": {
+      "id": "tx_beans_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "Ask at the bar",
+      "font": "$kiln.type.label"
+    },
+    "fr_kiln_catering": {
+      "id": "fr_kiln_catering",
+      "type": "frame",
+      "name": "Catering",
+      "x": 4560,
+      "y": 0,
+      "width": 1440,
+      "height": 900,
+      "layout": {
+        "direction": "column",
+        "gap": "$kiln.space.lg",
+        "padding": 80,
+        "align": "start",
+        "justify": "center"
+      },
+      "clip": true,
+      "fill": "$kiln.bg",
+      "children": [
+        "tx_cat_brand",
+        "tx_cat_h1",
+        "tx_cat_body",
+        "row_cat",
+        "bt_cat_email"
+      ]
+    },
+    "tx_cat_brand": {
+      "id": "tx_cat_brand",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "KILN",
+      "font": "$kiln.type.label"
+    },
+    "tx_cat_h1": {
+      "id": "tx_cat_h1",
+      "type": "text",
+      "width": 720,
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Coffee for\nthe room.",
+      "font": "$kiln.type.display"
+    },
+    "tx_cat_body": {
+      "id": "tx_cat_body",
+      "type": "text",
+      "width": 560,
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Airpots, cups, and a simple setup for offices and small gatherings. We deliver within a few blocks — email for a quote.",
+      "font": "$kiln.type.body"
+    },
+    "row_cat": {
+      "id": "row_cat",
+      "type": "frame",
+      "name": "Catering options",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "gap": 64,
+        "align": "start"
+      },
+      "children": [
+        "col_cat1",
+        "col_cat2",
+        "col_cat3"
+      ]
+    },
+    "col_cat1": {
+      "id": "col_cat1",
+      "type": "frame",
+      "width": 320,
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_cat1_n",
+        "tx_cat1_d"
+      ]
+    },
+    "tx_cat1_n": {
+      "id": "tx_cat1_n",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Office airpot",
+      "font": "$kiln.type.label"
+    },
+    "tx_cat1_d": {
+      "id": "tx_cat1_d",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Serves ~12. House blend or decaf.",
+      "font": "$kiln.type.small"
+    },
+    "col_cat2": {
+      "id": "col_cat2",
+      "type": "frame",
+      "width": 320,
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_cat2_n",
+        "tx_cat2_d"
+      ]
+    },
+    "tx_cat2_n": {
+      "id": "tx_cat2_n",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Meeting drop",
+      "font": "$kiln.type.label"
+    },
+    "tx_cat2_d": {
+      "id": "tx_cat2_d",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Two airpots, cups, milk, sugar.",
+      "font": "$kiln.type.small"
+    },
+    "col_cat3": {
+      "id": "col_cat3",
+      "type": "frame",
+      "width": 320,
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "align": "start"
+      },
+      "children": [
+        "tx_cat3_n",
+        "tx_cat3_d"
+      ]
+    },
+    "tx_cat3_n": {
+      "id": "tx_cat3_n",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.ink",
+      "content": "Weekend gather",
+      "font": "$kiln.type.label"
+    },
+    "tx_cat3_d": {
+      "id": "tx_cat3_d",
+      "type": "text",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$kiln.muted",
+      "content": "Batch brew + oat milk for ~25.",
+      "font": "$kiln.type.small"
+    },
+    "bt_cat_email": {
+      "id": "bt_cat_email",
+      "type": "frame",
+      "name": "Email catering",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "direction": "row",
+        "padding": [
+          0,
+          28
+        ],
+        "align": "center",
+        "justify": "center"
+      },
+      "fill": "$kiln.pine",
+      "radius": "$kiln.radius",
+      "children": [
+        "tx_cat_cta"
+      ]
+    },
+    "tx_cat_cta": {
+      "id": "tx_cat_cta",
+      "type": "text",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$kiln.onPine",
+      "content": "Email catering",
+      "font": "$kiln.type.label"
+    },
+    "bar_kiln_accent": {
+      "id": "bar_kiln_accent",
+      "type": "rect",
+      "name": "Accent bar",
+      "width": 48,
+      "height": 4,
+      "fill": "$kiln.accent"
+    }
+  },
+  "annotations": {
+    "an_cta": {
+      "nodeId": "bt_submit",
+      "body": "Make the CTA sit flush with the safe area; keep $radius.md.",
+      "status": "open",
+      "createdAt": "2026-10-20T20:01:01.112Z"
+    }
+  }
+}

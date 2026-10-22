@@ -1,0 +1,107 @@
+{
+  "name": "cursor-design",
+  "displayName": "Cursor Design",
+  "description": "Figma-like design canvas inside Cursor. Chat with the Cursor agent to build prototypes; the agent edits the canvas over MCP.",
+  "version": "0.0.1",
+  "publisher": "cursor-design",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "workspaceContains:**/*.design.json",
+    "onCommand:cursorDesign.newFile"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "cursorDesign.editor",
+        "displayName": "Cursor Design",
+        "selector": [
+          {
+            "filenamePattern": "*.design.json"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "cursorDesign.newFile",
+        "title": "Cursor Design: New design file"
+      },
+      {
+        "command": "cursorDesign.openAsText",
+        "title": "Cursor Design: Open as JSON"
+      },
+      {
+        "command": "cursorDesign.reconnectMcp",
+        "title": "Cursor Design: Reconnect MCP server"
+      },
+      {
+        "command": "cursorDesign.copyMcpConfig",
+        "title": "Cursor Design: Copy MCP config (mcp.json entry)"
+      },
+      {
+        "command": "cursorDesign.writeMcpConfig",
+        "title": "Cursor Design: Write .cursor/mcp.json entry (fallback)"
+      },
+      {
+        "command": "cursorDesign.showStatus",
+        "title": "Cursor Design: Show status"
+      },
+      {
+        "command": "cursorDesign.debugLayout",
+        "title": "Cursor Design: Dump layout (debug)"
+      },
+      {
+        "command": "cursorDesign.installSkill",
+        "title": "Cursor Design: Install agent skill into ~/.cursor (fallback)"
+      }
+    ],
+    "configuration": {
+      "title": "Cursor Design",
+      "properties": {
+        "cursorDesign.mcpPort": {
+          "type": "number",
+          "default": 48731,
+          "description": "Preferred local port for the MCP server (127.0.0.1). 0 = ephemeral. Falls back to ephemeral if busy."
+        },
+        "cursorDesign.autoRegister": {
+          "type": "boolean",
+          "default": true,
+          "description": "Register the MCP server with Cursor automatically on activation (vscode.cursor.mcp.registerServer)."
+        },
+        "cursorDesign.autoSaveAgentEdits": {
+          "type": "boolean",
+          "default": true,
+          "description": "Save the design file after each agent (MCP) batch so the file on disk always matches what the agent sees. Undo still works."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node esbuild.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "watch": "node esbuild.mjs --watch",
+    "package": "pnpm run build && vsce package --no-dependencies --out ../../cursor-design.vsix",
+    "test:integration": "node esbuild.mjs && node test/esbuild.test.mjs && node test/runTest.mjs"
+  },
+  "dependencies": {
+    "@cursor-design/core": "workspace:*",
+    "@cursor-design/mcp": "workspace:*"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@types/vscode": "^1.96.0",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.25.0"
+  }
+}
