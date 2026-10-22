@@ -51,15 +51,20 @@ export function unregisterPluginPath(p: string) {
   }
 }
 
+/** Prefer token in the URL — Cursor's project MCP client sometimes drops Authorization headers. */
 export function mcpJsonEntry(url: string, token: string) {
-  return { [MCP_SERVER_NAME]: { url, headers: { Authorization: `Bearer ${token}` } } };
+  const u = new URL(url);
+  u.searchParams.set("token", token);
+  return {
+    [MCP_SERVER_NAME]: {
+      url: u.toString(),
+      headers: { Authorization: `Bearer ${token}` },
+    },
+  };
 }
 
-/** Fallback for environments without the extension API: merge our entry into <workspace>/.cursor/mcp.json. */
-export async function writeWorkspaceMcpJson(url: string, token: string): Promise<vscode.Uri | undefined> {
-  const root = vscode.workspace.workspaceFolders?.[0];
-  if (!root) return undefined;
-  const dir = vscode.Uri.joinPath(root.uri, ".cursor");
+async function writeMcpJsonAt(root: vscode.Uri, url: string, token: string): Promise<vscode.Uri> {
+  const dir = vscode.Uri.joinPath(root, ".cursor");
   const file = vscode.Uri.joinPath(dir, "mcp.json");
   let json: { mcpServers?: Record<string, unknown> } = {};
   try {
@@ -71,6 +76,18 @@ export async function writeWorkspaceMcpJson(url: string, token: string): Promise
   await vscode.workspace.fs.createDirectory(dir);
   await vscode.workspace.fs.writeFile(file, Buffer.from(JSON.stringify(json, null, 2) + "\n", "utf8"));
   return file;
+}
+
+/** Merge our entry into every workspace folder's `.cursor/mcp.json` (EDH often opens `examples/`). */
+export async function writeWorkspaceMcpJson(url: string, token: string): Promise<vscode.Uri | undefined> {
+  const folders = vscode.workspace.workspaceFolders ?? [];
+  if (!folders.length) return undefined;
+  let first: vscode.Uri | undefined;
+  for (const f of folders) {
+    const written = await writeMcpJsonAt(f.uri, url, token);
+    first ??= written;
+  }
+  return first;
 }
 
 /** Prefill Cursor's chat with a prompt (user still presses send). */

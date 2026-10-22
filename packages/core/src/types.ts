@@ -75,7 +75,12 @@ export type Token =
   | { type: "shadow"; value: Shadow | Shadow[]; group?: string; description?: string };
 
 export type NumOrRef = number | TokenRef;
-export type Padding = NumOrRef | [NumOrRef, NumOrRef] | [NumOrRef, NumOrRef, NumOrRef, NumOrRef];
+/** Spacing edge: number, token, or CSS `auto` (common for flex push / end-align). */
+export type SpacingValue = NumOrRef | "auto";
+export type Padding =
+  | SpacingValue
+  | [SpacingValue, SpacingValue]
+  | [SpacingValue, SpacingValue, SpacingValue, SpacingValue];
 
 export type Layout = {
   /** Default `"flex"`. `"absolute"` makes the frame a positioning context; children honor `x`/`y`. */
@@ -83,7 +88,7 @@ export type Layout = {
   direction: "row" | "column";
   gap?: number | TokenRef;
   padding?: Padding;
-  /** CSS margin on this frame (negative allowed for flex overlap / peek stacks). */
+  /** CSS margin on this frame (negative allowed for flex overlap / peek stacks; `"auto"` allowed). */
   margin?: Padding;
   align?: "start" | "center" | "end" | "stretch";
   justify?: "start" | "center" | "end" | "space-between";
@@ -302,6 +307,46 @@ export type Annotation = {
   createdAt?: string;
 };
 
+/** Channels a timeline may animate (v1: transform + opacity only). */
+export type TimelineChannel =
+  | "opacity"
+  | "transform.x"
+  | "transform.y"
+  | "transform.scale"
+  | "transform.rotate";
+
+export type TimelineEase = "linear" | "ease-out" | "ease-in-out";
+
+export type TimelineKey = {
+  /** Normalized time 0..1 along the timeline. */
+  t: number;
+  value: number;
+  ease?: TimelineEase;
+};
+
+export type TimelineTrack = {
+  nodeId: Id;
+  channel: TimelineChannel;
+  keys: TimelineKey[];
+};
+
+export type Timeline = {
+  id: Id;
+  name?: string;
+  /** Frame this timeline is bound to (plays when that frame is shown in Play). */
+  frameId: Id;
+  /** Duration in milliseconds. */
+  duration: number;
+  loop?: boolean;
+  tracks: TimelineTrack[];
+};
+
+/** Per-node motion sample from timeline interpolation. */
+export type MotionSample = {
+  opacity?: number;
+  transform?: Transform;
+};
+
 export type Doc = {
   schemaVersion: 1;
   name: string;
@@ -313,4 +358,6 @@ export type Doc = {
   /** Component definitions (masters referenced by `root`). */
   components?: Record<Id, ComponentDef>;
   annotations?: Record<Id, Annotation>;
+  /** Keyframe timelines bound to frames (transform/opacity). */
+  timelines?: Record<Id, Timeline>;
 };

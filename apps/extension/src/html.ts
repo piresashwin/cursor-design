@@ -13,12 +13,14 @@ export function editorHtml(webview: vscode.Webview, extensionUri: vscode.Uri): s
   const css = webview.asWebviewUri(vscode.Uri.joinPath(media, "editor.css"));
   const n = nonce();
   // img-src data:/blob: is needed for html-to-image (SVG foreignObject → data URL → canvas)
+  // fonts.googleapis.com / fonts.gstatic.com: document font tokens load via Google Fonts CSS2
   const csp = [
     `default-src 'none'`,
     `img-src ${webview.cspSource} data: blob: https:`,
-    `style-src ${webview.cspSource} 'unsafe-inline'`,
-    `font-src ${webview.cspSource} data:`,
-    `script-src 'nonce-${n}'`,
+    `style-src ${webview.cspSource} 'unsafe-inline' https://fonts.googleapis.com`,
+    `font-src ${webview.cspSource} data: https://fonts.gstatic.com`,
+    // cspSource allows ES module chunks under media/ (editor.js → chunks/*)
+    `script-src 'nonce-${n}' ${webview.cspSource}`,
     `connect-src ${webview.cspSource}`,
   ].join("; ");
   return `<!doctype html>

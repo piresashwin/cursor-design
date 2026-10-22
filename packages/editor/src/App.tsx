@@ -8,6 +8,7 @@ import { TokensPanel } from "./panels/TokensPanel";
 import { Properties } from "./panels/Properties";
 import { screenshotNode } from "./screenshot";
 import { inspectNode } from "./inspect";
+import { ensureDocFonts } from "./fonts";
 
 export function App() {
   const bridge = useMemo(() => createBridge(), []);
@@ -131,6 +132,10 @@ export function App() {
   useEffect(() => {
     if (window.__editor) (window.__editor as unknown as { selectPage: (id: string) => void }).selectPage = selectPage;
   }, [selectPage]);
+
+  useEffect(() => {
+    if (doc) ensureDocFonts(doc);
+  }, [doc]);
 
   const apply = useCallback((ops: Op[]) => bridge.send({ type: "ops", ops }), [bridge]);
   const sendToCursor = useCallback((text: string) => bridge.send({ type: "send-to-cursor", text }), [bridge]);

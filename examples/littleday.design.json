@@ -2,6 +2,346 @@
   "schemaVersion": 1,
   "name": "LittleDay",
   "tokens": {
+    "aura.blur.glass": {
+      "description": "Backdrop blur for glass",
+      "group": "number",
+      "type": "number",
+      "value": 24
+    },
+    "aura.blur.glow": {
+      "description": "Ambient orb blur",
+      "group": "number",
+      "type": "number",
+      "value": 40
+    },
+    "aura.color.accent": {
+      "description": "Primary / FAB / active nav",
+      "group": "color",
+      "type": "color",
+      "value": "#70B8FF"
+    },
+    "aura.color.bg": {
+      "description": "Mesh base — lavender-blue (display punch)",
+      "group": "color",
+      "type": "color",
+      "value": "#D2DBFF"
+    },
+    "aura.color.bgAlt": {
+      "description": "Mesh peach/pink pole",
+      "group": "color",
+      "type": "color",
+      "value": "#F3D4E8"
+    },
+    "aura.color.bgMid": {
+      "description": "Soft sky midtone",
+      "group": "color",
+      "type": "color",
+      "value": "#BFD4FF"
+    },
+    "aura.color.calories": {
+      "description": "Calories metric",
+      "group": "color",
+      "type": "color",
+      "value": "#9CCC65"
+    },
+    "aura.color.glassBorder": {
+      "description": "Bright glass edge",
+      "group": "color",
+      "type": "color",
+      "value": "rgba(255,255,255,0.75)"
+    },
+    "aura.color.heart": {
+      "description": "Heart rate metric",
+      "group": "color",
+      "type": "color",
+      "value": "#FF6B6B"
+    },
+    "aura.color.ink": {
+      "description": "Primary text — tinted charcoal",
+      "group": "color",
+      "type": "color",
+      "value": "#1A1D26"
+    },
+    "aura.color.muted": {
+      "description": "Labels and captions",
+      "group": "color",
+      "type": "color",
+      "value": "#8B90A0"
+    },
+    "aura.color.onAccent": {
+      "group": "color",
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "aura.color.orbBlue": {
+      "description": "Ambient orb",
+      "group": "color",
+      "type": "color",
+      "value": "rgba(112,184,255,0.55)"
+    },
+    "aura.color.orbLav": {
+      "description": "Ambient orb lavender",
+      "group": "color",
+      "type": "color",
+      "value": "rgba(180,170,255,0.45)"
+    },
+    "aura.color.orbPink": {
+      "description": "Ambient orb pink",
+      "group": "color",
+      "type": "color",
+      "value": "rgba(245,180,210,0.5)"
+    },
+    "aura.color.progress": {
+      "description": "Progress metric",
+      "group": "color",
+      "type": "color",
+      "value": "#FF8A65"
+    },
+    "aura.color.scrim": {
+      "description": "Soft depth wash",
+      "group": "color",
+      "type": "color",
+      "value": "rgba(26,29,38,0.04)"
+    },
+    "aura.color.soft": {
+      "description": "Placeholder / inactive icons",
+      "group": "color",
+      "type": "color",
+      "value": "#B4B8C5"
+    },
+    "aura.color.steps": {
+      "description": "Steps metric",
+      "group": "color",
+      "type": "color",
+      "value": "#FFB74D"
+    },
+    "aura.color.surface": {
+      "description": "Glass fill — translucent over mesh orbs",
+      "group": "color",
+      "type": "color",
+      "value": "rgba(255,255,255,0.42)"
+    },
+    "aura.color.surfaceSolid": {
+      "description": "Opaque chips / user bubbles",
+      "group": "color",
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "aura.guide.accent": {
+      "description": "Guideline 3",
+      "group": "string",
+      "type": "string",
+      "value": "Sky blue owns FAB, active nav, and user chat. Metric hues (progress/heart/calories/steps) are status only, not brand."
+    },
+    "aura.guide.atmosphere": {
+      "description": "Guideline 1",
+      "group": "string",
+      "type": "string",
+      "value": "Every screen sits on the soft mesh gradient (bg → bgMid → bgAlt); never flat white or solid dark."
+    },
+    "aura.guide.bgFill": {
+      "description": "Compose screen background as layered gradient fill",
+      "group": "string",
+      "type": "string",
+      "value": "linear 135° stops: $aura.color.bg → $aura.color.bgMid → $aura.color.bgAlt"
+    },
+    "aura.guide.chat": {
+      "description": "Guideline 8",
+      "group": "string",
+      "type": "string",
+      "value": "User = solid accent bubble; AI = glass bubble; media embeds inside AI bubbles with labeled callouts."
+    },
+    "aura.guide.chrome": {
+      "description": "Guideline 7",
+      "group": "string",
+      "type": "string",
+      "value": "Bottom nav is a glass island inset from edges; primary action is a circular blue FAB with glow shadow."
+    },
+    "aura.guide.depth": {
+      "description": "Guideline 5",
+      "group": "string",
+      "type": "string",
+      "value": "Layer gradient → glass → solid accent controls → 3D clay assets. Ink is tinted charcoal, not pure black."
+    },
+    "aura.guide.geometry": {
+      "description": "Guideline 4",
+      "group": "string",
+      "type": "string",
+      "value": "Large radii (lg/xl) on panels; pills for inputs, chips, and the floating tab bar."
+    },
+    "aura.guide.glass": {
+      "description": "Guideline 2",
+      "group": "string",
+      "type": "string",
+      "value": "Surfaces use translucent white + backdrop blur + light border + soft shadow. One glass plane per section; avoid nested glass."
+    },
+    "aura.guide.mode": {
+      "description": "Design mode",
+      "group": "string",
+      "type": "string",
+      "value": "experience — calm softness and presence over dense clinical chrome"
+    },
+    "aura.guide.playful": {
+      "description": "Guideline 6",
+      "group": "string",
+      "type": "string",
+      "value": "3D mascot/organ renders carry warmth; icons stay thin-stroke (~2px), colored by metric role."
+    },
+    "aura.guide.spacing": {
+      "description": "Guideline 9",
+      "group": "string",
+      "type": "string",
+      "value": "Card padding 20 · stack gap 16 · screen inset 20–24."
+    },
+    "aura.motion.base": {
+      "group": "motion",
+      "type": "number",
+      "value": 240
+    },
+    "aura.motion.fast": {
+      "group": "motion",
+      "type": "number",
+      "value": 180
+    },
+    "aura.radius.lg": {
+      "group": "radius",
+      "type": "number",
+      "value": 28
+    },
+    "aura.radius.md": {
+      "group": "radius",
+      "type": "number",
+      "value": 20
+    },
+    "aura.radius.pill": {
+      "group": "radius",
+      "type": "number",
+      "value": 999
+    },
+    "aura.radius.sm": {
+      "group": "radius",
+      "type": "number",
+      "value": 12
+    },
+    "aura.radius.xl": {
+      "group": "radius",
+      "type": "number",
+      "value": 32
+    },
+    "aura.shadow.card": {
+      "description": "Soft glass elevation",
+      "group": "shadow",
+      "type": "shadow",
+      "value": {
+        "blur": 32,
+        "color": "rgba(31,38,135,0.08)",
+        "spread": -4,
+        "x": 0,
+        "y": 8
+      }
+    },
+    "aura.shadow.fab": {
+      "description": "Sky-blue FAB glow",
+      "group": "shadow",
+      "type": "shadow",
+      "value": {
+        "blur": 24,
+        "color": "rgba(112,184,255,0.45)",
+        "spread": 0,
+        "x": 0,
+        "y": 10
+      }
+    },
+    "aura.space.1": {
+      "group": "space",
+      "type": "number",
+      "value": 4
+    },
+    "aura.space.2": {
+      "group": "space",
+      "type": "number",
+      "value": 8
+    },
+    "aura.space.3": {
+      "group": "space",
+      "type": "number",
+      "value": 12
+    },
+    "aura.space.4": {
+      "group": "space",
+      "type": "number",
+      "value": 16
+    },
+    "aura.space.5": {
+      "group": "space",
+      "type": "number",
+      "value": 20
+    },
+    "aura.space.6": {
+      "group": "space",
+      "type": "number",
+      "value": 24
+    },
+    "aura.space.7": {
+      "group": "space",
+      "type": "number",
+      "value": 32
+    },
+    "aura.type.body": {
+      "description": "Body / chat",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.45,
+      "size": 15,
+      "type": "font",
+      "weight": 400
+    },
+    "aura.type.caption": {
+      "description": "Days, units",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 11,
+      "type": "font",
+      "weight": 400
+    },
+    "aura.type.display": {
+      "description": "Screen titles / brand",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "group": "type",
+      "letterSpacing": -0.8,
+      "lineHeight": 1.15,
+      "size": 36,
+      "type": "font",
+      "weight": 700
+    },
+    "aura.type.label": {
+      "description": "Field & metric labels",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 13,
+      "type": "font",
+      "weight": 500
+    },
+    "aura.type.metric": {
+      "description": "Big numbers",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.1,
+      "size": 22,
+      "type": "font",
+      "weight": 700
+    },
+    "aura.type.title": {
+      "description": "Card titles",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.25,
+      "size": 20,
+      "type": "font",
+      "weight": 600
+    },
     "color.accent": {
       "group": "color",
       "type": "color",
@@ -345,6 +685,12 @@
       ],
       "name": "Auth"
     },
+    "pg_foundations": {
+      "frames": [
+        "fr_aura_guide"
+      ],
+      "name": "Foundations"
+    },
     "pg_landing": {
       "frames": [
         "fr_landing"
@@ -357,7 +703,8 @@
         "fr_onb_rooms",
         "fr_onb_staff",
         "fr_onb_children",
-        "fr_onb_parents"
+        "fr_onb_parents",
+        "fr_onb_add_child"
       ],
       "name": "Onboarding"
     },
@@ -422,6 +769,15 @@
       "initials": "AN",
       "size": 40,
       "textFill": "$color.onPrimary"
+    },
+    "av_aura_psych": {
+      "id": "av_aura_psych",
+      "type": "avatar",
+      "name": "Psych avatar",
+      "fill": "$aura.color.accent",
+      "initials": "VP",
+      "size": 44,
+      "textFill": "$aura.color.onAccent"
     },
     "av_chat_chen": {
       "id": "av_chat_chen",
@@ -639,7 +995,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           0,
           48
@@ -664,7 +1020,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           0,
           48
@@ -689,7 +1045,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           0,
           48
@@ -714,7 +1070,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           0,
           48
@@ -739,7 +1095,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           0,
           48
@@ -754,6 +1110,49 @@
         "tx_onb5_brand",
         "tx_onb5_step"
       ]
+    },
+    "bar_s4": {
+      "id": "bar_s4",
+      "type": "frame",
+      "name": "Bar 16",
+      "width": 160,
+      "height": 8,
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "children": []
+    },
+    "bar_s5": {
+      "id": "bar_s5",
+      "type": "frame",
+      "name": "Bar 20",
+      "width": 200,
+      "height": 8,
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "opacity": 0.85,
+      "children": []
+    },
+    "bar_s6": {
+      "id": "bar_s6",
+      "type": "frame",
+      "name": "Bar 24",
+      "width": 240,
+      "height": 8,
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "opacity": 0.7,
+      "children": []
+    },
+    "bar_s7": {
+      "id": "bar_s7",
+      "type": "frame",
+      "name": "Bar 32",
+      "width": 320,
+      "height": 8,
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "opacity": 0.55,
+      "children": []
     },
     "bar_tl_photo_cap": {
       "id": "bar_tl_photo_cap",
@@ -1079,7 +1478,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           0,
           14
@@ -1095,6 +1494,108 @@
       "children": [
         "tx_center_tz_val",
         "ic_center_tz"
+      ]
+    },
+    "box_child_allergy": {
+      "id": "box_child_allergy",
+      "type": "frame",
+      "name": "Allergy input",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          14
+        ]
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "tx_child_allergy_val"
+      ]
+    },
+    "box_child_name": {
+      "id": "box_child_name",
+      "type": "frame",
+      "name": "Child name input",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 10,
+        "padding": [
+          0,
+          14
+        ]
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "ic_child_name",
+        "tx_child_name_val"
+      ]
+    },
+    "box_child_parent": {
+      "id": "box_child_parent",
+      "type": "frame",
+      "name": "Parent email input",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 10,
+        "padding": [
+          0,
+          14
+        ]
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "ic_child_parent",
+        "tx_child_parent_val"
+      ]
+    },
+    "box_child_room": {
+      "id": "box_child_room",
+      "type": "frame",
+      "name": "Room input",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "space-between",
+        "padding": [
+          0,
+          14
+        ]
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "tx_child_room_val",
+        "ic_child_room"
       ]
     },
     "box_log_meal": {
@@ -1208,7 +1709,7 @@
           14
         ]
       },
-      "fill": "rgba(255,255,255,0.55)",
+      "fill": "$color.surface",
       "stroke": {
         "color": "$color.border",
         "width": 1
@@ -1229,12 +1730,13 @@
       "layout": {
         "align": "center",
         "direction": "row",
+        "gap": 10,
         "padding": [
           0,
           14
         ]
       },
-      "fill": "rgba(255,255,255,0.55)",
+      "fill": "$color.surface",
       "stroke": {
         "color": "$color.border",
         "width": 1
@@ -1242,6 +1744,7 @@
       "radius": "$radius.md",
       "backdropBlur": 8,
       "children": [
+        "ic_signup_name",
         "tx_signup_name_val"
       ]
     },
@@ -1260,7 +1763,7 @@
           14
         ]
       },
-      "fill": "rgba(255,255,255,0.55)",
+      "fill": "$color.surface",
       "stroke": {
         "color": "$color.border",
         "width": 1
@@ -1337,9 +1840,65 @@
         "width": 1
       },
       "radius": "$radius.sm",
+      "link": {
+        "present": "overlay",
+        "to": "fr_onb_add_child",
+        "transition": "fade"
+      },
       "children": [
         "ic_add_child",
         "tx_add_child"
+      ]
+    },
+    "bt_add_child_cancel": {
+      "id": "bt_add_child_cancel",
+      "type": "frame",
+      "name": "Cancel add child",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          20
+        ]
+      },
+      "radius": "$radius.md",
+      "link": {
+        "present": "navigate",
+        "to": "fr_onb_children",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_add_child_cancel"
+      ]
+    },
+    "bt_add_child_save": {
+      "id": "bt_add_child_save",
+      "type": "frame",
+      "name": "Save child",
+      "width": "hug",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          24
+        ]
+      },
+      "fill": "$color.primary",
+      "radius": "$radius.md",
+      "link": {
+        "present": "navigate",
+        "to": "fr_onb_children",
+        "transition": "fade"
+      },
+      "children": [
+        "tx_add_child_save"
       ]
     },
     "bt_add_room": {
@@ -1379,6 +1938,24 @@
       "radius": "$radius.md",
       "children": [
         "tx_add_staff"
+      ]
+    },
+    "bt_aura_fab": {
+      "id": "bt_aura_fab",
+      "type": "frame",
+      "name": "FAB",
+      "width": 48,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "shadow": "$aura.shadow.fab",
+      "children": [
+        "ic_fab_send"
       ]
     },
     "bt_checkin_sam": {
@@ -2301,7 +2878,7 @@
         "direction": "row",
         "justify": "center"
       },
-      "fill": "rgba(31,107,74,0.92)",
+      "fill": "$color.primary",
       "radius": "$radius.xl",
       "backdropBlur": 8,
       "link": {
@@ -2352,6 +2929,29 @@
       "children": [
         "tx_view_day",
         "ic_view_day"
+      ]
+    },
+    "bubble_ai": {
+      "id": "bubble_ai",
+      "type": "frame",
+      "name": "AI bubble",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.3",
+        "padding": "$aura.space.4"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.lg",
+      "children": [
+        "tx_bubble_ai",
+        "card_heart_embed"
       ]
     },
     "bubble_p_parent": {
@@ -2467,6 +3067,64 @@
         "tx_bubble_staff"
       ]
     },
+    "bubble_user": {
+      "id": "bubble_user",
+      "type": "frame",
+      "name": "User bubble",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "column",
+        "margin": [
+          0,
+          0,
+          0,
+          "auto"
+        ],
+        "padding": [
+          "$aura.space.3",
+          "$aura.space.4"
+        ]
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.fab",
+      "children": [
+        "tx_bubble_user"
+      ]
+    },
+    "card_add_child": {
+      "id": "card_add_child",
+      "type": "frame",
+      "name": "Add child modal",
+      "x": 460,
+      "y": 120,
+      "width": 520,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 20,
+        "padding": 36
+      },
+      "fill": "$color.surface.solid",
+      "stroke": {
+        "color": "$color.border.soft",
+        "width": 1
+      },
+      "radius": "$radius.2xl",
+      "shadow": "$shadow.md",
+      "zIndex": 2,
+      "children": [
+        "col_add_child_head",
+        "in_child_name",
+        "in_child_room",
+        "in_child_allergy",
+        "in_child_parent",
+        "row_add_child_actions"
+      ]
+    },
     "card_allergy": {
       "id": "card_allergy",
       "type": "frame",
@@ -2489,6 +3147,30 @@
       "children": [
         "tx_allergy_title",
         "tx_allergy_val"
+      ]
+    },
+    "card_aura_psych": {
+      "id": "card_aura_psych",
+      "type": "frame",
+      "name": "Psychologist card",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.3",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.card",
+      "children": [
+        "av_aura_psych",
+        "col_psych_copy"
       ]
     },
     "card_checkin_status": {
@@ -2646,6 +3328,37 @@
       "children": [
         "tx_contacts_title",
         "tx_contacts_val"
+      ]
+    },
+    "card_heart_embed": {
+      "id": "card_heart_embed",
+      "type": "frame",
+      "name": "Heart embed",
+      "width": "fill",
+      "height": 120,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": {
+        "kind": "radial",
+        "stops": [
+          {
+            "at": 0,
+            "color": "$aura.color.heart"
+          },
+          {
+            "at": 1,
+            "color": "$aura.color.bgAlt"
+          }
+        ]
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "ell_heart",
+        "chip_bpm",
+        "chip_rest"
       ]
     },
     "card_hero_peek": {
@@ -3416,13 +4129,16 @@
       "id": "card_signup",
       "type": "frame",
       "name": "Signup glass card",
-      "width": 440,
+      "width": 480,
       "height": "hug",
       "layout": {
         "align": "stretch",
         "direction": "column",
-        "gap": 20,
-        "padding": 40
+        "gap": 0,
+        "padding": [
+          40,
+          44
+        ]
       },
       "fill": "rgba(255,255,255,0.62)",
       "stroke": {
@@ -3657,6 +4373,33 @@
         "tx_asha_you"
       ]
     },
+    "chip_aura_mode": {
+      "id": "chip_aura_mode",
+      "type": "frame",
+      "name": "Mode chip",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          "$aura.space.2",
+          "$aura.space.4"
+        ]
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.pill",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_aura_mode"
+      ]
+    },
     "chip_bf_active": {
       "id": "chip_bf_active",
       "type": "frame",
@@ -3675,6 +4418,28 @@
       "radius": "$radius.sm",
       "children": [
         "tx_chip_bf"
+      ]
+    },
+    "chip_bpm": {
+      "id": "chip_bpm",
+      "type": "frame",
+      "name": "BPM chip",
+      "x": 12,
+      "y": 12,
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          4,
+          10
+        ]
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "radius": "$aura.radius.pill",
+      "children": [
+        "tx_chip_bpm"
       ]
     },
     "chip_chen_ready": {
@@ -3799,6 +4564,28 @@
       "radius": "$radius.sm",
       "children": [
         "tx_present_maya"
+      ]
+    },
+    "chip_rest": {
+      "id": "chip_rest",
+      "type": "frame",
+      "name": "Resting chip",
+      "x": 12,
+      "y": 84,
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          4,
+          10
+        ]
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "radius": "$aura.radius.pill",
+      "children": [
+        "tx_chip_rest"
       ]
     },
     "chip_ruiz_ready": {
@@ -3986,6 +4773,22 @@
         "tx_act_3_time"
       ]
     },
+    "col_add_child_head": {
+      "id": "col_add_child_head",
+      "type": "frame",
+      "name": "Add child header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 8
+      },
+      "children": [
+        "tx_add_child_title",
+        "tx_add_child_sub"
+      ]
+    },
     "col_asha_info": {
       "id": "col_asha_info",
       "type": "frame",
@@ -4033,6 +4836,104 @@
         "card_roster"
       ]
     },
+    "col_aura_chat": {
+      "id": "col_aura_chat",
+      "type": "frame",
+      "name": "Chat demo",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.3",
+        "justify": "end",
+        "padding": "$aura.space.4"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.xl",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_chat_h",
+        "bubble_user",
+        "bubble_ai"
+      ]
+    },
+    "col_aura_chrome": {
+      "id": "col_aura_chrome",
+      "type": "frame",
+      "name": "Chrome demo",
+      "width": 280,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.5",
+        "justify": "center",
+        "padding": "$aura.space.4"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.xl",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_chrome_h",
+        "in_aura_pill",
+        "dock_aura"
+      ]
+    },
+    "col_aura_header": {
+      "id": "col_aura_header",
+      "type": "frame",
+      "name": "Header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.3"
+      },
+      "children": [
+        "tx_aura_eyebrow",
+        "tx_aura_title",
+        "tx_aura_lede",
+        "chip_aura_mode"
+      ]
+    },
+    "col_aura_main": {
+      "id": "col_aura_main",
+      "type": "frame",
+      "name": "Main content",
+      "x": 0,
+      "y": 0,
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.6",
+        "padding": [
+          "$aura.space.7",
+          64
+        ]
+      },
+      "zIndex": 2,
+      "children": [
+        "col_aura_header",
+        "sec_aura_color",
+        "row_aura_type_geo",
+        "sec_aura_patterns",
+        "sec_aura_guides"
+      ]
+    },
     "col_bf_info": {
       "id": "col_bf_info",
       "type": "frame",
@@ -4069,6 +4970,7 @@
       "name": "Chat messages",
       "width": "fill",
       "height": "fill",
+      "overflow": "auto",
       "layout": {
         "align": "stretch",
         "direction": "column",
@@ -4235,6 +5137,42 @@
         "tx_emma_meta"
       ]
     },
+    "col_guides_a": {
+      "id": "col_guides_a",
+      "type": "frame",
+      "name": "Guidelines column A",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.4"
+      },
+      "children": [
+        "g1",
+        "g2",
+        "g3",
+        "g4"
+      ]
+    },
+    "col_guides_b": {
+      "id": "col_guides_b",
+      "type": "frame",
+      "name": "Guidelines column B",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.4"
+      },
+      "children": [
+        "g5",
+        "g6",
+        "g7",
+        "g8"
+      ]
+    },
     "col_hero_copy": {
       "id": "col_hero_copy",
       "type": "frame",
@@ -4300,12 +5238,6 @@
         "tx_today_label",
         "row_summary_cards",
         "bt_view_day"
-      ],
-      "padding": [
-        48,
-        20,
-        0,
-        20
       ]
     },
     "col_invite_cta": {
@@ -4670,6 +5602,22 @@
         "tx_prof_meta"
       ]
     },
+    "col_psych_copy": {
+      "id": "col_psych_copy",
+      "type": "frame",
+      "name": "Psych copy",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 2
+      },
+      "children": [
+        "tx_psych_title",
+        "tx_psych_sub"
+      ]
+    },
     "col_rivera_info": {
       "id": "col_rivera_info",
       "type": "frame",
@@ -4778,15 +5726,30 @@
         "tx_ruiz_meta"
       ]
     },
+    "col_signup_actions": {
+      "id": "col_signup_actions",
+      "type": "frame",
+      "name": "Signup actions",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 16
+      },
+      "children": [
+        "bt_signup_submit",
+        "row_signup_login"
+      ]
+    },
     "col_signup_brand": {
       "id": "col_signup_brand",
       "type": "frame",
       "name": "Signup brand block",
-      "x": 48,
-      "y": 48,
-      "width": 440,
-      "height": 200,
+      "width": "fill",
+      "height": "hug",
       "layout": {
+        "align": "stretch",
         "direction": "column",
         "gap": 12
       },
@@ -4794,6 +5757,23 @@
       "children": [
         "tx_signup_brand",
         "tx_signup_visual_sub"
+      ]
+    },
+    "col_signup_fields": {
+      "id": "col_signup_fields",
+      "type": "frame",
+      "name": "Signup fields",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 12
+      },
+      "children": [
+        "in_signup_name",
+        "in_signup_email",
+        "in_signup_pass"
       ]
     },
     "col_signup_form": {
@@ -4806,7 +5786,10 @@
         "align": "center",
         "direction": "column",
         "justify": "center",
-        "padding": 48
+        "padding": [
+          56,
+          64
+        ]
       },
       "fill": {
         "angle": 200,
@@ -4831,32 +5814,44 @@
         "card_signup"
       ]
     },
-    "col_signup_inner": {
-      "id": "col_signup_inner",
+    "col_signup_header": {
+      "id": "col_signup_header",
       "type": "frame",
-      "name": "Signup form",
-      "width": 400,
+      "name": "Signup header",
+      "width": "fill",
       "height": "hug",
       "layout": {
         "align": "stretch",
         "direction": "column",
-        "gap": 20
+        "gap": 8
       },
       "children": [
         "tx_signup_title",
-        "tx_signup_sub",
-        "in_signup_name",
-        "in_signup_email",
-        "in_signup_pass",
-        "bt_signup_submit",
-        "row_signup_login"
+        "tx_signup_sub"
+      ]
+    },
+    "col_signup_inner": {
+      "id": "col_signup_inner",
+      "type": "frame",
+      "name": "Signup form",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 24
+      },
+      "children": [
+        "col_signup_header",
+        "col_signup_fields",
+        "col_signup_actions"
       ]
     },
     "col_signup_visual": {
       "id": "col_signup_visual",
       "type": "frame",
       "name": "Signup visual",
-      "width": 560,
+      "width": 520,
       "height": "fill",
       "layout": {
         "direction": "column",
@@ -4878,9 +5873,29 @@
         ]
       },
       "children": [
-        "col_signup_brand",
+        "col_signup_visual_stack",
         "blob_signup_1",
         "blob_signup_2"
+      ]
+    },
+    "col_signup_visual_stack": {
+      "id": "col_signup_visual_stack",
+      "type": "frame",
+      "name": "Signup visual stack",
+      "x": 0,
+      "y": 0,
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "justify": "space-between",
+        "padding": 48
+      },
+      "zIndex": 2,
+      "children": [
+        "col_signup_brand",
+        "tx_signup_visual_foot"
       ]
     },
     "col_switcher_text": {
@@ -5117,6 +6132,163 @@
         "dot_tl_4"
       ]
     },
+    "day_fri": {
+      "id": "day_fri",
+      "type": "frame",
+      "name": "Day Fri",
+      "width": 36,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "radius": "$aura.radius.sm",
+      "children": [
+        "tx_day_fri",
+        "tx_d_fri"
+      ]
+    },
+    "day_mon": {
+      "id": "day_mon",
+      "type": "frame",
+      "name": "Day Mon active",
+      "width": 40,
+      "height": 52,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "shadow": "$aura.shadow.fab",
+      "children": [
+        "tx_day_mon",
+        "tx_d_mon"
+      ]
+    },
+    "day_sat": {
+      "id": "day_sat",
+      "type": "frame",
+      "name": "Day Sat",
+      "width": 36,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "radius": "$aura.radius.sm",
+      "children": [
+        "tx_day_sat",
+        "tx_d_sat"
+      ]
+    },
+    "day_sun": {
+      "id": "day_sun",
+      "type": "frame",
+      "name": "Day Sun",
+      "width": 36,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "radius": "$aura.radius.sm",
+      "children": [
+        "tx_day_sun",
+        "tx_d_sun"
+      ]
+    },
+    "day_thu": {
+      "id": "day_thu",
+      "type": "frame",
+      "name": "Day Thu",
+      "width": 36,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "radius": "$aura.radius.sm",
+      "children": [
+        "tx_day_thu",
+        "tx_d_thu"
+      ]
+    },
+    "day_tue": {
+      "id": "day_tue",
+      "type": "frame",
+      "name": "Day Tue",
+      "width": 36,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "radius": "$aura.radius.sm",
+      "children": [
+        "tx_day_tue",
+        "tx_d_tue"
+      ]
+    },
+    "day_wed": {
+      "id": "day_wed",
+      "type": "frame",
+      "name": "Day Wed",
+      "width": 36,
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 2,
+        "justify": "center"
+      },
+      "radius": "$aura.radius.sm",
+      "children": [
+        "tx_day_wed",
+        "tx_d_wed"
+      ]
+    },
+    "dock_aura": {
+      "id": "dock_aura",
+      "type": "frame",
+      "name": "Glass dock",
+      "width": "fill",
+      "height": 64,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.3",
+        "justify": "space-between",
+        "padding": [
+          8,
+          12
+        ]
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.pill",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "nav_aura",
+        "bt_aura_fab"
+      ]
+    },
     "dot1": {
       "id": "dot1",
       "type": "ellipse",
@@ -5181,6 +6353,56 @@
       "height": 12,
       "fill": "$color.sky"
     },
+    "ell_heart": {
+      "id": "ell_heart",
+      "type": "ellipse",
+      "name": "Heart orb",
+      "x": 70,
+      "y": 20,
+      "width": 80,
+      "height": 80,
+      "fill": "$aura.color.heart",
+      "opacity": 0.9
+    },
+    "fr_aura_guide": {
+      "id": "fr_aura_guide",
+      "type": "frame",
+      "name": "Aura · Guidelines",
+      "x": 45,
+      "y": -287,
+      "width": 1440,
+      "height": 1900,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "overflow": "hidden",
+      "fill": {
+        "angle": 135,
+        "kind": "linear",
+        "stops": [
+          {
+            "at": 0,
+            "color": "$aura.color.bg"
+          },
+          {
+            "at": 0.45,
+            "color": "$aura.color.bgMid"
+          },
+          {
+            "at": 1,
+            "color": "$aura.color.bgAlt"
+          }
+        ]
+      },
+      "children": [
+        "orb_aura_1",
+        "orb_aura_2",
+        "orb_aura_3",
+        "col_aura_main"
+      ]
+    },
     "fr_landing": {
       "id": "fr_landing",
       "type": "frame",
@@ -5240,6 +6462,42 @@
       },
       "children": [
         "card_login"
+      ]
+    },
+    "fr_onb_add_child": {
+      "id": "fr_onb_add_child",
+      "type": "frame",
+      "name": "Onboarding · Add child",
+      "x": 4560,
+      "y": 1000,
+      "width": 1440,
+      "height": 900,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": {
+        "angle": 140,
+        "kind": "linear",
+        "stops": [
+          {
+            "at": 0,
+            "color": "#D8EEE3"
+          },
+          {
+            "at": 0.5,
+            "color": "#B8D9C8"
+          },
+          {
+            "at": 1,
+            "color": "#A8CBE0"
+          }
+        ]
+      },
+      "children": [
+        "scrim_add_child",
+        "card_add_child"
       ]
     },
     "fr_onb_center": {
@@ -5998,6 +7256,166 @@
         "col_room_main"
       ]
     },
+    "g1": {
+      "id": "g1",
+      "type": "frame",
+      "name": "Guide atmosphere",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g1_t",
+        "tx_g1_b"
+      ]
+    },
+    "g2": {
+      "id": "g2",
+      "type": "frame",
+      "name": "Guide glass",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g2_t",
+        "tx_g2_b"
+      ]
+    },
+    "g3": {
+      "id": "g3",
+      "type": "frame",
+      "name": "Guide accent",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g3_t",
+        "tx_g3_b"
+      ]
+    },
+    "g4": {
+      "id": "g4",
+      "type": "frame",
+      "name": "Guide geometry",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g4_t",
+        "tx_g4_b"
+      ]
+    },
+    "g5": {
+      "id": "g5",
+      "type": "frame",
+      "name": "Guide depth",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g5_t",
+        "tx_g5_b"
+      ]
+    },
+    "g6": {
+      "id": "g6",
+      "type": "frame",
+      "name": "Guide playful",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g6_t",
+        "tx_g6_b"
+      ]
+    },
+    "g7": {
+      "id": "g7",
+      "type": "frame",
+      "name": "Guide chrome",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g7_t",
+        "tx_g7_b"
+      ]
+    },
+    "g8": {
+      "id": "g8",
+      "type": "frame",
+      "name": "Guide chat",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "tx_g8_t",
+        "tx_g8_b"
+      ]
+    },
+    "grid_aura_metrics": {
+      "id": "grid_aura_metrics",
+      "type": "frame",
+      "name": "Metrics grid",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.2"
+      },
+      "children": [
+        "row_m1",
+        "row_m2"
+      ]
+    },
+    "grid_guides": {
+      "id": "grid_guides",
+      "type": "frame",
+      "name": "Guidelines grid",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.4"
+      },
+      "children": [
+        "col_guides_a",
+        "col_guides_b"
+      ]
+    },
     "grid_keypad": {
       "id": "grid_keypad",
       "type": "frame",
@@ -6088,6 +7506,15 @@
       "height": 16,
       "fill": "$color.onSidebar.muted"
     },
+    "ic_aura_search": {
+      "id": "ic_aura_search",
+      "type": "icon",
+      "name": "search",
+      "width": 16,
+      "height": 16,
+      "fill": "$aura.color.soft",
+      "strokeWidth": 2
+    },
     "ic_bf_edit": {
       "id": "ic_bf_edit",
       "type": "icon",
@@ -6160,6 +7587,33 @@
       "height": 16,
       "fill": "$color.onSidebar.muted"
     },
+    "ic_child_name": {
+      "id": "ic_child_name",
+      "type": "icon",
+      "name": "user",
+      "width": 16,
+      "height": 16,
+      "fill": "$color.muted",
+      "strokeWidth": 2
+    },
+    "ic_child_parent": {
+      "id": "ic_child_parent",
+      "type": "icon",
+      "name": "mail",
+      "width": 16,
+      "height": 16,
+      "fill": "$color.muted",
+      "strokeWidth": 2
+    },
+    "ic_child_room": {
+      "id": "ic_child_room",
+      "type": "icon",
+      "name": "chevron-down",
+      "width": 16,
+      "height": 16,
+      "fill": "$color.muted",
+      "strokeWidth": 2
+    },
     "ic_child_rooms": {
       "id": "ic_child_rooms",
       "type": "icon",
@@ -6183,6 +7637,15 @@
       "width": 18,
       "height": 18,
       "fill": "$color.text"
+    },
+    "ic_fab_send": {
+      "id": "ic_fab_send",
+      "type": "icon",
+      "name": "arrow-up",
+      "width": 18,
+      "height": 18,
+      "fill": "$aura.color.onAccent",
+      "strokeWidth": 2.25
     },
     "ic_hero_trial": {
       "id": "ic_hero_trial",
@@ -6256,6 +7719,42 @@
       "height": 16,
       "fill": "$color.primary"
     },
+    "ic_mc": {
+      "id": "ic_mc",
+      "type": "icon",
+      "name": "zap",
+      "width": 14,
+      "height": 14,
+      "fill": "$aura.color.calories",
+      "strokeWidth": 2
+    },
+    "ic_mh": {
+      "id": "ic_mh",
+      "type": "icon",
+      "name": "heart",
+      "width": 14,
+      "height": 14,
+      "fill": "$aura.color.heart",
+      "strokeWidth": 2
+    },
+    "ic_mp": {
+      "id": "ic_mp",
+      "type": "icon",
+      "name": "trending-up",
+      "width": 14,
+      "height": 14,
+      "fill": "$aura.color.progress",
+      "strokeWidth": 2
+    },
+    "ic_ms": {
+      "id": "ic_ms",
+      "type": "icon",
+      "name": "chart-line",
+      "width": 14,
+      "height": 14,
+      "fill": "$aura.color.steps",
+      "strokeWidth": 2
+    },
     "ic_msg_att": {
       "id": "ic_msg_att",
       "type": "icon",
@@ -6312,6 +7811,15 @@
       "height": 16,
       "fill": "$color.onSidebar.muted"
     },
+    "ic_nav_cal": {
+      "id": "ic_nav_cal",
+      "type": "icon",
+      "name": "calendar",
+      "width": 18,
+      "height": 18,
+      "fill": "$aura.color.soft",
+      "strokeWidth": 2
+    },
     "ic_nav_dash": {
       "id": "ic_nav_dash",
       "type": "icon",
@@ -6319,6 +7827,15 @@
       "width": 16,
       "height": 16,
       "fill": "$color.onSidebar"
+    },
+    "ic_nav_home": {
+      "id": "ic_nav_home",
+      "type": "icon",
+      "name": "home",
+      "width": 18,
+      "height": 18,
+      "fill": "$aura.color.onAccent",
+      "strokeWidth": 2
     },
     "ic_nav_kids": {
       "id": "ic_nav_kids",
@@ -6351,6 +7868,15 @@
       "width": 16,
       "height": 16,
       "fill": "$color.onSidebar.muted"
+    },
+    "ic_nav_user": {
+      "id": "ic_nav_user",
+      "type": "icon",
+      "name": "user",
+      "width": 18,
+      "height": 18,
+      "fill": "$aura.color.soft",
+      "strokeWidth": 2
     },
     "ic_oaks_edit": {
       "id": "ic_oaks_edit",
@@ -6495,6 +8021,15 @@
       "width": 16,
       "height": 16,
       "fill": "$color.muted"
+    },
+    "ic_signup_name": {
+      "id": "ic_signup_name",
+      "type": "icon",
+      "name": "user",
+      "width": 16,
+      "height": 16,
+      "fill": "$color.muted",
+      "strokeWidth": 2
     },
     "ic_signup_pass": {
       "id": "ic_signup_pass",
@@ -6706,6 +8241,33 @@
         "bar_tl_photo_cap"
       ]
     },
+    "in_aura_pill": {
+      "id": "in_aura_pill",
+      "type": "frame",
+      "name": "Pill input",
+      "width": "fill",
+      "height": 48,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.2",
+        "padding": [
+          0,
+          "$aura.space.4"
+        ]
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.pill",
+      "shadow": "$aura.shadow.card",
+      "children": [
+        "ic_aura_search",
+        "tx_aura_search"
+      ]
+    },
     "in_center_addr": {
       "id": "in_center_addr",
       "type": "frame",
@@ -6764,6 +8326,70 @@
       "children": [
         "tx_center_tz_label",
         "box_center_tz"
+      ]
+    },
+    "in_child_allergy": {
+      "id": "in_child_allergy",
+      "type": "frame",
+      "name": "Allergy field",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_child_allergy_label",
+        "box_child_allergy"
+      ]
+    },
+    "in_child_name": {
+      "id": "in_child_name",
+      "type": "frame",
+      "name": "Child name field",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_child_name_label",
+        "box_child_name"
+      ]
+    },
+    "in_child_parent": {
+      "id": "in_child_parent",
+      "type": "frame",
+      "name": "Parent email field",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_child_parent_label",
+        "box_child_parent"
+      ]
+    },
+    "in_child_room": {
+      "id": "in_child_room",
+      "type": "frame",
+      "name": "Child room field",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_child_room_label",
+        "box_child_room"
       ]
     },
     "in_log_meal": {
@@ -7140,6 +8766,94 @@
         "ic_key_ok"
       ]
     },
+    "m_cal": {
+      "id": "m_cal",
+      "type": "frame",
+      "name": "Calories tile",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.1",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "row_mc",
+        "tx_mc_v"
+      ]
+    },
+    "m_heart": {
+      "id": "m_heart",
+      "type": "frame",
+      "name": "Heart tile",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.1",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "row_mh",
+        "tx_mh_v"
+      ]
+    },
+    "m_progress": {
+      "id": "m_progress",
+      "type": "frame",
+      "name": "Progress tile",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.1",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "row_mp",
+        "tx_mp_v"
+      ]
+    },
+    "m_steps": {
+      "id": "m_steps",
+      "type": "frame",
+      "name": "Steps tile",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.1",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "row_ms",
+        "tx_ms_v"
+      ]
+    },
     "nav_att": {
       "id": "nav_att",
       "type": "frame",
@@ -7316,6 +9030,27 @@
       "children": [
         "ic_att_settings",
         "tx_att_settings"
+      ]
+    },
+    "nav_aura": {
+      "id": "nav_aura",
+      "type": "frame",
+      "name": "Nav icons",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.4",
+        "padding": [
+          0,
+          "$aura.space.2"
+        ]
+      },
+      "children": [
+        "pill_home",
+        "ic_nav_cal",
+        "ic_nav_user"
       ]
     },
     "nav_child": {
@@ -7689,7 +9424,7 @@
         "align": "center",
         "direction": "row",
         "gap": 16,
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": [
           16,
           28
@@ -8065,6 +9800,85 @@
         "tx_room_settings"
       ]
     },
+    "orb_aura_1": {
+      "id": "orb_aura_1",
+      "type": "ellipse",
+      "name": "Orb blue",
+      "x": 40,
+      "y": 80,
+      "width": 360,
+      "height": 360,
+      "fill": "$aura.color.orbBlue",
+      "opacity": 0.9,
+      "blur": 60
+    },
+    "orb_aura_2": {
+      "id": "orb_aura_2",
+      "type": "ellipse",
+      "name": "Orb pink",
+      "x": 900,
+      "y": 280,
+      "width": 400,
+      "height": 400,
+      "fill": "$aura.color.orbPink",
+      "opacity": 0.85,
+      "blur": 70
+    },
+    "orb_aura_3": {
+      "id": "orb_aura_3",
+      "type": "ellipse",
+      "name": "Orb lavender",
+      "x": 480,
+      "y": 1180,
+      "width": 420,
+      "height": 420,
+      "fill": "$aura.color.orbLav",
+      "opacity": 0.8,
+      "blur": 80
+    },
+    "phone_aura_dash": {
+      "id": "phone_aura_dash",
+      "type": "frame",
+      "name": "Dashboard phone",
+      "width": 320,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.3",
+        "padding": "$aura.space.4"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.xl",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "row_aura_dates",
+        "card_aura_psych",
+        "grid_aura_metrics"
+      ]
+    },
+    "pill_home": {
+      "id": "pill_home",
+      "type": "frame",
+      "name": "Home active",
+      "width": 40,
+      "height": 40,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "children": [
+        "ic_nav_home"
+      ]
+    },
     "pr_bf_ratio": {
       "id": "pr_bf_ratio",
       "type": "progress",
@@ -8142,6 +9956,77 @@
       "value": 1,
       "barFill": "$color.primary"
     },
+    "r_lg": {
+      "id": "r_lg",
+      "type": "frame",
+      "name": "Radius lg",
+      "width": 104,
+      "height": 72,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.lg",
+      "children": [
+        "tx_r_lg"
+      ]
+    },
+    "r_md": {
+      "id": "r_md",
+      "type": "frame",
+      "name": "Radius md",
+      "width": 88,
+      "height": 64,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.md",
+      "opacity": 0.9,
+      "children": [
+        "tx_r_md"
+      ]
+    },
+    "r_pill": {
+      "id": "r_pill",
+      "type": "frame",
+      "name": "Radius pill",
+      "width": 120,
+      "height": 40,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.pill",
+      "shadow": "$aura.shadow.fab",
+      "children": [
+        "tx_r_pill"
+      ]
+    },
+    "r_sm": {
+      "id": "r_sm",
+      "type": "frame",
+      "name": "Radius sm",
+      "width": 72,
+      "height": 56,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "justify": "center"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.sm",
+      "opacity": 0.85,
+      "children": [
+        "tx_r_sm"
+      ]
+    },
     "rect_peek_art": {
       "id": "rect_peek_art",
       "type": "frame",
@@ -8217,6 +10102,23 @@
         "col_act_3"
       ]
     },
+    "row_add_child_actions": {
+      "id": "row_add_child_actions",
+      "type": "frame",
+      "name": "Add child actions",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 12,
+        "justify": "end"
+      },
+      "children": [
+        "bt_add_child_cancel",
+        "bt_add_child_save"
+      ]
+    },
     "row_att_filters": {
       "id": "row_att_filters",
       "type": "frame",
@@ -8241,11 +10143,122 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "col_att_head",
         "row_att_filters"
+      ]
+    },
+    "row_aura_core": {
+      "id": "row_aura_core",
+      "type": "frame",
+      "name": "Core row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.3"
+      },
+      "children": [
+        "sw_surface",
+        "sw_ink",
+        "sw_muted",
+        "sw_accent"
+      ]
+    },
+    "row_aura_dates": {
+      "id": "row_aura_dates",
+      "type": "frame",
+      "name": "Date rail",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.2",
+        "justify": "space-between"
+      },
+      "children": [
+        "day_sun",
+        "day_mon",
+        "day_tue",
+        "day_wed",
+        "day_thu",
+        "day_fri",
+        "day_sat"
+      ]
+    },
+    "row_aura_mesh": {
+      "id": "row_aura_mesh",
+      "type": "frame",
+      "name": "Mesh row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.3",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.ink",
+      "radius": "$aura.radius.md",
+      "children": [
+        "sw_bg",
+        "sw_bgMid",
+        "sw_bgAlt"
+      ]
+    },
+    "row_aura_metrics": {
+      "id": "row_aura_metrics",
+      "type": "frame",
+      "name": "Metrics row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.3"
+      },
+      "children": [
+        "sw_progress",
+        "sw_heart",
+        "sw_calories",
+        "sw_steps"
+      ]
+    },
+    "row_aura_patterns": {
+      "id": "row_aura_patterns",
+      "type": "frame",
+      "name": "Patterns row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.4"
+      },
+      "children": [
+        "phone_aura_dash",
+        "col_aura_chat",
+        "col_aura_chrome"
+      ]
+    },
+    "row_aura_type_geo": {
+      "id": "row_aura_type_geo",
+      "type": "frame",
+      "name": "Type and geometry row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.4"
+      },
+      "children": [
+        "sec_aura_type",
+        "sec_aura_geo"
       ]
     },
     "row_center_meta": {
@@ -8463,7 +10476,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "col_dash_head_text",
@@ -8563,7 +10576,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "col_home_greet",
@@ -8711,7 +10724,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "tx_log_title",
@@ -8788,6 +10801,102 @@
         "card_step_parent"
       ]
     },
+    "row_m1": {
+      "id": "row_m1",
+      "type": "frame",
+      "name": "Metrics row 1",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.2"
+      },
+      "children": [
+        "m_progress",
+        "m_heart"
+      ]
+    },
+    "row_m2": {
+      "id": "row_m2",
+      "type": "frame",
+      "name": "Metrics row 2",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$aura.space.2"
+      },
+      "children": [
+        "m_cal",
+        "m_steps"
+      ]
+    },
+    "row_mc": {
+      "id": "row_mc",
+      "type": "frame",
+      "name": "Cal head",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "ic_mc",
+        "tx_mc_l"
+      ]
+    },
+    "row_mh": {
+      "id": "row_mh",
+      "type": "frame",
+      "name": "Heart head",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "ic_mh",
+        "tx_mh_l"
+      ]
+    },
+    "row_mp": {
+      "id": "row_mp",
+      "type": "frame",
+      "name": "Progress head",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "ic_mp",
+        "tx_mp_l"
+      ]
+    },
+    "row_ms": {
+      "id": "row_ms",
+      "type": "frame",
+      "name": "Steps head",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$aura.space.1"
+      },
+      "children": [
+        "ic_ms",
+        "tx_ms_l"
+      ]
+    },
     "row_nav_actions": {
       "id": "row_nav_actions",
       "type": "frame",
@@ -8814,7 +10923,7 @@
         "align": "center",
         "direction": "row",
         "gap": 12,
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "bt_onb2_back",
@@ -8831,7 +10940,7 @@
         "align": "center",
         "direction": "row",
         "gap": 12,
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "bt_onb3_back",
@@ -8848,7 +10957,7 @@
         "align": "center",
         "direction": "row",
         "gap": 12,
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "bt_onb4_back",
@@ -8865,7 +10974,7 @@
         "align": "center",
         "direction": "row",
         "gap": 12,
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "bt_onb5_back",
@@ -8881,7 +10990,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": 14
       },
       "fill": "$color.bg",
@@ -8900,7 +11009,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": 14
       },
       "fill": "$color.bg",
@@ -8919,7 +11028,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": 14
       },
       "fill": "$color.bg",
@@ -9081,6 +11190,24 @@
         "bt_quick_mood"
       ]
     },
+    "row_radius": {
+      "id": "row_radius",
+      "type": "frame",
+      "name": "Radius samples",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "end",
+        "direction": "row",
+        "gap": "$aura.space.3"
+      },
+      "children": [
+        "r_sm",
+        "r_md",
+        "r_lg",
+        "r_pill"
+      ]
+    },
     "row_role_tabs": {
       "id": "row_role_tabs",
       "type": "frame",
@@ -9115,7 +11242,7 @@
         "align": "center",
         "direction": "row",
         "gap": 16,
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": 16
       },
       "fill": "$color.bg",
@@ -9134,7 +11261,7 @@
       "layout": {
         "align": "center",
         "direction": "row",
-        "justify": "space_between"
+        "justify": "space-between"
       },
       "children": [
         "col_room_head",
@@ -9151,7 +11278,7 @@
         "align": "center",
         "direction": "row",
         "gap": 16,
-        "justify": "space_between",
+        "justify": "space-between",
         "padding": 16
       },
       "fill": "$color.bg",
@@ -9283,6 +11410,24 @@
       "children": [
         "tx_signup_have",
         "bt_signup_to_login"
+      ]
+    },
+    "row_space_bars": {
+      "id": "row_space_bars",
+      "type": "frame",
+      "name": "Space bars",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.2"
+      },
+      "children": [
+        "bar_s4",
+        "bar_s5",
+        "bar_s6",
+        "bar_s7"
       ]
     },
     "row_staff_asha": {
@@ -9531,6 +11676,161 @@
       "children": [
         "col_tl_rail_2",
         "col_tl_2"
+      ]
+    },
+    "scrim_add_child": {
+      "id": "scrim_add_child",
+      "type": "frame",
+      "name": "Add child scrim",
+      "x": 0,
+      "y": 0,
+      "width": "fill",
+      "height": "fill",
+      "fill": "rgba(15,42,31,0.45)",
+      "zIndex": 1,
+      "link": {
+        "present": "navigate",
+        "to": "fr_onb_children",
+        "transition": "fade"
+      },
+      "children": []
+    },
+    "sec_aura_color": {
+      "id": "sec_aura_color",
+      "type": "frame",
+      "name": "Color section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.4",
+        "padding": "$aura.space.5"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_aura_color_h",
+        "tx_aura_color_d",
+        "row_aura_mesh",
+        "row_aura_core",
+        "row_aura_metrics"
+      ]
+    },
+    "sec_aura_geo": {
+      "id": "sec_aura_geo",
+      "type": "frame",
+      "name": "Geometry section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.4",
+        "padding": "$aura.space.5"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_aura_geo_h",
+        "tx_aura_geo_d",
+        "row_radius",
+        "tx_space_note",
+        "row_space_bars"
+      ]
+    },
+    "sec_aura_guides": {
+      "id": "sec_aura_guides",
+      "type": "frame",
+      "name": "Guidelines section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.4",
+        "padding": "$aura.space.5"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_aura_guides_h",
+        "grid_guides"
+      ]
+    },
+    "sec_aura_patterns": {
+      "id": "sec_aura_patterns",
+      "type": "frame",
+      "name": "Patterns section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.5",
+        "padding": "$aura.space.5"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_aura_pat_h",
+        "tx_aura_pat_d",
+        "row_aura_patterns"
+      ]
+    },
+    "sec_aura_type": {
+      "id": "sec_aura_type",
+      "type": "frame",
+      "name": "Type section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$aura.space.4",
+        "padding": "$aura.space.5"
+      },
+      "fill": "$aura.color.surface",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1.5
+      },
+      "radius": "$aura.radius.lg",
+      "shadow": "$aura.shadow.card",
+      "backdropBlur": 28,
+      "children": [
+        "tx_aura_type_h",
+        "tx_aura_type_d",
+        "tx_spec_display",
+        "tx_spec_title",
+        "tx_spec_metric",
+        "tx_spec_body",
+        "tx_spec_label",
+        "tx_spec_caption"
       ]
     },
     "sec_final_cta": {
@@ -9982,6 +12282,213 @@
       "width": "fill",
       "height": 16,
       "children": []
+    },
+    "sw_accent": {
+      "id": "sw_accent",
+      "type": "frame",
+      "name": "Swatch accent",
+      "width": "fill",
+      "height": 88,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.accent",
+      "radius": "$aura.radius.md",
+      "shadow": "$aura.shadow.fab",
+      "children": [
+        "tx_sw_accent"
+      ]
+    },
+    "sw_bg": {
+      "id": "sw_bg",
+      "type": "frame",
+      "name": "Swatch bg",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.2",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.bg",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_bg"
+      ]
+    },
+    "sw_bgAlt": {
+      "id": "sw_bgAlt",
+      "type": "frame",
+      "name": "Swatch bgAlt",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.2",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.bgAlt",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_bgAlt"
+      ]
+    },
+    "sw_bgMid": {
+      "id": "sw_bgMid",
+      "type": "frame",
+      "name": "Swatch bgMid",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "gap": "$aura.space.2",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.bgMid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_bgMid"
+      ]
+    },
+    "sw_calories": {
+      "id": "sw_calories",
+      "type": "frame",
+      "name": "Swatch calories",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.calories",
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_calories"
+      ]
+    },
+    "sw_heart": {
+      "id": "sw_heart",
+      "type": "frame",
+      "name": "Swatch heart",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.heart",
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_heart"
+      ]
+    },
+    "sw_ink": {
+      "id": "sw_ink",
+      "type": "frame",
+      "name": "Swatch ink",
+      "width": "fill",
+      "height": 88,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.ink",
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_ink"
+      ]
+    },
+    "sw_muted": {
+      "id": "sw_muted",
+      "type": "frame",
+      "name": "Swatch muted",
+      "width": "fill",
+      "height": 88,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.muted",
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_muted"
+      ]
+    },
+    "sw_progress": {
+      "id": "sw_progress",
+      "type": "frame",
+      "name": "Swatch progress",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.progress",
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_progress"
+      ]
+    },
+    "sw_steps": {
+      "id": "sw_steps",
+      "type": "frame",
+      "name": "Swatch steps",
+      "width": "fill",
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.steps",
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_steps"
+      ]
+    },
+    "sw_surface": {
+      "id": "sw_surface",
+      "type": "frame",
+      "name": "Swatch surface",
+      "width": "fill",
+      "height": 88,
+      "layout": {
+        "direction": "column",
+        "justify": "end",
+        "padding": "$aura.space.3"
+      },
+      "fill": "$aura.color.surfaceSolid",
+      "stroke": {
+        "color": "$aura.color.glassBorder",
+        "width": 1
+      },
+      "radius": "$aura.radius.md",
+      "children": [
+        "tx_sw_surface"
+      ]
     },
     "tab_d_day": {
       "id": "tab_d_day",
@@ -10564,6 +13071,46 @@
       "content": "Add child",
       "font": "$type.label"
     },
+    "tx_add_child_cancel": {
+      "id": "tx_add_child_cancel",
+      "type": "text",
+      "name": "Cancel label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Cancel",
+      "font": "$type.label"
+    },
+    "tx_add_child_save": {
+      "id": "tx_add_child_save",
+      "type": "text",
+      "name": "Save child label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.onPrimary",
+      "content": "Save child",
+      "font": "$type.label"
+    },
+    "tx_add_child_sub": {
+      "id": "tx_add_child_sub",
+      "type": "text",
+      "name": "Add child subtitle",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text.secondary",
+      "content": "We’ll use the parent email when you send invites.",
+      "font": "$type.body"
+    },
+    "tx_add_child_title": {
+      "id": "tx_add_child_title",
+      "type": "text",
+      "name": "Add child title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Add a child",
+      "font": "$type.headline"
+    },
     "tx_add_room": {
       "id": "tx_add_room",
       "type": "text",
@@ -10764,6 +13311,146 @@
       "content": "Attendance",
       "font": "$type.headline"
     },
+    "tx_aura_color_d": {
+      "id": "tx_aura_color_d",
+      "type": "text",
+      "name": "Color description",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Mesh atmosphere, glass surfaces, one sky accent, metric hues for status only.",
+      "font": "$aura.type.body"
+    },
+    "tx_aura_color_h": {
+      "id": "tx_aura_color_h",
+      "type": "text",
+      "name": "Color heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Color",
+      "font": "$aura.type.title"
+    },
+    "tx_aura_eyebrow": {
+      "id": "tx_aura_eyebrow",
+      "type": "text",
+      "name": "Eyebrow",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "LittleDay · Inspiration system",
+      "font": "$aura.type.label"
+    },
+    "tx_aura_geo_d": {
+      "id": "tx_aura_geo_d",
+      "type": "text",
+      "name": "Geometry description",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Soft geometry: panels use lg/xl; chrome uses pills. Rhythm 4→32.",
+      "font": "$aura.type.body"
+    },
+    "tx_aura_geo_h": {
+      "id": "tx_aura_geo_h",
+      "type": "text",
+      "name": "Geometry heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Radius & space",
+      "font": "$aura.type.title"
+    },
+    "tx_aura_guides_h": {
+      "id": "tx_aura_guides_h",
+      "type": "text",
+      "name": "Guidelines heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Guidelines",
+      "font": "$aura.type.title"
+    },
+    "tx_aura_lede": {
+      "id": "tx_aura_lede",
+      "type": "text",
+      "name": "Lede",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Soft glass + mesh atmosphere for calm, experience-led screens. Use $aura.* tokens — keep LittleDay green tokens for product chrome.",
+      "font": "$aura.type.body"
+    },
+    "tx_aura_mode": {
+      "id": "tx_aura_mode",
+      "type": "text",
+      "name": "Mode label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Mode · experience",
+      "font": "$aura.type.caption"
+    },
+    "tx_aura_pat_d": {
+      "id": "tx_aura_pat_d",
+      "type": "text",
+      "name": "Patterns description",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Phone-density strip: date rail, metric grid, chat, floating glass chrome.",
+      "font": "$aura.type.body"
+    },
+    "tx_aura_pat_h": {
+      "id": "tx_aura_pat_h",
+      "type": "text",
+      "name": "Patterns heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Patterns",
+      "font": "$aura.type.title"
+    },
+    "tx_aura_search": {
+      "id": "tx_aura_search",
+      "type": "text",
+      "name": "Search placeholder",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.soft",
+      "content": "Ask Aura…",
+      "font": "$aura.type.body"
+    },
+    "tx_aura_title": {
+      "id": "tx_aura_title",
+      "type": "text",
+      "name": "Title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Aura",
+      "font": "$aura.type.display"
+    },
+    "tx_aura_type_d": {
+      "id": "tx_aura_type_d",
+      "type": "text",
+      "name": "Type description",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Plus Jakarta Sans — geometric soft sans for titles, metrics, and UI.",
+      "font": "$aura.type.body"
+    },
+    "tx_aura_type_h": {
+      "id": "tx_aura_type_h",
+      "type": "text",
+      "name": "Type heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Typography",
+      "font": "$aura.type.title"
+    },
     "tx_bf_meta": {
       "id": "tx_bf_meta",
       "type": "text",
@@ -10804,6 +13491,16 @@
       "content": "Butterflies",
       "font": "$type.label"
     },
+    "tx_bubble_ai": {
+      "id": "tx_bubble_ai",
+      "type": "text",
+      "name": "AI message",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Steady at 98 BPM — a calm resting range for you.",
+      "font": "$aura.type.body"
+    },
     "tx_bubble_p_parent": {
       "id": "tx_bubble_p_parent",
       "type": "text",
@@ -10843,6 +13540,16 @@
       "fill": "$color.onPrimary",
       "content": "Maya enjoyed snack — apple slices & crackers, ate it all.",
       "font": "$type.body"
+    },
+    "tx_bubble_user": {
+      "id": "tx_bubble_user",
+      "type": "text",
+      "name": "User message",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "How is my heart today?",
+      "font": "$aura.type.body"
     },
     "tx_center_addr_label": {
       "id": "tx_center_addr_label",
@@ -10923,6 +13630,16 @@
       "fill": "$color.text",
       "content": "Central Time (CT)",
       "font": "$type.body"
+    },
+    "tx_chat_h": {
+      "id": "tx_chat_h",
+      "type": "text",
+      "name": "Chat heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "AI Powered Health Summary",
+      "font": "$aura.type.title"
     },
     "tx_chat_meta": {
       "id": "tx_chat_meta",
@@ -11024,6 +13741,26 @@
       "content": "Ready",
       "font": "$type.caption"
     },
+    "tx_child_allergy_label": {
+      "id": "tx_child_allergy_label",
+      "type": "text",
+      "name": "Allergy label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text.secondary",
+      "content": "Allergies",
+      "font": "$type.small"
+    },
+    "tx_child_allergy_val": {
+      "id": "tx_child_allergy_val",
+      "type": "text",
+      "name": "Allergy value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "None",
+      "font": "$type.body"
+    },
     "tx_child_att": {
       "id": "tx_child_att",
       "type": "text",
@@ -11094,6 +13831,46 @@
       "content": "Messages",
       "font": "$type.label"
     },
+    "tx_child_name_label": {
+      "id": "tx_child_name_label",
+      "type": "text",
+      "name": "Child name label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text.secondary",
+      "content": "Child’s full name",
+      "font": "$type.small"
+    },
+    "tx_child_name_val": {
+      "id": "tx_child_name_val",
+      "type": "text",
+      "name": "Child name value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Noah Kim",
+      "font": "$type.body"
+    },
+    "tx_child_parent_label": {
+      "id": "tx_child_parent_label",
+      "type": "text",
+      "name": "Parent email label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text.secondary",
+      "content": "Parent email",
+      "font": "$type.small"
+    },
+    "tx_child_parent_val": {
+      "id": "tx_child_parent_val",
+      "type": "text",
+      "name": "Parent email value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "mina.kim@email.com",
+      "font": "$type.body"
+    },
     "tx_child_prof_meta": {
       "id": "tx_child_prof_meta",
       "type": "text",
@@ -11113,6 +13890,26 @@
       "fill": "$color.text",
       "content": "Maya Chen",
       "font": "$type.headline"
+    },
+    "tx_child_room_label": {
+      "id": "tx_child_room_label",
+      "type": "text",
+      "name": "Room label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text.secondary",
+      "content": "Room",
+      "font": "$type.small"
+    },
+    "tx_child_room_val": {
+      "id": "tx_child_room_val",
+      "type": "text",
+      "name": "Room value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Butterflies",
+      "font": "$type.body"
     },
     "tx_child_rooms": {
       "id": "tx_child_rooms",
@@ -11144,6 +13941,16 @@
       "content": "Butterflies",
       "font": "$type.small"
     },
+    "tx_chip_bpm": {
+      "id": "tx_chip_bpm",
+      "type": "text",
+      "name": "BPM chip label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "98 BPM",
+      "font": "$aura.type.caption"
+    },
     "tx_chip_oaks": {
       "id": "tx_chip_oaks",
       "type": "text",
@@ -11153,6 +13960,26 @@
       "fill": "$color.text",
       "content": "Oaks",
       "font": "$type.small"
+    },
+    "tx_chip_rest": {
+      "id": "tx_chip_rest",
+      "type": "text",
+      "name": "Resting label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Resting",
+      "font": "$aura.type.caption"
+    },
+    "tx_chrome_h": {
+      "id": "tx_chrome_h",
+      "type": "text",
+      "name": "Chrome heading",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Floating chrome",
+      "font": "$aura.type.label"
     },
     "tx_compose_ph": {
       "id": "tx_compose_ph",
@@ -11184,6 +14011,76 @@
       "content": "Jordan Chen (mom) · jordan.chen@email.com\nAlex Chen (dad) · Authorized pickup",
       "font": "$type.body"
     },
+    "tx_d_fri": {
+      "id": "tx_d_fri",
+      "type": "text",
+      "name": "20",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "20",
+      "font": "$aura.type.label"
+    },
+    "tx_d_mon": {
+      "id": "tx_d_mon",
+      "type": "text",
+      "name": "16",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "16",
+      "font": "$aura.type.label"
+    },
+    "tx_d_sat": {
+      "id": "tx_d_sat",
+      "type": "text",
+      "name": "21",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "21",
+      "font": "$aura.type.label"
+    },
+    "tx_d_sun": {
+      "id": "tx_d_sun",
+      "type": "text",
+      "name": "15",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "15",
+      "font": "$aura.type.label"
+    },
+    "tx_d_thu": {
+      "id": "tx_d_thu",
+      "type": "text",
+      "name": "19",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "19",
+      "font": "$aura.type.label"
+    },
+    "tx_d_tue": {
+      "id": "tx_d_tue",
+      "type": "text",
+      "name": "17",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "17",
+      "font": "$aura.type.label"
+    },
+    "tx_d_wed": {
+      "id": "tx_d_wed",
+      "type": "text",
+      "name": "18",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "18",
+      "font": "$aura.type.label"
+    },
     "tx_dash_date": {
       "id": "tx_dash_date",
       "type": "text",
@@ -11214,6 +14111,56 @@
       "content": "Thursday, Oct 22",
       "font": "$type.small"
     },
+    "tx_day_fri": {
+      "id": "tx_day_fri",
+      "type": "text",
+      "name": "Fri",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Fri",
+      "font": "$aura.type.caption"
+    },
+    "tx_day_mon": {
+      "id": "tx_day_mon",
+      "type": "text",
+      "name": "Mon",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "Mon",
+      "font": "$aura.type.caption"
+    },
+    "tx_day_sat": {
+      "id": "tx_day_sat",
+      "type": "text",
+      "name": "Sat",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Sat",
+      "font": "$aura.type.caption"
+    },
+    "tx_day_sun": {
+      "id": "tx_day_sun",
+      "type": "text",
+      "name": "Sun",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Sun",
+      "font": "$aura.type.caption"
+    },
+    "tx_day_thu": {
+      "id": "tx_day_thu",
+      "type": "text",
+      "name": "Thu",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Thu",
+      "font": "$aura.type.caption"
+    },
     "tx_day_title": {
       "id": "tx_day_title",
       "type": "text",
@@ -11243,6 +14190,26 @@
       "fill": "$color.text",
       "content": "Today · Oct 22",
       "font": "$type.label"
+    },
+    "tx_day_tue": {
+      "id": "tx_day_tue",
+      "type": "text",
+      "name": "Tue",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Tue",
+      "font": "$aura.type.caption"
+    },
+    "tx_day_wed": {
+      "id": "tx_day_wed",
+      "type": "text",
+      "name": "Wed",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Wed",
+      "font": "$aura.type.caption"
     },
     "tx_day_yest_body": {
       "id": "tx_day_yest_body",
@@ -11336,6 +14303,166 @@
       "fill": "$color.text",
       "content": "Start free trial",
       "font": "$type.label"
+    },
+    "tx_g1_b": {
+      "id": "tx_g1_b",
+      "type": "text",
+      "name": "G1 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Every screen sits on the soft mesh gradient — never flat white or solid dark.",
+      "font": "$aura.type.body"
+    },
+    "tx_g1_t": {
+      "id": "tx_g1_t",
+      "type": "text",
+      "name": "G1 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "01 · Atmosphere",
+      "font": "$aura.type.label"
+    },
+    "tx_g2_b": {
+      "id": "tx_g2_b",
+      "type": "text",
+      "name": "G2 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Translucent white + blur + light border + soft shadow. One glass plane per section.",
+      "font": "$aura.type.body"
+    },
+    "tx_g2_t": {
+      "id": "tx_g2_t",
+      "type": "text",
+      "name": "G2 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "02 · Glass, not chrome cards",
+      "font": "$aura.type.label"
+    },
+    "tx_g3_b": {
+      "id": "tx_g3_b",
+      "type": "text",
+      "name": "G3 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Sky blue owns FAB, active nav, user chat. Metric hues are status only.",
+      "font": "$aura.type.body"
+    },
+    "tx_g3_t": {
+      "id": "tx_g3_t",
+      "type": "text",
+      "name": "G3 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "03 · One accent",
+      "font": "$aura.type.label"
+    },
+    "tx_g4_b": {
+      "id": "tx_g4_b",
+      "type": "text",
+      "name": "G4 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Large radii on panels; pills for inputs, chips, and floating tab bars.",
+      "font": "$aura.type.body"
+    },
+    "tx_g4_t": {
+      "id": "tx_g4_t",
+      "type": "text",
+      "name": "G4 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "04 · Soft geometry",
+      "font": "$aura.type.label"
+    },
+    "tx_g5_b": {
+      "id": "tx_g5_b",
+      "type": "text",
+      "name": "G5 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Gradient → glass → solid accent → 3D clay. Ink is tinted charcoal.",
+      "font": "$aura.type.body"
+    },
+    "tx_g5_t": {
+      "id": "tx_g5_t",
+      "type": "text",
+      "name": "G5 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "05 · Depth via layering",
+      "font": "$aura.type.label"
+    },
+    "tx_g6_b": {
+      "id": "tx_g6_b",
+      "type": "text",
+      "name": "G6 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "3D mascot/organs for warmth; icons thin-stroke (~2px), colored by role.",
+      "font": "$aura.type.body"
+    },
+    "tx_g6_t": {
+      "id": "tx_g6_t",
+      "type": "text",
+      "name": "G6 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "06 · Playful clinical",
+      "font": "$aura.type.label"
+    },
+    "tx_g7_b": {
+      "id": "tx_g7_b",
+      "type": "text",
+      "name": "G7 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Bottom nav is a glass island; primary action is a circular blue FAB with glow.",
+      "font": "$aura.type.body"
+    },
+    "tx_g7_t": {
+      "id": "tx_g7_t",
+      "type": "text",
+      "name": "G7 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "07 · Floating chrome",
+      "font": "$aura.type.label"
+    },
+    "tx_g8_b": {
+      "id": "tx_g8_b",
+      "type": "text",
+      "name": "G8 body",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "User = solid accent; AI = glass. Padding 20 · gap 16 · inset 20–24.",
+      "font": "$aura.type.body"
+    },
+    "tx_g8_t": {
+      "id": "tx_g8_t",
+      "type": "text",
+      "name": "G8 title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "08 · Chat & spacing",
+      "font": "$aura.type.label"
     },
     "tx_grid_jay_name": {
       "id": "tx_grid_jay_name",
@@ -12149,6 +15276,86 @@
       "content": "Maya Chen",
       "font": "$type.label"
     },
+    "tx_mc_l": {
+      "id": "tx_mc_l",
+      "type": "text",
+      "name": "Cal label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Calories",
+      "font": "$aura.type.caption"
+    },
+    "tx_mc_v": {
+      "id": "tx_mc_v",
+      "type": "text",
+      "name": "Cal value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "1.2k",
+      "font": "$aura.type.title"
+    },
+    "tx_mh_l": {
+      "id": "tx_mh_l",
+      "type": "text",
+      "name": "Heart label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Heart Rate",
+      "font": "$aura.type.caption"
+    },
+    "tx_mh_v": {
+      "id": "tx_mh_v",
+      "type": "text",
+      "name": "Heart value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "98",
+      "font": "$aura.type.title"
+    },
+    "tx_mp_l": {
+      "id": "tx_mp_l",
+      "type": "text",
+      "name": "Progress label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Progress",
+      "font": "$aura.type.caption"
+    },
+    "tx_mp_v": {
+      "id": "tx_mp_v",
+      "type": "text",
+      "name": "Progress value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "72%",
+      "font": "$aura.type.title"
+    },
+    "tx_ms_l": {
+      "id": "tx_ms_l",
+      "type": "text",
+      "name": "Steps label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Steps",
+      "font": "$aura.type.caption"
+    },
+    "tx_ms_v": {
+      "id": "tx_ms_v",
+      "type": "text",
+      "name": "Steps value",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "8.4k",
+      "font": "$aura.type.title"
+    },
     "tx_msg_att": {
       "id": "tx_msg_att",
       "type": "text",
@@ -12959,6 +16166,26 @@
       "content": "Built for centers that want less admin noise",
       "font": "$type.headline"
     },
+    "tx_psych_sub": {
+      "id": "tx_psych_sub",
+      "type": "text",
+      "name": "Psych sub",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "AI summary ready",
+      "font": "$aura.type.caption"
+    },
+    "tx_psych_title": {
+      "id": "tx_psych_title",
+      "type": "text",
+      "name": "Psych title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Virtual Psychologist",
+      "font": "$aura.type.label"
+    },
     "tx_quick_meal": {
       "id": "tx_quick_meal",
       "type": "text",
@@ -13068,6 +16295,46 @@
       "fill": "$color.muted",
       "content": "Jordan Park · Parent",
       "font": "$type.small"
+    },
+    "tx_r_lg": {
+      "id": "tx_r_lg",
+      "type": "text",
+      "name": "lg",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "lg",
+      "font": "$aura.type.caption"
+    },
+    "tx_r_md": {
+      "id": "tx_r_md",
+      "type": "text",
+      "name": "md",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "md",
+      "font": "$aura.type.caption"
+    },
+    "tx_r_pill": {
+      "id": "tx_r_pill",
+      "type": "text",
+      "name": "pill",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "pill",
+      "font": "$aura.type.caption"
+    },
+    "tx_r_sm": {
+      "id": "tx_r_sm",
+      "type": "text",
+      "name": "sm",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "sm",
+      "font": "$aura.type.caption"
     },
     "tx_recent_days_title": {
       "id": "tx_recent_days_title",
@@ -13345,9 +16612,9 @@
       "name": "Signup brand",
       "width": "fill",
       "height": "hug",
-      "fill": "#FFFFFF",
+      "fill": "$color.onPrimary",
       "content": "LittleDay",
-      "font": "$type.headline"
+      "font": "$type.display"
     },
     "tx_signup_email_label": {
       "id": "tx_signup_email_label",
@@ -13459,15 +16726,95 @@
       "content": "Log in",
       "font": "$type.small"
     },
+    "tx_signup_visual_foot": {
+      "id": "tx_signup_visual_foot",
+      "type": "text",
+      "name": "Signup visual footer",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.onSidebar.muted",
+      "content": "Built for directors who want a calmer first week.",
+      "font": "$type.body"
+    },
     "tx_signup_visual_sub": {
       "id": "tx_signup_visual_sub",
       "type": "text",
       "name": "Signup visual sub",
       "width": "fill",
       "height": "hug",
-      "fill": "rgba(255,255,255,0.85)",
+      "fill": "$color.onSidebar",
       "content": "Open your center on LittleDay in a few minutes.",
       "font": "$type.body"
+    },
+    "tx_space_note": {
+      "id": "tx_space_note",
+      "type": "text",
+      "name": "Space note",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "space · 4 / 8 / 12 / 16 / 20 / 24 / 32\nCard padding 20 · stack gap 16 · screen inset 20–24",
+      "font": "$aura.type.body"
+    },
+    "tx_spec_body": {
+      "id": "tx_spec_body",
+      "type": "text",
+      "name": "Body specimen",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Body · Soft glass sits over a calm mesh. Keep copy short and reassuring.",
+      "font": "$aura.type.body"
+    },
+    "tx_spec_caption": {
+      "id": "tx_spec_caption",
+      "type": "text",
+      "name": "Caption specimen",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.muted",
+      "content": "Caption · Sun · Mon · Tue · BPM",
+      "font": "$aura.type.caption"
+    },
+    "tx_spec_display": {
+      "id": "tx_spec_display",
+      "type": "text",
+      "name": "Display specimen",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Display · AI Powered Health",
+      "font": "$aura.type.display"
+    },
+    "tx_spec_label": {
+      "id": "tx_spec_label",
+      "type": "text",
+      "name": "Label specimen",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Label · Heart Rate",
+      "font": "$aura.type.label"
+    },
+    "tx_spec_metric": {
+      "id": "tx_spec_metric",
+      "type": "text",
+      "name": "Metric specimen",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Metric · 98 BPM",
+      "font": "$aura.type.title"
+    },
+    "tx_spec_title": {
+      "id": "tx_spec_title",
+      "type": "text",
+      "name": "Title specimen",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "Title · Virtual Psychologist",
+      "font": "$aura.type.title"
     },
     "tx_staff_email_label": {
       "id": "tx_staff_email_label",
@@ -13608,6 +16955,116 @@
       "fill": "$color.text",
       "content": "Ate all",
       "font": "$type.label"
+    },
+    "tx_sw_accent": {
+      "id": "tx_sw_accent",
+      "type": "text",
+      "name": "accent label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "accent",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_bg": {
+      "id": "tx_sw_bg",
+      "type": "text",
+      "name": "bg label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "bg",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_bgAlt": {
+      "id": "tx_sw_bgAlt",
+      "type": "text",
+      "name": "bgAlt label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "bgAlt",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_bgMid": {
+      "id": "tx_sw_bgMid",
+      "type": "text",
+      "name": "bgMid label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "bgMid",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_calories": {
+      "id": "tx_sw_calories",
+      "type": "text",
+      "name": "calories label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "calories",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_heart": {
+      "id": "tx_sw_heart",
+      "type": "text",
+      "name": "heart label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "heart",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_ink": {
+      "id": "tx_sw_ink",
+      "type": "text",
+      "name": "ink label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "ink",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_muted": {
+      "id": "tx_sw_muted",
+      "type": "text",
+      "name": "muted label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "muted",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_progress": {
+      "id": "tx_sw_progress",
+      "type": "text",
+      "name": "progress label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "progress",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_steps": {
+      "id": "tx_sw_steps",
+      "type": "text",
+      "name": "steps label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.onAccent",
+      "content": "steps",
+      "font": "$aura.type.caption"
+    },
+    "tx_sw_surface": {
+      "id": "tx_sw_surface",
+      "type": "text",
+      "name": "surface label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$aura.color.ink",
+      "content": "surface / solid",
+      "font": "$aura.type.caption"
     },
     "tx_switcher_name": {
       "id": "tx_switcher_name",
@@ -13891,14 +17348,6 @@
       "name": "Threads title",
       "width": "fill",
       "height": "hug",
-      "layout": {
-        "margin": [
-          0,
-          16,
-          16,
-          16
-        ]
-      },
       "fill": "$color.text",
       "content": "Messages",
       "font": "$type.title"

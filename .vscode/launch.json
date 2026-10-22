@@ -5,9 +5,24 @@
       "name": "Run Extension (Cursor Design)",
       "type": "extensionHost",
       "request": "launch",
-      "args": ["--extensionDevelopmentPath=${workspaceFolder}/apps/extension", "${workspaceFolder}/examples"],
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/apps/extension",
+        "${workspaceFolder}/examples"
+      ],
       "outFiles": ["${workspaceFolder}/apps/extension/dist/**/*.js"],
       "preLaunchTask": "build"
+    },
+    {
+      "name": "Run Extension (no rebuild)",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/apps/extension",
+        "${workspaceFolder}/examples"
+      ],
+      "outFiles": ["${workspaceFolder}/apps/extension/dist/**/*.js"]
     }
   ]
 }

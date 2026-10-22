@@ -42,7 +42,9 @@ Single-direction references only. The board shows **one page at a time**; frames
 - **`radius`** is a number, a `"$radius.x"` ref, or per-corner `[tl, tr, br, bl]` (numbers or refs).
 - **`shadow`** is `{x, y, blur, spread?, color, inset?}`, an array of them, or a `"$shadow.x"` ref. Use soft shadows for depth: e.g. `{x:0, y:8, blur:24, spread:-4, color:"rgba(16,24,40,.12)"}`.
 - **Expressiveness (any node):** `blur` (layer filter), `mixBlendMode`, `mask`, `clipPath`, `outline:{color,width,offset?}`; frames also `overflow` (overrides `clip` when set).
-- `frame`: `layout { mode?:"flex"|"absolute", direction:"row"|"column", gap, padding, margin (negatives OK), align, justify }`, `clip` / `overflow`, `children: [ids]`. **Default layout is flex**. Frames are the only containers (buttons, cards, inputs are frames with text inside).
+- `frame`: `layout { mode?:"flex"|"absolute", direction:"row"|"column", gap, padding, margin (negatives OK; `"auto"` OK), align, justify }`, `clip` / `overflow`, `children: [ids]`. **Default layout is flex**. Frames are the only containers (buttons, cards, inputs are frames with text inside).
+- **`justify`**: use `"space-between"` (hyphen), **not** `space_between`. Schema coerces the underscore typo, but prefer the CSS spelling.
+- **`overflow`**: `"visible"` | `"hidden"` | `"scroll"` | `"auto"` (overrides `clip`). For chat panes / lists / fill columns that must scroll in Play, set `overflow:"auto"` on the fill-height frame.
 - `text`: `content`, `font` (`"$type.body"` or `{family,size,weight,lineHeight,letterSpacing,style}`), `fill` = color **or gradient** (gradient text), `align`, `decoration`, `textTransform`.
 - `rect`, `ellipse`, `image { src, fit }` (sibling image node; prefer **image fill** on a clipped frame for heroes).
 - `icon`: `{ type:"icon", name, fill?, strokeWidth? }` — Lucide id from catalog (`design_guide`); `fill` is stroke color.
@@ -75,7 +77,19 @@ Glass docks: `backdropBlur` + translucent fill over imagery. Peek stacks: `trans
 Static mock without Play: draw the open state on the host frame (scrim + panel as absolute children). Prefer paired frames when closed and open both matter.
 
 ### Motion
-Optional tokens `motion.fast` / `motion.base` (ms numbers, ~180 / ~240). Board motion = drawn pose (`opacity`, `transform`). Play animates overlay enter from `link.transition` (under ~300ms, ease-out). No keyframe timelines on nodes yet.
+Optional tokens `motion.fast` / `motion.base` (ms numbers, ~180 / ~240). Board motion = drawn pose (`opacity`, `transform`). Play animates overlay enter from `link.transition` (under ~300ms, ease-out).
+
+**Keyframe timelines** (`doc.timelines`, Play + **Cursor Design: Open preview in browser**): only `opacity` and `transform.x|y|scale|rotate`. Bind to a frame with `frameId`; tracks target nodes under that frame. Author via `setTimeline` / delete with `timeline:null`. Keys use normalized `t` in 0..1 and absolute values (opacity 0..1, x/y px, scale 1=100%, rotate degrees). Autoplay on frame enter; scrubber + Space in Play. Browser preview hot-reloads on doc change (localhost SSE).
+
+```json
+{ "op": "setTimeline", "id": "tl_login_in", "timeline": {
+  "id": "tl_login_in", "name": "Login enter", "frameId": "fr_login", "duration": 800,
+  "tracks": [
+    { "nodeId": "tx_title", "channel": "opacity", "keys": [{ "t": 0, "value": 0 }, { "t": 1, "value": 1, "ease": "ease-out" }] },
+    { "nodeId": "tx_title", "channel": "transform.y", "keys": [{ "t": 0, "value": 16 }, { "t": 1, "value": 0 }] }
+  ]
+}}
+```
 
 ### Tokens (`tokens[name]`)
 `{type:"color", value, modes?:{dark}}` · `{type:"number", value}` · `{type:"font", family, size, weight, lineHeight}` · `{type:"string", value}` · `{type:"shadow", value:<shadow | shadow[]>}`. Reference as `"$name"`. Groups: `color`, `space`, `radius`, `type`, `shadow`, `motion`.
@@ -97,6 +111,7 @@ upsertAnnotation { op:"upsertAnnotation", id?, annotation:{nodeId, body, status}
 deleteAnnotation { op:"deleteAnnotation", ids:[...] }
 createComponent  { op:"createComponent", id?, name, root:<frameId>, props?, variants? }
 setComponent     { op:"setComponent", id, component:<ComponentDef|null> }
+setTimeline      { op:"setTimeline", id, timeline:<Timeline|null> }  // keyframes: opacity + transform.* on a frame
 ```
 Prefer `design_components` for list/create/instantiate. You may supply your own ids (`fr_home`, `bt_cta`, `tx_title`); otherwise they are generated. Place new top-level frames so they don't overlap: next free `x` = max(existing x + width) + 80.
 
@@ -149,6 +164,9 @@ Then: `design_screenshot { nodeId: "fr_home" }`.
 |---|---|
 | `references/modes.md` | Persuade / Operate / Read / Experience |
 | `references/aesthetics.md` | Anti-slop bans, color commitment, type, copy |
+| `references/layout.md` | Flex structure, fill/hug, screenshot loop |
+| `references/overlays.md` | Drawers/modals via links + keyframe timelines |
+| `references/components.md` | Component defs / instances / variants |
 | `references/viz.md` | When to chart vs compose |
 | `references/explore.md` | 3-variant divergence |
 | `references/critique.md` | polish / quieter / bolder / distill |

@@ -1,0 +1,4548 @@
+{
+  "schemaVersion": 1,
+  "name": "Pattern Library",
+  "tokens": {
+    "color.ground": {
+      "group": "color",
+      "type": "color",
+      "value": "#F3EEE6"
+    },
+    "color.ink": {
+      "group": "color",
+      "type": "color",
+      "value": "#1E3A4C"
+    },
+    "color.muted": {
+      "group": "color",
+      "type": "color",
+      "value": "#5A6B78"
+    },
+    "color.surface": {
+      "group": "color",
+      "type": "color",
+      "value": "#FAF8F4"
+    },
+    "color.text": {
+      "group": "color",
+      "type": "color",
+      "value": "#1E3A4C"
+    },
+    "radius.lg": {
+      "group": "radius",
+      "type": "number",
+      "value": 12
+    },
+    "radius.md": {
+      "group": "radius",
+      "type": "number",
+      "value": 8
+    },
+    "space.2": {
+      "group": "space",
+      "type": "number",
+      "value": 8
+    },
+    "space.3": {
+      "group": "space",
+      "type": "number",
+      "value": 12
+    },
+    "space.4": {
+      "group": "space",
+      "type": "number",
+      "value": 16
+    },
+    "space.5": {
+      "group": "space",
+      "type": "number",
+      "value": 20
+    },
+    "space.6": {
+      "group": "space",
+      "type": "number",
+      "value": 24
+    },
+    "space.8": {
+      "group": "space",
+      "type": "number",
+      "value": 32
+    },
+    "type.body": {
+      "family": "IBM Plex Sans",
+      "group": "type",
+      "lineHeight": 1.4,
+      "size": 14,
+      "type": "font",
+      "weight": 400
+    },
+    "type.display": {
+      "family": "Fraunces",
+      "group": "type",
+      "lineHeight": 1.15,
+      "size": 40,
+      "type": "font",
+      "weight": 600
+    },
+    "type.label": {
+      "family": "IBM Plex Sans",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 12,
+      "type": "font",
+      "weight": 500
+    },
+    "type.title": {
+      "family": "Fraunces",
+      "group": "type",
+      "lineHeight": 1.25,
+      "size": 22,
+      "type": "font",
+      "weight": 600
+    }
+  },
+  "folderRoot": [
+    "pg_catalog"
+  ],
+  "folders": {},
+  "pages": {
+    "pg_catalog": {
+      "frames": [
+        "fr_catalog"
+      ],
+      "name": "Catalog"
+    }
+  },
+  "nodes": {
+    "col_swatch_blob": {
+      "id": "col_swatch_blob",
+      "type": "frame",
+      "name": "Blob swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_blob",
+        "tx_label_blob"
+      ]
+    },
+    "col_swatch_blueprint": {
+      "id": "col_swatch_blueprint",
+      "type": "frame",
+      "name": "Blueprint swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_blueprint",
+        "tx_label_blueprint"
+      ]
+    },
+    "col_swatch_circuit": {
+      "id": "col_swatch_circuit",
+      "type": "frame",
+      "name": "Circuit swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_circuit",
+        "tx_label_circuit"
+      ]
+    },
+    "col_swatch_dot": {
+      "id": "col_swatch_dot",
+      "type": "frame",
+      "name": "Dot swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_dot",
+        "tx_label_dot"
+      ]
+    },
+    "col_swatch_hatch": {
+      "id": "col_swatch_hatch",
+      "type": "frame",
+      "name": "Hatch swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_hatch",
+        "tx_label_hatch"
+      ]
+    },
+    "col_swatch_hex": {
+      "id": "col_swatch_hex",
+      "type": "frame",
+      "name": "Hex swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_hex",
+        "tx_label_hex"
+      ]
+    },
+    "col_swatch_iso": {
+      "id": "col_swatch_iso",
+      "type": "frame",
+      "name": "Iso swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_iso",
+        "tx_label_iso"
+      ]
+    },
+    "col_swatch_stipple": {
+      "id": "col_swatch_stipple",
+      "type": "frame",
+      "name": "Stipple swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_stipple",
+        "tx_label_stipple"
+      ]
+    },
+    "col_swatch_wave": {
+      "id": "col_swatch_wave",
+      "type": "frame",
+      "name": "Wave swatch column",
+      "width": 200,
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2"
+      },
+      "children": [
+        "fr_swatch_wave",
+        "tx_label_wave"
+      ]
+    },
+    "el_ad_00": {
+      "id": "el_ad_00",
+      "type": "ellipse",
+      "name": "App Dot 0",
+      "x": 16,
+      "y": 16,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_01": {
+      "id": "el_ad_01",
+      "type": "ellipse",
+      "name": "App Dot 1",
+      "x": 48,
+      "y": 16,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_02": {
+      "id": "el_ad_02",
+      "type": "ellipse",
+      "name": "App Dot 2",
+      "x": 80,
+      "y": 16,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_03": {
+      "id": "el_ad_03",
+      "type": "ellipse",
+      "name": "App Dot 3",
+      "x": 112,
+      "y": 16,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_04": {
+      "id": "el_ad_04",
+      "type": "ellipse",
+      "name": "App Dot 4",
+      "x": 144,
+      "y": 16,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_05": {
+      "id": "el_ad_05",
+      "type": "ellipse",
+      "name": "App Dot 5",
+      "x": 176,
+      "y": 16,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_10": {
+      "id": "el_ad_10",
+      "type": "ellipse",
+      "name": "App Dot 10",
+      "x": 16,
+      "y": 48,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_11": {
+      "id": "el_ad_11",
+      "type": "ellipse",
+      "name": "App Dot 11",
+      "x": 48,
+      "y": 48,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_12": {
+      "id": "el_ad_12",
+      "type": "ellipse",
+      "name": "App Dot 12",
+      "x": 80,
+      "y": 48,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_13": {
+      "id": "el_ad_13",
+      "type": "ellipse",
+      "name": "App Dot 13",
+      "x": 112,
+      "y": 48,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_14": {
+      "id": "el_ad_14",
+      "type": "ellipse",
+      "name": "App Dot 14",
+      "x": 144,
+      "y": 48,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_15": {
+      "id": "el_ad_15",
+      "type": "ellipse",
+      "name": "App Dot 15",
+      "x": 176,
+      "y": 48,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_20": {
+      "id": "el_ad_20",
+      "type": "ellipse",
+      "name": "App Dot 20",
+      "x": 16,
+      "y": 80,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_21": {
+      "id": "el_ad_21",
+      "type": "ellipse",
+      "name": "App Dot 21",
+      "x": 48,
+      "y": 80,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_22": {
+      "id": "el_ad_22",
+      "type": "ellipse",
+      "name": "App Dot 22",
+      "x": 80,
+      "y": 80,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_ad_23": {
+      "id": "el_ad_23",
+      "type": "ellipse",
+      "name": "App Dot 23",
+      "x": 112,
+      "y": 80,
+      "width": 6,
+      "height": 6,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_as_0": {
+      "id": "el_as_0",
+      "type": "ellipse",
+      "name": "ES Stipple 0",
+      "x": 20,
+      "y": 20,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_as_1": {
+      "id": "el_as_1",
+      "type": "ellipse",
+      "name": "ES Stipple 1",
+      "x": 60,
+      "y": 32,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_as_2": {
+      "id": "el_as_2",
+      "type": "ellipse",
+      "name": "ES Stipple 2",
+      "x": 110,
+      "y": 18,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.4
+    },
+    "el_as_3": {
+      "id": "el_as_3",
+      "type": "ellipse",
+      "name": "ES Stipple 3",
+      "x": 160,
+      "y": 40,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.28
+    },
+    "el_as_4": {
+      "id": "el_as_4",
+      "type": "ellipse",
+      "name": "ES Stipple 4",
+      "x": 40,
+      "y": 70,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.32
+    },
+    "el_as_5": {
+      "id": "el_as_5",
+      "type": "ellipse",
+      "name": "ES Stipple 5",
+      "x": 90,
+      "y": 80,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.36
+    },
+    "el_as_6": {
+      "id": "el_as_6",
+      "type": "ellipse",
+      "name": "ES Stipple 6",
+      "x": 140,
+      "y": 65,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_as_7": {
+      "id": "el_as_7",
+      "type": "ellipse",
+      "name": "ES Stipple 7",
+      "x": 200,
+      "y": 90,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.34
+    },
+    "el_cir_p0": {
+      "id": "el_cir_p0",
+      "type": "ellipse",
+      "name": "Pad 0",
+      "x": 16,
+      "y": 36,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_cir_p1": {
+      "id": "el_cir_p1",
+      "type": "ellipse",
+      "name": "Pad 1",
+      "x": 116,
+      "y": 36,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_cir_p2": {
+      "id": "el_cir_p2",
+      "type": "ellipse",
+      "name": "Pad 2",
+      "x": 116,
+      "y": 96,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_cir_p3": {
+      "id": "el_cir_p3",
+      "type": "ellipse",
+      "name": "Pad 3",
+      "x": 36,
+      "y": 116,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_cir_p4": {
+      "id": "el_cir_p4",
+      "type": "ellipse",
+      "name": "Pad 4",
+      "x": 156,
+      "y": 56,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_cir_p5": {
+      "id": "el_cir_p5",
+      "type": "ellipse",
+      "name": "Pad 5",
+      "x": 156,
+      "y": 146,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_cir_p6": {
+      "id": "el_cir_p6",
+      "type": "ellipse",
+      "name": "Pad 6",
+      "x": 56,
+      "y": 156,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_dot_00": {
+      "id": "el_dot_00",
+      "type": "ellipse",
+      "name": "Dot 0 0",
+      "x": 14,
+      "y": 14,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_01": {
+      "id": "el_dot_01",
+      "type": "ellipse",
+      "name": "Dot 0 1",
+      "x": 42,
+      "y": 14,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_02": {
+      "id": "el_dot_02",
+      "type": "ellipse",
+      "name": "Dot 0 2",
+      "x": 70,
+      "y": 14,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_03": {
+      "id": "el_dot_03",
+      "type": "ellipse",
+      "name": "Dot 0 3",
+      "x": 98,
+      "y": 14,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_04": {
+      "id": "el_dot_04",
+      "type": "ellipse",
+      "name": "Dot 0 4",
+      "x": 126,
+      "y": 14,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_05": {
+      "id": "el_dot_05",
+      "type": "ellipse",
+      "name": "Dot 0 5",
+      "x": 154,
+      "y": 14,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_10": {
+      "id": "el_dot_10",
+      "type": "ellipse",
+      "name": "Dot 1 0",
+      "x": 14,
+      "y": 42,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_11": {
+      "id": "el_dot_11",
+      "type": "ellipse",
+      "name": "Dot 1 1",
+      "x": 42,
+      "y": 42,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_12": {
+      "id": "el_dot_12",
+      "type": "ellipse",
+      "name": "Dot 1 2",
+      "x": 70,
+      "y": 42,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_13": {
+      "id": "el_dot_13",
+      "type": "ellipse",
+      "name": "Dot 1 3",
+      "x": 98,
+      "y": 42,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_14": {
+      "id": "el_dot_14",
+      "type": "ellipse",
+      "name": "Dot 1 4",
+      "x": 126,
+      "y": 42,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_15": {
+      "id": "el_dot_15",
+      "type": "ellipse",
+      "name": "Dot 1 5",
+      "x": 154,
+      "y": 42,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_20": {
+      "id": "el_dot_20",
+      "type": "ellipse",
+      "name": "Dot 2 0",
+      "x": 14,
+      "y": 70,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_21": {
+      "id": "el_dot_21",
+      "type": "ellipse",
+      "name": "Dot 2 1",
+      "x": 42,
+      "y": 70,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_22": {
+      "id": "el_dot_22",
+      "type": "ellipse",
+      "name": "Dot 2 2",
+      "x": 70,
+      "y": 70,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_23": {
+      "id": "el_dot_23",
+      "type": "ellipse",
+      "name": "Dot 2 3",
+      "x": 98,
+      "y": 70,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_24": {
+      "id": "el_dot_24",
+      "type": "ellipse",
+      "name": "Dot 2 4",
+      "x": 126,
+      "y": 70,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_25": {
+      "id": "el_dot_25",
+      "type": "ellipse",
+      "name": "Dot 2 5",
+      "x": 154,
+      "y": 70,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_30": {
+      "id": "el_dot_30",
+      "type": "ellipse",
+      "name": "Dot 3 0",
+      "x": 14,
+      "y": 98,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_31": {
+      "id": "el_dot_31",
+      "type": "ellipse",
+      "name": "Dot 3 1",
+      "x": 42,
+      "y": 98,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_32": {
+      "id": "el_dot_32",
+      "type": "ellipse",
+      "name": "Dot 3 2",
+      "x": 70,
+      "y": 98,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_33": {
+      "id": "el_dot_33",
+      "type": "ellipse",
+      "name": "Dot 3 3",
+      "x": 98,
+      "y": 98,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_34": {
+      "id": "el_dot_34",
+      "type": "ellipse",
+      "name": "Dot 3 4",
+      "x": 126,
+      "y": 98,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_35": {
+      "id": "el_dot_35",
+      "type": "ellipse",
+      "name": "Dot 3 5",
+      "x": 154,
+      "y": 98,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_40": {
+      "id": "el_dot_40",
+      "type": "ellipse",
+      "name": "Dot 4 0",
+      "x": 14,
+      "y": 126,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_41": {
+      "id": "el_dot_41",
+      "type": "ellipse",
+      "name": "Dot 4 1",
+      "x": 42,
+      "y": 126,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_42": {
+      "id": "el_dot_42",
+      "type": "ellipse",
+      "name": "Dot 4 2",
+      "x": 70,
+      "y": 126,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_43": {
+      "id": "el_dot_43",
+      "type": "ellipse",
+      "name": "Dot 4 3",
+      "x": 98,
+      "y": 126,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_44": {
+      "id": "el_dot_44",
+      "type": "ellipse",
+      "name": "Dot 4 4",
+      "x": 126,
+      "y": 126,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_45": {
+      "id": "el_dot_45",
+      "type": "ellipse",
+      "name": "Dot 4 5",
+      "x": 154,
+      "y": 126,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_50": {
+      "id": "el_dot_50",
+      "type": "ellipse",
+      "name": "Dot 5 0",
+      "x": 14,
+      "y": 154,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_51": {
+      "id": "el_dot_51",
+      "type": "ellipse",
+      "name": "Dot 5 1",
+      "x": 42,
+      "y": 154,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_52": {
+      "id": "el_dot_52",
+      "type": "ellipse",
+      "name": "Dot 5 2",
+      "x": 70,
+      "y": 154,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_53": {
+      "id": "el_dot_53",
+      "type": "ellipse",
+      "name": "Dot 5 3",
+      "x": 98,
+      "y": 154,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_54": {
+      "id": "el_dot_54",
+      "type": "ellipse",
+      "name": "Dot 5 4",
+      "x": 126,
+      "y": 154,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_dot_55": {
+      "id": "el_dot_55",
+      "type": "ellipse",
+      "name": "Dot 5 5",
+      "x": 154,
+      "y": 154,
+      "width": 8,
+      "height": 8,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_hc_0": {
+      "id": "el_hc_0",
+      "type": "ellipse",
+      "name": "Hero Pad 0",
+      "x": 16,
+      "y": 30,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_hc_1": {
+      "id": "el_hc_1",
+      "type": "ellipse",
+      "name": "Hero Pad 1",
+      "x": 136,
+      "y": 16,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_hc_2": {
+      "id": "el_hc_2",
+      "type": "ellipse",
+      "name": "Hero Pad 2",
+      "x": 216,
+      "y": 16,
+      "width": 10,
+      "height": 10,
+      "fill": "$color.ink",
+      "opacity": 0.55
+    },
+    "el_st_00": {
+      "id": "el_st_00",
+      "type": "ellipse",
+      "name": "Stipple 0",
+      "x": 12,
+      "y": 18,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.35
+    },
+    "el_st_01": {
+      "id": "el_st_01",
+      "type": "ellipse",
+      "name": "Stipple 1",
+      "x": 34,
+      "y": 28,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.28
+    },
+    "el_st_02": {
+      "id": "el_st_02",
+      "type": "ellipse",
+      "name": "Stipple 2",
+      "x": 58,
+      "y": 14,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.4
+    },
+    "el_st_03": {
+      "id": "el_st_03",
+      "type": "ellipse",
+      "name": "Stipple 3",
+      "x": 82,
+      "y": 36,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_st_04": {
+      "id": "el_st_04",
+      "type": "ellipse",
+      "name": "Stipple 4",
+      "x": 110,
+      "y": 22,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.45
+    },
+    "el_st_05": {
+      "id": "el_st_05",
+      "type": "ellipse",
+      "name": "Stipple 5",
+      "x": 138,
+      "y": 40,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "el_st_06": {
+      "id": "el_st_06",
+      "type": "ellipse",
+      "name": "Stipple 6",
+      "x": 164,
+      "y": 16,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.38
+    },
+    "el_st_07": {
+      "id": "el_st_07",
+      "type": "ellipse",
+      "name": "Stipple 7",
+      "x": 22,
+      "y": 56,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.32
+    },
+    "el_st_08": {
+      "id": "el_st_08",
+      "type": "ellipse",
+      "name": "Stipple 8",
+      "x": 48,
+      "y": 68,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.42
+    },
+    "el_st_09": {
+      "id": "el_st_09",
+      "type": "ellipse",
+      "name": "Stipple 9",
+      "x": 76,
+      "y": 54,
+      "width": 2,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.28
+    },
+    "el_st_10": {
+      "id": "el_st_10",
+      "type": "ellipse",
+      "name": "Stipple 10",
+      "x": 98,
+      "y": 72,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.36
+    },
+    "el_st_11": {
+      "id": "el_st_11",
+      "type": "ellipse",
+      "name": "Stipple 11",
+      "x": 128,
+      "y": 58,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_st_12": {
+      "id": "el_st_12",
+      "type": "ellipse",
+      "name": "Stipple 12",
+      "x": 152,
+      "y": 74,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.4
+    },
+    "el_st_13": {
+      "id": "el_st_13",
+      "type": "ellipse",
+      "name": "Stipple 13",
+      "x": 18,
+      "y": 98,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.34
+    },
+    "el_st_14": {
+      "id": "el_st_14",
+      "type": "ellipse",
+      "name": "Stipple 14",
+      "x": 44,
+      "y": 112,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.26
+    },
+    "el_st_15": {
+      "id": "el_st_15",
+      "type": "ellipse",
+      "name": "Stipple 15",
+      "x": 70,
+      "y": 96,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.44
+    },
+    "el_st_16": {
+      "id": "el_st_16",
+      "type": "ellipse",
+      "name": "Stipple 16",
+      "x": 96,
+      "y": 118,
+      "width": 2,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.3
+    },
+    "el_st_17": {
+      "id": "el_st_17",
+      "type": "ellipse",
+      "name": "Stipple 17",
+      "x": 122,
+      "y": 104,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.38
+    },
+    "el_st_18": {
+      "id": "el_st_18",
+      "type": "ellipse",
+      "name": "Stipple 18",
+      "x": 148,
+      "y": 120,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.32
+    },
+    "el_st_19": {
+      "id": "el_st_19",
+      "type": "ellipse",
+      "name": "Stipple 19",
+      "x": 172,
+      "y": 98,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.36
+    },
+    "el_st_20": {
+      "id": "el_st_20",
+      "type": "ellipse",
+      "name": "Stipple 20",
+      "x": 28,
+      "y": 142,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.28
+    },
+    "el_st_21": {
+      "id": "el_st_21",
+      "type": "ellipse",
+      "name": "Stipple 21",
+      "x": 56,
+      "y": 156,
+      "width": 5,
+      "height": 5,
+      "fill": "$color.ink",
+      "opacity": 0.4
+    },
+    "el_st_22": {
+      "id": "el_st_22",
+      "type": "ellipse",
+      "name": "Stipple 22",
+      "x": 88,
+      "y": 148,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.33
+    },
+    "el_st_23": {
+      "id": "el_st_23",
+      "type": "ellipse",
+      "name": "Stipple 23",
+      "x": 118,
+      "y": 164,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.37
+    },
+    "el_st_24": {
+      "id": "el_st_24",
+      "type": "ellipse",
+      "name": "Stipple 24",
+      "x": 150,
+      "y": 152,
+      "width": 3,
+      "height": 3,
+      "fill": "$color.ink",
+      "opacity": 0.29
+    },
+    "el_st_25": {
+      "id": "el_st_25",
+      "type": "ellipse",
+      "name": "Stipple 25",
+      "x": 176,
+      "y": 168,
+      "width": 4,
+      "height": 4,
+      "fill": "$color.ink",
+      "opacity": 0.41
+    },
+    "fr_app_blob": {
+      "id": "fr_app_blob",
+      "type": "frame",
+      "name": "Empty Blob",
+      "width": 240,
+      "height": 160,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "sh_ab_0",
+        "sh_ab_1",
+        "sh_ab_2",
+        "sh_ab_3",
+        "pl_as_blob"
+      ]
+    },
+    "fr_app_blueprint": {
+      "id": "fr_app_blueprint",
+      "type": "frame",
+      "name": "Hero Blueprint",
+      "width": 280,
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "ln_hb_h0",
+        "ln_hb_h1",
+        "ln_hb_h2",
+        "ln_hb_v0",
+        "ln_hb_v1",
+        "ln_hb_v2",
+        "ln_hb_v3",
+        "ln_hb_v4",
+        "ln_hb_v5",
+        "pl_hb_bp"
+      ]
+    },
+    "fr_app_circuit": {
+      "id": "fr_app_circuit",
+      "type": "frame",
+      "name": "Hero Circuit",
+      "width": 280,
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "rc_hc_0",
+        "rc_hc_1",
+        "rc_hc_2",
+        "el_hc_0",
+        "el_hc_1",
+        "el_hc_2",
+        "pl_hb_cir"
+      ]
+    },
+    "fr_app_dot": {
+      "id": "fr_app_dot",
+      "type": "frame",
+      "name": "Card Dot",
+      "width": 220,
+      "height": 140,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "el_ad_00",
+        "el_ad_01",
+        "el_ad_02",
+        "el_ad_03",
+        "el_ad_04",
+        "el_ad_05",
+        "el_ad_10",
+        "el_ad_11",
+        "el_ad_12",
+        "el_ad_13",
+        "el_ad_14",
+        "el_ad_15",
+        "el_ad_20",
+        "el_ad_21",
+        "el_ad_22",
+        "el_ad_23",
+        "pl_ad_dot"
+      ]
+    },
+    "fr_app_hatch": {
+      "id": "fr_app_hatch",
+      "type": "frame",
+      "name": "Card Hatch",
+      "width": 220,
+      "height": 140,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "rc_ah_0",
+        "rc_ah_1",
+        "rc_ah_2",
+        "rc_ah_3",
+        "rc_ah_4",
+        "rc_ah_5",
+        "rc_ah_6",
+        "rc_ah_7",
+        "rc_ah_8",
+        "rc_ah_9",
+        "rc_ah_10",
+        "rc_ah_11",
+        "pl_ad_hatch"
+      ]
+    },
+    "fr_app_hex": {
+      "id": "fr_app_hex",
+      "type": "frame",
+      "name": "Card Hex",
+      "width": 220,
+      "height": 140,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "sh_ax_0",
+        "sh_ax_1",
+        "sh_ax_2",
+        "sh_ax_3",
+        "sh_ax_4",
+        "sh_ax_5",
+        "sh_ax_6",
+        "sh_ax_7",
+        "sh_ax_8",
+        "pl_ad_hex"
+      ]
+    },
+    "fr_app_iso": {
+      "id": "fr_app_iso",
+      "type": "frame",
+      "name": "Hero Iso",
+      "width": 280,
+      "height": 72,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "sh_hi_0",
+        "sh_hi_1",
+        "sh_hi_2",
+        "pl_hb_iso"
+      ]
+    },
+    "fr_app_stipple": {
+      "id": "fr_app_stipple",
+      "type": "frame",
+      "name": "Empty Stipple",
+      "width": 240,
+      "height": 160,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "el_as_0",
+        "el_as_1",
+        "el_as_2",
+        "el_as_3",
+        "el_as_4",
+        "el_as_5",
+        "el_as_6",
+        "el_as_7",
+        "pl_as_stipple"
+      ]
+    },
+    "fr_app_wave": {
+      "id": "fr_app_wave",
+      "type": "frame",
+      "name": "Empty Wave",
+      "width": 240,
+      "height": 160,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "sh_aw_0",
+        "sh_aw_1",
+        "sh_aw_2",
+        "pl_as_wave"
+      ]
+    },
+    "fr_catalog": {
+      "id": "fr_catalog",
+      "type": "frame",
+      "name": "Pattern Library",
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 2200,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.8",
+        "padding": [
+          "$space.8",
+          "$space.8"
+        ]
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "children": [
+        "row_header",
+        "row_geo",
+        "row_org",
+        "row_tech",
+        "row_apps"
+      ]
+    },
+    "fr_swatch_blob": {
+      "id": "fr_swatch_blob",
+      "type": "frame",
+      "name": "Blob scatter tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "sh_blob_0",
+        "sh_blob_1",
+        "sh_blob_2",
+        "sh_blob_3",
+        "sh_blob_4",
+        "sh_blob_5"
+      ]
+    },
+    "fr_swatch_blueprint": {
+      "id": "fr_swatch_blueprint",
+      "type": "frame",
+      "name": "Blueprint grid tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "ln_bp_h0",
+        "ln_bp_h1",
+        "ln_bp_h2",
+        "ln_bp_h3",
+        "ln_bp_h4",
+        "ln_bp_h5",
+        "ln_bp_h6",
+        "ln_bp_h7",
+        "ln_bp_h8",
+        "ln_bp_v0",
+        "ln_bp_v1",
+        "ln_bp_v2",
+        "ln_bp_v3",
+        "ln_bp_v4",
+        "ln_bp_v5",
+        "ln_bp_v6",
+        "ln_bp_v7",
+        "ln_bp_v8",
+        "ln_bp_mark_tl_h",
+        "ln_bp_mark_tl_v",
+        "ln_bp_mark_br_h",
+        "ln_bp_mark_br_v"
+      ]
+    },
+    "fr_swatch_circuit": {
+      "id": "fr_swatch_circuit",
+      "type": "frame",
+      "name": "Circuit traces tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "rc_cir_h0",
+        "rc_cir_v0",
+        "rc_cir_h1",
+        "rc_cir_v1",
+        "rc_cir_h2",
+        "rc_cir_v2",
+        "rc_cir_h3",
+        "el_cir_p0",
+        "el_cir_p1",
+        "el_cir_p2",
+        "el_cir_p3",
+        "el_cir_p4",
+        "el_cir_p5",
+        "el_cir_p6"
+      ]
+    },
+    "fr_swatch_dot": {
+      "id": "fr_swatch_dot",
+      "type": "frame",
+      "name": "Dot grid tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "el_dot_00",
+        "el_dot_01",
+        "el_dot_02",
+        "el_dot_03",
+        "el_dot_04",
+        "el_dot_05",
+        "el_dot_10",
+        "el_dot_11",
+        "el_dot_12",
+        "el_dot_13",
+        "el_dot_14",
+        "el_dot_15",
+        "el_dot_20",
+        "el_dot_21",
+        "el_dot_22",
+        "el_dot_23",
+        "el_dot_24",
+        "el_dot_25",
+        "el_dot_30",
+        "el_dot_31",
+        "el_dot_32",
+        "el_dot_33",
+        "el_dot_34",
+        "el_dot_35",
+        "el_dot_40",
+        "el_dot_41",
+        "el_dot_42",
+        "el_dot_43",
+        "el_dot_44",
+        "el_dot_45",
+        "el_dot_50",
+        "el_dot_51",
+        "el_dot_52",
+        "el_dot_53",
+        "el_dot_54",
+        "el_dot_55"
+      ]
+    },
+    "fr_swatch_hatch": {
+      "id": "fr_swatch_hatch",
+      "type": "frame",
+      "name": "Diagonal hatch tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "rc_hatch_00",
+        "rc_hatch_01",
+        "rc_hatch_02",
+        "rc_hatch_03",
+        "rc_hatch_04",
+        "rc_hatch_05",
+        "rc_hatch_06",
+        "rc_hatch_07",
+        "rc_hatch_08",
+        "rc_hatch_09",
+        "rc_hatch_10",
+        "rc_hatch_11",
+        "rc_hatch_12",
+        "rc_hatch_13",
+        "rc_hatch_14",
+        "rc_hatch_15"
+      ]
+    },
+    "fr_swatch_hex": {
+      "id": "fr_swatch_hex",
+      "type": "frame",
+      "name": "Hex lattice tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "sh_hex_00",
+        "sh_hex_01",
+        "sh_hex_02",
+        "sh_hex_03",
+        "sh_hex_04",
+        "sh_hex_10",
+        "sh_hex_11",
+        "sh_hex_12",
+        "sh_hex_13",
+        "sh_hex_20",
+        "sh_hex_21",
+        "sh_hex_22",
+        "sh_hex_23",
+        "sh_hex_24",
+        "sh_hex_30",
+        "sh_hex_31",
+        "sh_hex_32",
+        "sh_hex_33",
+        "sh_hex_40",
+        "sh_hex_41",
+        "sh_hex_42",
+        "sh_hex_43",
+        "sh_hex_44",
+        "sh_hex_50",
+        "sh_hex_51",
+        "sh_hex_52",
+        "sh_hex_53"
+      ]
+    },
+    "fr_swatch_iso": {
+      "id": "fr_swatch_iso",
+      "type": "frame",
+      "name": "Isometric cubes tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "sh_iso_0",
+        "sh_iso_1",
+        "sh_iso_2",
+        "sh_iso_3",
+        "sh_iso_4",
+        "sh_iso_5"
+      ]
+    },
+    "fr_swatch_stipple": {
+      "id": "fr_swatch_stipple",
+      "type": "frame",
+      "name": "Soft stipple tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "el_st_00",
+        "el_st_01",
+        "el_st_02",
+        "el_st_03",
+        "el_st_04",
+        "el_st_05",
+        "el_st_06",
+        "el_st_07",
+        "el_st_08",
+        "el_st_09",
+        "el_st_10",
+        "el_st_11",
+        "el_st_12",
+        "el_st_13",
+        "el_st_14",
+        "el_st_15",
+        "el_st_16",
+        "el_st_17",
+        "el_st_18",
+        "el_st_19",
+        "el_st_20",
+        "el_st_21",
+        "el_st_22",
+        "el_st_23",
+        "el_st_24",
+        "el_st_25"
+      ]
+    },
+    "fr_swatch_wave": {
+      "id": "fr_swatch_wave",
+      "type": "frame",
+      "name": "Wave bands tile",
+      "width": 200,
+      "height": 200,
+      "layout": {
+        "direction": "column",
+        "mode": "absolute"
+      },
+      "clip": true,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": [
+        "sh_wave_0",
+        "sh_wave_1",
+        "sh_wave_2",
+        "sh_wave_3"
+      ]
+    },
+    "ln_bp_h0": {
+      "id": "ln_bp_h0",
+      "type": "rect",
+      "name": "BP H 0",
+      "x": 0,
+      "y": 20,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h1": {
+      "id": "ln_bp_h1",
+      "type": "rect",
+      "name": "BP H 1",
+      "x": 0,
+      "y": 40,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h2": {
+      "id": "ln_bp_h2",
+      "type": "rect",
+      "name": "BP H 2",
+      "x": 0,
+      "y": 60,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h3": {
+      "id": "ln_bp_h3",
+      "type": "rect",
+      "name": "BP H 3",
+      "x": 0,
+      "y": 80,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h4": {
+      "id": "ln_bp_h4",
+      "type": "rect",
+      "name": "BP H 4",
+      "x": 0,
+      "y": 100,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h5": {
+      "id": "ln_bp_h5",
+      "type": "rect",
+      "name": "BP H 5",
+      "x": 0,
+      "y": 120,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h6": {
+      "id": "ln_bp_h6",
+      "type": "rect",
+      "name": "BP H 6",
+      "x": 0,
+      "y": 140,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h7": {
+      "id": "ln_bp_h7",
+      "type": "rect",
+      "name": "BP H 7",
+      "x": 0,
+      "y": 160,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_h8": {
+      "id": "ln_bp_h8",
+      "type": "rect",
+      "name": "BP H 8",
+      "x": 0,
+      "y": 180,
+      "width": 200,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_mark_br_h": {
+      "id": "ln_bp_mark_br_h",
+      "type": "rect",
+      "name": "BP mark BR H",
+      "x": 176,
+      "y": 190,
+      "width": 16,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "ln_bp_mark_br_v": {
+      "id": "ln_bp_mark_br_v",
+      "type": "rect",
+      "name": "BP mark BR V",
+      "x": 190,
+      "y": 176,
+      "width": 2,
+      "height": 16,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "ln_bp_mark_tl_h": {
+      "id": "ln_bp_mark_tl_h",
+      "type": "rect",
+      "name": "BP mark TL H",
+      "x": 8,
+      "y": 8,
+      "width": 16,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "ln_bp_mark_tl_v": {
+      "id": "ln_bp_mark_tl_v",
+      "type": "rect",
+      "name": "BP mark TL V",
+      "x": 8,
+      "y": 8,
+      "width": 2,
+      "height": 16,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "ln_bp_v0": {
+      "id": "ln_bp_v0",
+      "type": "rect",
+      "name": "BP V 0",
+      "x": 20,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v1": {
+      "id": "ln_bp_v1",
+      "type": "rect",
+      "name": "BP V 1",
+      "x": 40,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v2": {
+      "id": "ln_bp_v2",
+      "type": "rect",
+      "name": "BP V 2",
+      "x": 60,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v3": {
+      "id": "ln_bp_v3",
+      "type": "rect",
+      "name": "BP V 3",
+      "x": 80,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v4": {
+      "id": "ln_bp_v4",
+      "type": "rect",
+      "name": "BP V 4",
+      "x": 100,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v5": {
+      "id": "ln_bp_v5",
+      "type": "rect",
+      "name": "BP V 5",
+      "x": 120,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v6": {
+      "id": "ln_bp_v6",
+      "type": "rect",
+      "name": "BP V 6",
+      "x": 140,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v7": {
+      "id": "ln_bp_v7",
+      "type": "rect",
+      "name": "BP V 7",
+      "x": 160,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_bp_v8": {
+      "id": "ln_bp_v8",
+      "type": "rect",
+      "name": "BP V 8",
+      "x": 180,
+      "y": 0,
+      "width": 1,
+      "height": 200,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_h0": {
+      "id": "ln_hb_h0",
+      "type": "rect",
+      "name": "Hero BP H 0",
+      "x": 0,
+      "y": 18,
+      "width": 280,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_h1": {
+      "id": "ln_hb_h1",
+      "type": "rect",
+      "name": "Hero BP H 1",
+      "x": 0,
+      "y": 36,
+      "width": 280,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_h2": {
+      "id": "ln_hb_h2",
+      "type": "rect",
+      "name": "Hero BP H 2",
+      "x": 0,
+      "y": 54,
+      "width": 280,
+      "height": 1,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_v0": {
+      "id": "ln_hb_v0",
+      "type": "rect",
+      "name": "Hero BP V 0",
+      "x": 40,
+      "y": 0,
+      "width": 1,
+      "height": 72,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_v1": {
+      "id": "ln_hb_v1",
+      "type": "rect",
+      "name": "Hero BP V 1",
+      "x": 80,
+      "y": 0,
+      "width": 1,
+      "height": 72,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_v2": {
+      "id": "ln_hb_v2",
+      "type": "rect",
+      "name": "Hero BP V 2",
+      "x": 120,
+      "y": 0,
+      "width": 1,
+      "height": 72,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_v3": {
+      "id": "ln_hb_v3",
+      "type": "rect",
+      "name": "Hero BP V 3",
+      "x": 160,
+      "y": 0,
+      "width": 1,
+      "height": 72,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_v4": {
+      "id": "ln_hb_v4",
+      "type": "rect",
+      "name": "Hero BP V 4",
+      "x": 200,
+      "y": 0,
+      "width": 1,
+      "height": 72,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "ln_hb_v5": {
+      "id": "ln_hb_v5",
+      "type": "rect",
+      "name": "Hero BP V 5",
+      "x": 240,
+      "y": 0,
+      "width": 1,
+      "height": 72,
+      "fill": "$color.ink",
+      "opacity": 0.25
+    },
+    "pl_ad_dot": {
+      "id": "pl_ad_dot",
+      "type": "frame",
+      "name": "Dot label plate",
+      "x": 12,
+      "y": 96,
+      "width": 140,
+      "height": 28,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          8
+        ]
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_ad_dot"
+      ]
+    },
+    "pl_ad_hatch": {
+      "id": "pl_ad_hatch",
+      "type": "frame",
+      "name": "Hatch label plate",
+      "x": 12,
+      "y": 96,
+      "width": 140,
+      "height": 28,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          8
+        ]
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_ad_hatch"
+      ]
+    },
+    "pl_ad_hex": {
+      "id": "pl_ad_hex",
+      "type": "frame",
+      "name": "Hex label plate",
+      "x": 12,
+      "y": 96,
+      "width": 140,
+      "height": 28,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          8
+        ]
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_ad_hex"
+      ]
+    },
+    "pl_as_blob": {
+      "id": "pl_as_blob",
+      "type": "frame",
+      "name": "Blob empty plate",
+      "x": 40,
+      "y": 55,
+      "width": 160,
+      "height": 50,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 4,
+        "justify": "center"
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_as_blob",
+        "tx_as_blob_tag"
+      ]
+    },
+    "pl_as_stipple": {
+      "id": "pl_as_stipple",
+      "type": "frame",
+      "name": "Stipple empty plate",
+      "x": 40,
+      "y": 55,
+      "width": 160,
+      "height": 50,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 4,
+        "justify": "center"
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_as_stipple",
+        "tx_as_stipple_tag"
+      ]
+    },
+    "pl_as_wave": {
+      "id": "pl_as_wave",
+      "type": "frame",
+      "name": "Wave empty plate",
+      "x": 40,
+      "y": 55,
+      "width": 160,
+      "height": 50,
+      "layout": {
+        "align": "center",
+        "direction": "column",
+        "gap": 4,
+        "justify": "center"
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_as_wave",
+        "tx_as_wave_tag"
+      ]
+    },
+    "pl_hb_bp": {
+      "id": "pl_hb_bp",
+      "type": "frame",
+      "name": "Blueprint hero plate",
+      "x": 12,
+      "y": 20,
+      "width": 140,
+      "height": 32,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          10
+        ]
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_hb_bp"
+      ]
+    },
+    "pl_hb_cir": {
+      "id": "pl_hb_cir",
+      "type": "frame",
+      "name": "Circuit hero plate",
+      "x": 12,
+      "y": 20,
+      "width": 130,
+      "height": 32,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          10
+        ]
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_hb_cir"
+      ]
+    },
+    "pl_hb_iso": {
+      "id": "pl_hb_iso",
+      "type": "frame",
+      "name": "Iso hero plate",
+      "x": 12,
+      "y": 20,
+      "width": 110,
+      "height": 32,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          10
+        ]
+      },
+      "fill": "$color.ground",
+      "radius": "$radius.md",
+      "zIndex": 2,
+      "children": [
+        "tx_hb_iso"
+      ]
+    },
+    "rc_ah_0": {
+      "id": "rc_ah_0",
+      "type": "rect",
+      "name": "App Hatch 0",
+      "x": -30,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_1": {
+      "id": "rc_ah_1",
+      "type": "rect",
+      "name": "App Hatch 1",
+      "x": -10,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_10": {
+      "id": "rc_ah_10",
+      "type": "rect",
+      "name": "App Hatch 10",
+      "x": 170,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_11": {
+      "id": "rc_ah_11",
+      "type": "rect",
+      "name": "App Hatch 11",
+      "x": 190,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_2": {
+      "id": "rc_ah_2",
+      "type": "rect",
+      "name": "App Hatch 2",
+      "x": 10,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_3": {
+      "id": "rc_ah_3",
+      "type": "rect",
+      "name": "App Hatch 3",
+      "x": 30,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_4": {
+      "id": "rc_ah_4",
+      "type": "rect",
+      "name": "App Hatch 4",
+      "x": 50,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_5": {
+      "id": "rc_ah_5",
+      "type": "rect",
+      "name": "App Hatch 5",
+      "x": 70,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_6": {
+      "id": "rc_ah_6",
+      "type": "rect",
+      "name": "App Hatch 6",
+      "x": 90,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_7": {
+      "id": "rc_ah_7",
+      "type": "rect",
+      "name": "App Hatch 7",
+      "x": 110,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_8": {
+      "id": "rc_ah_8",
+      "type": "rect",
+      "name": "App Hatch 8",
+      "x": 130,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_ah_9": {
+      "id": "rc_ah_9",
+      "type": "rect",
+      "name": "App Hatch 9",
+      "x": 150,
+      "y": -40,
+      "width": 2,
+      "height": 220,
+      "fill": "$color.ink",
+      "opacity": 0.35,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_cir_h0": {
+      "id": "rc_cir_h0",
+      "type": "rect",
+      "name": "Trace H 0",
+      "x": 20,
+      "y": 40,
+      "width": 100,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_cir_h1": {
+      "id": "rc_cir_h1",
+      "type": "rect",
+      "name": "Trace H 1",
+      "x": 120,
+      "y": 100,
+      "width": 50,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_cir_h2": {
+      "id": "rc_cir_h2",
+      "type": "rect",
+      "name": "Trace H 2",
+      "x": 40,
+      "y": 120,
+      "width": 80,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_cir_h3": {
+      "id": "rc_cir_h3",
+      "type": "rect",
+      "name": "Trace H 3",
+      "x": 60,
+      "y": 160,
+      "width": 100,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_cir_v0": {
+      "id": "rc_cir_v0",
+      "type": "rect",
+      "name": "Trace V 0",
+      "x": 120,
+      "y": 40,
+      "width": 2,
+      "height": 60,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_cir_v1": {
+      "id": "rc_cir_v1",
+      "type": "rect",
+      "name": "Trace V 1",
+      "x": 40,
+      "y": 40,
+      "width": 2,
+      "height": 80,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_cir_v2": {
+      "id": "rc_cir_v2",
+      "type": "rect",
+      "name": "Trace V 2",
+      "x": 160,
+      "y": 60,
+      "width": 2,
+      "height": 90,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_hatch_00": {
+      "id": "rc_hatch_00",
+      "type": "rect",
+      "name": "Hatch 0",
+      "x": -40,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_01": {
+      "id": "rc_hatch_01",
+      "type": "rect",
+      "name": "Hatch 1",
+      "x": -24,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_02": {
+      "id": "rc_hatch_02",
+      "type": "rect",
+      "name": "Hatch 2",
+      "x": -8,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_03": {
+      "id": "rc_hatch_03",
+      "type": "rect",
+      "name": "Hatch 3",
+      "x": 8,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_04": {
+      "id": "rc_hatch_04",
+      "type": "rect",
+      "name": "Hatch 4",
+      "x": 24,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_05": {
+      "id": "rc_hatch_05",
+      "type": "rect",
+      "name": "Hatch 5",
+      "x": 40,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_06": {
+      "id": "rc_hatch_06",
+      "type": "rect",
+      "name": "Hatch 6",
+      "x": 56,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_07": {
+      "id": "rc_hatch_07",
+      "type": "rect",
+      "name": "Hatch 7",
+      "x": 72,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_08": {
+      "id": "rc_hatch_08",
+      "type": "rect",
+      "name": "Hatch 8",
+      "x": 88,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_09": {
+      "id": "rc_hatch_09",
+      "type": "rect",
+      "name": "Hatch 9",
+      "x": 104,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_10": {
+      "id": "rc_hatch_10",
+      "type": "rect",
+      "name": "Hatch 10",
+      "x": 120,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_11": {
+      "id": "rc_hatch_11",
+      "type": "rect",
+      "name": "Hatch 11",
+      "x": 136,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_12": {
+      "id": "rc_hatch_12",
+      "type": "rect",
+      "name": "Hatch 12",
+      "x": 152,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_13": {
+      "id": "rc_hatch_13",
+      "type": "rect",
+      "name": "Hatch 13",
+      "x": 168,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_14": {
+      "id": "rc_hatch_14",
+      "type": "rect",
+      "name": "Hatch 14",
+      "x": 184,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hatch_15": {
+      "id": "rc_hatch_15",
+      "type": "rect",
+      "name": "Hatch 15",
+      "x": 200,
+      "y": -40,
+      "width": 2,
+      "height": 280,
+      "fill": "$color.ink",
+      "opacity": 0.4,
+      "transform": {
+        "rotate": 35
+      }
+    },
+    "rc_hc_0": {
+      "id": "rc_hc_0",
+      "type": "rect",
+      "name": "Hero Cir H",
+      "x": 20,
+      "y": 34,
+      "width": 120,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_hc_1": {
+      "id": "rc_hc_1",
+      "type": "rect",
+      "name": "Hero Cir V",
+      "x": 140,
+      "y": 20,
+      "width": 2,
+      "height": 40,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "rc_hc_2": {
+      "id": "rc_hc_2",
+      "type": "rect",
+      "name": "Hero Cir H2",
+      "x": 140,
+      "y": 20,
+      "width": 80,
+      "height": 2,
+      "fill": "$color.ink",
+      "opacity": 0.5
+    },
+    "row_app_cards": {
+      "id": "row_app_cards",
+      "type": "frame",
+      "name": "Card applications",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "fr_app_dot",
+        "fr_app_hatch",
+        "fr_app_hex"
+      ]
+    },
+    "row_app_empty": {
+      "id": "row_app_empty",
+      "type": "frame",
+      "name": "Empty applications",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "fr_app_stipple",
+        "fr_app_wave",
+        "fr_app_blob"
+      ]
+    },
+    "row_app_hero": {
+      "id": "row_app_hero",
+      "type": "frame",
+      "name": "Hero applications",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "fr_app_blueprint",
+        "fr_app_circuit",
+        "fr_app_iso"
+      ]
+    },
+    "row_apps": {
+      "id": "row_apps",
+      "type": "frame",
+      "name": "Applied section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.5"
+      },
+      "children": [
+        "tx_apps_title",
+        "tx_apps_sub",
+        "tx_apps_cards_label",
+        "row_app_cards",
+        "tx_apps_empty_label",
+        "row_app_empty",
+        "tx_apps_hero_label",
+        "row_app_hero"
+      ]
+    },
+    "row_geo": {
+      "id": "row_geo",
+      "type": "frame",
+      "name": "Geometric section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_geo_title",
+        "row_geo_tiles"
+      ]
+    },
+    "row_geo_tiles": {
+      "id": "row_geo_tiles",
+      "type": "frame",
+      "name": "Geometric tiles",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "row",
+        "gap": "$space.5"
+      },
+      "children": [
+        "col_swatch_dot",
+        "col_swatch_hatch",
+        "col_swatch_hex"
+      ]
+    },
+    "row_header": {
+      "id": "row_header",
+      "type": "frame",
+      "name": "Header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3"
+      },
+      "children": [
+        "tx_title",
+        "tx_subtitle",
+        "row_swatches"
+      ]
+    },
+    "row_org": {
+      "id": "row_org",
+      "type": "frame",
+      "name": "Organic section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_org_title",
+        "row_org_tiles"
+      ]
+    },
+    "row_org_tiles": {
+      "id": "row_org_tiles",
+      "type": "frame",
+      "name": "Organic tiles",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "row",
+        "gap": "$space.5"
+      },
+      "children": [
+        "col_swatch_stipple",
+        "col_swatch_wave",
+        "col_swatch_blob"
+      ]
+    },
+    "row_swatches": {
+      "id": "row_swatches",
+      "type": "frame",
+      "name": "Tone swatches",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "sw_ground",
+        "tx_sw_ground",
+        "sw_ink",
+        "tx_sw_ink"
+      ]
+    },
+    "row_tech": {
+      "id": "row_tech",
+      "type": "frame",
+      "name": "Technical section",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_tech_title",
+        "row_tech_tiles"
+      ]
+    },
+    "row_tech_tiles": {
+      "id": "row_tech_tiles",
+      "type": "frame",
+      "name": "Technical tiles",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "start",
+        "direction": "row",
+        "gap": "$space.5"
+      },
+      "children": [
+        "col_swatch_blueprint",
+        "col_swatch_circuit",
+        "col_swatch_iso"
+      ]
+    },
+    "sh_ab_0": {
+      "id": "sh_ab_0",
+      "type": "shape",
+      "name": "ES Blob 0",
+      "x": 20,
+      "y": 20,
+      "width": 60,
+      "height": 50,
+      "fill": "$color.ink",
+      "opacity": 0.26,
+      "kind": "blob",
+      "seed": 8,
+      "complexity": 0.5
+    },
+    "sh_ab_1": {
+      "id": "sh_ab_1",
+      "type": "shape",
+      "name": "ES Blob 1",
+      "x": 150,
+      "y": 16,
+      "width": 50,
+      "height": 44,
+      "fill": "$color.ink",
+      "opacity": 0.3,
+      "kind": "blob",
+      "seed": 20,
+      "complexity": 0.48
+    },
+    "sh_ab_2": {
+      "id": "sh_ab_2",
+      "type": "shape",
+      "name": "ES Blob 2",
+      "x": 40,
+      "y": 100,
+      "width": 70,
+      "height": 48,
+      "fill": "$color.ink",
+      "opacity": 0.24,
+      "kind": "blob",
+      "seed": 32,
+      "complexity": 0.55
+    },
+    "sh_ab_3": {
+      "id": "sh_ab_3",
+      "type": "shape",
+      "name": "ES Blob 3",
+      "x": 150,
+      "y": 100,
+      "width": 48,
+      "height": 40,
+      "fill": "$color.ink",
+      "opacity": 0.32,
+      "kind": "blob",
+      "seed": 44,
+      "complexity": 0.45
+    },
+    "sh_aw_0": {
+      "id": "sh_aw_0",
+      "type": "shape",
+      "name": "ES Wave 0",
+      "x": -20,
+      "y": 20,
+      "width": 280,
+      "height": 24,
+      "fill": "$color.ink",
+      "opacity": 0.22,
+      "kind": "blob",
+      "seed": 12,
+      "complexity": 0.4
+    },
+    "sh_aw_1": {
+      "id": "sh_aw_1",
+      "type": "shape",
+      "name": "ES Wave 1",
+      "x": -30,
+      "y": 60,
+      "width": 300,
+      "height": 28,
+      "fill": "$color.ink",
+      "opacity": 0.28,
+      "kind": "blob",
+      "seed": 24,
+      "complexity": 0.35
+    },
+    "sh_aw_2": {
+      "id": "sh_aw_2",
+      "type": "shape",
+      "name": "ES Wave 2",
+      "x": -16,
+      "y": 110,
+      "width": 280,
+      "height": 24,
+      "fill": "$color.ink",
+      "opacity": 0.2,
+      "kind": "blob",
+      "seed": 36,
+      "complexity": 0.42
+    },
+    "sh_ax_0": {
+      "id": "sh_ax_0",
+      "type": "shape",
+      "name": "App Hex 0",
+      "x": 12,
+      "y": 12,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_1": {
+      "id": "sh_ax_1",
+      "type": "shape",
+      "name": "App Hex 1",
+      "x": 44,
+      "y": 12,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_2": {
+      "id": "sh_ax_2",
+      "type": "shape",
+      "name": "App Hex 2",
+      "x": 76,
+      "y": 12,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_3": {
+      "id": "sh_ax_3",
+      "type": "shape",
+      "name": "App Hex 3",
+      "x": 108,
+      "y": 12,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_4": {
+      "id": "sh_ax_4",
+      "type": "shape",
+      "name": "App Hex 4",
+      "x": 28,
+      "y": 40,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_5": {
+      "id": "sh_ax_5",
+      "type": "shape",
+      "name": "App Hex 5",
+      "x": 60,
+      "y": 40,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_6": {
+      "id": "sh_ax_6",
+      "type": "shape",
+      "name": "App Hex 6",
+      "x": 92,
+      "y": 40,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_7": {
+      "id": "sh_ax_7",
+      "type": "shape",
+      "name": "App Hex 7",
+      "x": 12,
+      "y": 68,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_ax_8": {
+      "id": "sh_ax_8",
+      "type": "shape",
+      "name": "App Hex 8",
+      "x": 44,
+      "y": 68,
+      "width": 32,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.4,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_blob_0": {
+      "id": "sh_blob_0",
+      "type": "shape",
+      "name": "Blob 0",
+      "x": 18,
+      "y": 24,
+      "width": 70,
+      "height": 58,
+      "fill": "$color.ink",
+      "opacity": 0.28,
+      "kind": "blob",
+      "seed": 7,
+      "complexity": 0.55
+    },
+    "sh_blob_1": {
+      "id": "sh_blob_1",
+      "type": "shape",
+      "name": "Blob 1",
+      "x": 110,
+      "y": 16,
+      "width": 54,
+      "height": 48,
+      "fill": "$color.ink",
+      "opacity": 0.32,
+      "transform": {
+        "scale": 1.1
+      },
+      "kind": "blob",
+      "seed": 19,
+      "complexity": 0.5
+    },
+    "sh_blob_2": {
+      "id": "sh_blob_2",
+      "type": "shape",
+      "name": "Blob 2",
+      "x": 42,
+      "y": 90,
+      "width": 80,
+      "height": 64,
+      "fill": "$color.ink",
+      "opacity": 0.24,
+      "kind": "blob",
+      "seed": 31,
+      "complexity": 0.6
+    },
+    "sh_blob_3": {
+      "id": "sh_blob_3",
+      "type": "shape",
+      "name": "Blob 3",
+      "x": 128,
+      "y": 100,
+      "width": 48,
+      "height": 42,
+      "fill": "$color.ink",
+      "opacity": 0.36,
+      "kind": "blob",
+      "seed": 43,
+      "complexity": 0.48
+    },
+    "sh_blob_4": {
+      "id": "sh_blob_4",
+      "type": "shape",
+      "name": "Blob 4",
+      "x": 20,
+      "y": 148,
+      "width": 42,
+      "height": 36,
+      "fill": "$color.ink",
+      "opacity": 0.3,
+      "kind": "blob",
+      "seed": 55,
+      "complexity": 0.52
+    },
+    "sh_blob_5": {
+      "id": "sh_blob_5",
+      "type": "shape",
+      "name": "Blob 5",
+      "x": 90,
+      "y": 150,
+      "width": 60,
+      "height": 40,
+      "fill": "$color.ink",
+      "opacity": 0.26,
+      "kind": "blob",
+      "seed": 67,
+      "complexity": 0.45
+    },
+    "sh_hex_00": {
+      "id": "sh_hex_00",
+      "type": "shape",
+      "name": "Hex 0 0",
+      "x": 8,
+      "y": 12,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_01": {
+      "id": "sh_hex_01",
+      "type": "shape",
+      "name": "Hex 0 1",
+      "x": 44,
+      "y": 12,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_02": {
+      "id": "sh_hex_02",
+      "type": "shape",
+      "name": "Hex 0 2",
+      "x": 80,
+      "y": 12,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_03": {
+      "id": "sh_hex_03",
+      "type": "shape",
+      "name": "Hex 0 3",
+      "x": 116,
+      "y": 12,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_04": {
+      "id": "sh_hex_04",
+      "type": "shape",
+      "name": "Hex 0 4",
+      "x": 152,
+      "y": 12,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_10": {
+      "id": "sh_hex_10",
+      "type": "shape",
+      "name": "Hex 1 0",
+      "x": 26,
+      "y": 42,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_11": {
+      "id": "sh_hex_11",
+      "type": "shape",
+      "name": "Hex 1 1",
+      "x": 62,
+      "y": 42,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_12": {
+      "id": "sh_hex_12",
+      "type": "shape",
+      "name": "Hex 1 2",
+      "x": 98,
+      "y": 42,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_13": {
+      "id": "sh_hex_13",
+      "type": "shape",
+      "name": "Hex 1 3",
+      "x": 134,
+      "y": 42,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_20": {
+      "id": "sh_hex_20",
+      "type": "shape",
+      "name": "Hex 2 0",
+      "x": 8,
+      "y": 72,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_21": {
+      "id": "sh_hex_21",
+      "type": "shape",
+      "name": "Hex 2 1",
+      "x": 44,
+      "y": 72,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_22": {
+      "id": "sh_hex_22",
+      "type": "shape",
+      "name": "Hex 2 2",
+      "x": 80,
+      "y": 72,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_23": {
+      "id": "sh_hex_23",
+      "type": "shape",
+      "name": "Hex 2 3",
+      "x": 116,
+      "y": 72,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_24": {
+      "id": "sh_hex_24",
+      "type": "shape",
+      "name": "Hex 2 4",
+      "x": 152,
+      "y": 72,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_30": {
+      "id": "sh_hex_30",
+      "type": "shape",
+      "name": "Hex 3 0",
+      "x": 26,
+      "y": 102,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_31": {
+      "id": "sh_hex_31",
+      "type": "shape",
+      "name": "Hex 3 1",
+      "x": 62,
+      "y": 102,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_32": {
+      "id": "sh_hex_32",
+      "type": "shape",
+      "name": "Hex 3 2",
+      "x": 98,
+      "y": 102,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_33": {
+      "id": "sh_hex_33",
+      "type": "shape",
+      "name": "Hex 3 3",
+      "x": 134,
+      "y": 102,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_40": {
+      "id": "sh_hex_40",
+      "type": "shape",
+      "name": "Hex 4 0",
+      "x": 8,
+      "y": 132,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_41": {
+      "id": "sh_hex_41",
+      "type": "shape",
+      "name": "Hex 4 1",
+      "x": 44,
+      "y": 132,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_42": {
+      "id": "sh_hex_42",
+      "type": "shape",
+      "name": "Hex 4 2",
+      "x": 80,
+      "y": 132,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_43": {
+      "id": "sh_hex_43",
+      "type": "shape",
+      "name": "Hex 4 3",
+      "x": 116,
+      "y": 132,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_44": {
+      "id": "sh_hex_44",
+      "type": "shape",
+      "name": "Hex 4 4",
+      "x": 152,
+      "y": 132,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_50": {
+      "id": "sh_hex_50",
+      "type": "shape",
+      "name": "Hex 5 0",
+      "x": 26,
+      "y": 162,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_51": {
+      "id": "sh_hex_51",
+      "type": "shape",
+      "name": "Hex 5 1",
+      "x": 62,
+      "y": 162,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_52": {
+      "id": "sh_hex_52",
+      "type": "shape",
+      "name": "Hex 5 2",
+      "x": 98,
+      "y": 162,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hex_53": {
+      "id": "sh_hex_53",
+      "type": "shape",
+      "name": "Hex 5 3",
+      "x": 134,
+      "y": 162,
+      "width": 36,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hi_0": {
+      "id": "sh_hi_0",
+      "type": "shape",
+      "name": "Hero Iso 0",
+      "x": 180,
+      "y": 12,
+      "width": 40,
+      "height": 36,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1.5
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hi_1": {
+      "id": "sh_hi_1",
+      "type": "shape",
+      "name": "Hero Iso 1",
+      "x": 210,
+      "y": 24,
+      "width": 36,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.35,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_hi_2": {
+      "id": "sh_hi_2",
+      "type": "shape",
+      "name": "Hero Iso 2",
+      "x": 155,
+      "y": 28,
+      "width": 32,
+      "height": 28,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.35,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_iso_0": {
+      "id": "sh_iso_0",
+      "type": "shape",
+      "name": "Iso cube 0",
+      "x": 70,
+      "y": 30,
+      "width": 48,
+      "height": 42,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1.5
+      },
+      "opacity": 0.55,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_iso_1": {
+      "id": "sh_iso_1",
+      "type": "shape",
+      "name": "Iso cube 1",
+      "x": 40,
+      "y": 70,
+      "width": 48,
+      "height": 42,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1.5
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_iso_2": {
+      "id": "sh_iso_2",
+      "type": "shape",
+      "name": "Iso cube 2",
+      "x": 100,
+      "y": 70,
+      "width": 48,
+      "height": 42,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1.5
+      },
+      "opacity": 0.45,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_iso_3": {
+      "id": "sh_iso_3",
+      "type": "shape",
+      "name": "Iso cube 3",
+      "x": 70,
+      "y": 110,
+      "width": 48,
+      "height": 42,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1.5
+      },
+      "opacity": 0.5,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_iso_4": {
+      "id": "sh_iso_4",
+      "type": "shape",
+      "name": "Iso cube 4",
+      "x": 24,
+      "y": 130,
+      "width": 36,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.35,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_iso_5": {
+      "id": "sh_iso_5",
+      "type": "shape",
+      "name": "Iso cube 5",
+      "x": 130,
+      "y": 40,
+      "width": 36,
+      "height": 32,
+      "fill": "transparent",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "opacity": 0.35,
+      "kind": "polygon",
+      "sides": 6
+    },
+    "sh_wave_0": {
+      "id": "sh_wave_0",
+      "type": "shape",
+      "name": "Wave 0",
+      "x": -20,
+      "y": 18,
+      "width": 240,
+      "height": 28,
+      "fill": "$color.ink",
+      "opacity": 0.22,
+      "kind": "blob",
+      "seed": 11,
+      "complexity": 0.4
+    },
+    "sh_wave_1": {
+      "id": "sh_wave_1",
+      "type": "shape",
+      "name": "Wave 1",
+      "x": -30,
+      "y": 58,
+      "width": 260,
+      "height": 32,
+      "fill": "$color.ink",
+      "opacity": 0.28,
+      "kind": "blob",
+      "seed": 22,
+      "complexity": 0.35
+    },
+    "sh_wave_2": {
+      "id": "sh_wave_2",
+      "type": "shape",
+      "name": "Wave 2",
+      "x": -16,
+      "y": 98,
+      "width": 240,
+      "height": 26,
+      "fill": "$color.ink",
+      "opacity": 0.2,
+      "kind": "blob",
+      "seed": 33,
+      "complexity": 0.45
+    },
+    "sh_wave_3": {
+      "id": "sh_wave_3",
+      "type": "shape",
+      "name": "Wave 3",
+      "x": -24,
+      "y": 138,
+      "width": 250,
+      "height": 30,
+      "fill": "$color.ink",
+      "opacity": 0.3,
+      "kind": "blob",
+      "seed": 44,
+      "complexity": 0.38
+    },
+    "sw_ground": {
+      "id": "sw_ground",
+      "type": "frame",
+      "name": "Ground chip",
+      "width": 48,
+      "height": 48,
+      "fill": "$color.ground",
+      "stroke": {
+        "color": "$color.ink",
+        "width": 1
+      },
+      "radius": "$radius.md",
+      "children": []
+    },
+    "sw_ink": {
+      "id": "sw_ink",
+      "type": "frame",
+      "name": "Ink chip",
+      "width": 48,
+      "height": 48,
+      "fill": "$color.ink",
+      "radius": "$radius.md",
+      "children": []
+    },
+    "tx_ad_dot": {
+      "id": "tx_ad_dot",
+      "type": "text",
+      "name": "Sprint notes",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Sprint notes",
+      "font": "$type.label"
+    },
+    "tx_ad_hatch": {
+      "id": "tx_ad_hatch",
+      "type": "text",
+      "name": "Weekly digest",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Weekly digest",
+      "font": "$type.label"
+    },
+    "tx_ad_hex": {
+      "id": "tx_ad_hex",
+      "type": "text",
+      "name": "Design critique",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Design critique",
+      "font": "$type.label"
+    },
+    "tx_apps_cards_label": {
+      "id": "tx_apps_cards_label",
+      "type": "text",
+      "name": "Cards group label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Cards · Geometric",
+      "font": "$type.label"
+    },
+    "tx_apps_empty_label": {
+      "id": "tx_apps_empty_label",
+      "type": "text",
+      "name": "Empty group label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Empty states · Organic",
+      "font": "$type.label"
+    },
+    "tx_apps_hero_label": {
+      "id": "tx_apps_hero_label",
+      "type": "text",
+      "name": "Hero group label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Hero bands · Technical",
+      "font": "$type.label"
+    },
+    "tx_apps_sub": {
+      "id": "tx_apps_sub",
+      "type": "text",
+      "name": "Applied subtitle",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Same motifs as card, empty state, and hero band backgrounds.",
+      "font": "$type.body"
+    },
+    "tx_apps_title": {
+      "id": "tx_apps_title",
+      "type": "text",
+      "name": "Applied title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Applied",
+      "font": "$type.title"
+    },
+    "tx_as_blob": {
+      "id": "tx_as_blob",
+      "type": "text",
+      "name": "No projects yet blob",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "No projects yet",
+      "font": "$type.body"
+    },
+    "tx_as_blob_tag": {
+      "id": "tx_as_blob_tag",
+      "type": "text",
+      "name": "Blob chip",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Blob scatter",
+      "font": "$type.label"
+    },
+    "tx_as_stipple": {
+      "id": "tx_as_stipple",
+      "type": "text",
+      "name": "No projects yet",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "No projects yet",
+      "font": "$type.body"
+    },
+    "tx_as_stipple_tag": {
+      "id": "tx_as_stipple_tag",
+      "type": "text",
+      "name": "Stipple chip",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Soft stipple",
+      "font": "$type.label"
+    },
+    "tx_as_wave": {
+      "id": "tx_as_wave",
+      "type": "text",
+      "name": "No projects yet wave",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "No projects yet",
+      "font": "$type.body"
+    },
+    "tx_as_wave_tag": {
+      "id": "tx_as_wave_tag",
+      "type": "text",
+      "name": "Wave chip",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Wave bands",
+      "font": "$type.label"
+    },
+    "tx_geo_title": {
+      "id": "tx_geo_title",
+      "type": "text",
+      "name": "Geometric title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Geometric",
+      "font": "$type.title"
+    },
+    "tx_hb_bp": {
+      "id": "tx_hb_bp",
+      "type": "text",
+      "name": "Northwind Ops",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Northwind Ops",
+      "font": "$type.label"
+    },
+    "tx_hb_cir": {
+      "id": "tx_hb_cir",
+      "type": "text",
+      "name": "Trace Console",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Trace Console",
+      "font": "$type.label"
+    },
+    "tx_hb_iso": {
+      "id": "tx_hb_iso",
+      "type": "text",
+      "name": "Iso Board",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Iso Board",
+      "font": "$type.label"
+    },
+    "tx_label_blob": {
+      "id": "tx_label_blob",
+      "type": "text",
+      "name": "Blob label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Blob scatter",
+      "font": "$type.label"
+    },
+    "tx_label_blueprint": {
+      "id": "tx_label_blueprint",
+      "type": "text",
+      "name": "Blueprint label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Blueprint grid",
+      "font": "$type.label"
+    },
+    "tx_label_circuit": {
+      "id": "tx_label_circuit",
+      "type": "text",
+      "name": "Circuit label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Circuit traces",
+      "font": "$type.label"
+    },
+    "tx_label_dot": {
+      "id": "tx_label_dot",
+      "type": "text",
+      "name": "Dot label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Dot grid",
+      "font": "$type.label"
+    },
+    "tx_label_hatch": {
+      "id": "tx_label_hatch",
+      "type": "text",
+      "name": "Hatch label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Diagonal hatch",
+      "font": "$type.label"
+    },
+    "tx_label_hex": {
+      "id": "tx_label_hex",
+      "type": "text",
+      "name": "Hex label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Hex lattice",
+      "font": "$type.label"
+    },
+    "tx_label_iso": {
+      "id": "tx_label_iso",
+      "type": "text",
+      "name": "Iso label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Isometric cubes",
+      "font": "$type.label"
+    },
+    "tx_label_stipple": {
+      "id": "tx_label_stipple",
+      "type": "text",
+      "name": "Stipple label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Soft stipple",
+      "font": "$type.label"
+    },
+    "tx_label_wave": {
+      "id": "tx_label_wave",
+      "type": "text",
+      "name": "Wave label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Wave bands",
+      "font": "$type.label"
+    },
+    "tx_org_title": {
+      "id": "tx_org_title",
+      "type": "text",
+      "name": "Organic title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Organic",
+      "font": "$type.title"
+    },
+    "tx_subtitle": {
+      "id": "tx_subtitle",
+      "type": "text",
+      "name": "Subtitle",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Nine two-tone motifs — swatches and applied surfaces.",
+      "font": "$type.body"
+    },
+    "tx_sw_ground": {
+      "id": "tx_sw_ground",
+      "type": "text",
+      "name": "Ground label",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Ground · #F3EEE6",
+      "font": "$type.label"
+    },
+    "tx_sw_ink": {
+      "id": "tx_sw_ink",
+      "type": "text",
+      "name": "Ink label",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Ink · #1E3A4C",
+      "font": "$type.label"
+    },
+    "tx_tech_title": {
+      "id": "tx_tech_title",
+      "type": "text",
+      "name": "Technical title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Technical",
+      "font": "$type.title"
+    },
+    "tx_title": {
+      "id": "tx_title",
+      "type": "text",
+      "name": "Title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Pattern Library",
+      "font": "$type.display"
+    }
+  },
+  "components": {},
+  "annotations": {}
+}

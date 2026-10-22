@@ -738,5 +738,40 @@ export function sampleDoc(name = "Pulse"): Doc {
       },
     },
     annotations: {},
+    timelines: {
+      tl_login_in: {
+        id: "tl_login_in",
+        name: "Login enter",
+        frameId: "fr_login",
+        duration: 800,
+        tracks: [
+          {
+            nodeId: "tx_title",
+            channel: "opacity",
+            keys: [
+              { t: 0, value: 0, ease: "ease-out" },
+              { t: 1, value: 1 },
+            ],
+          },
+          {
+            nodeId: "tx_title",
+            channel: "transform.y",
+            keys: [
+              { t: 0, value: 16, ease: "ease-out" },
+              { t: 1, value: 0 },
+            ],
+          },
+          {
+            nodeId: "bt_submit",
+            channel: "opacity",
+            keys: [
+              { t: 0, value: 0 },
+              { t: 0.4, value: 0 },
+              { t: 1, value: 1, ease: "ease-out" },
+            ],
+          },
+        ],
+      },
+    },
   };
 }

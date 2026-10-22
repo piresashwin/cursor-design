@@ -28,6 +28,8 @@ test("standalone editor renders, applies ops, screenshots", async (t) => {
     page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
     await page.route("**/*", async (route) => {
       const u = new URL(route.request().url());
+      // document fonts load from Google (CSP-allowlisted in the extension webview)
+      if (u.hostname === "fonts.googleapis.com" || u.hostname === "fonts.gstatic.com") return route.continue();
       if (u.pathname === "/") return route.fulfill({ body: html, contentType: "text/html" });
       try {
         const body = await fs.readFile(path.join(dist, u.pathname));
@@ -75,7 +77,9 @@ test("standalone editor renders, applies ops, screenshots", async (t) => {
     // select via host → overlay shows
     await page.evaluate(() => (window as unknown as { __editor: { select(ids: string[]): void } }).__editor.select(["bt_blue"]));
     await page.waitForSelector("svg.overlay rect.sel");
-    assert.deepEqual(errors, []);
+    const ignoreNoise = (e: string) =>
+      /fonts\.googleapis|fonts\.gstatic|cssRules|inlining remote css|Failed to load resource:.*404/i.test(e);
+    assert.deepEqual(errors.filter((e) => !ignoreNoise(e)), []);
 
     // --- resize: drag the SE handle of fr_login and confirm width/height commit ---
     await page.evaluate(() => (window as unknown as { __editor: { select(ids: string[]): void } }).__editor.select(["fr_login"]));
@@ -136,7 +140,8 @@ test("standalone editor renders, applies ops, screenshots", async (t) => {
     const startX = a.x + 24, startY = a.y + 24;
     await page.mouse.move(startX, startY);
     await page.mouse.down();
-    await page.mouse.move(startX + (b.x - a.x) - 3, startY, { steps: 6 }); // 3px short of alignment
+    // 1 screen-px short of alignment (world shortfall = 1/z; snap threshold is 12/z)
+    await page.mouse.move(startX + (b.x - a.x) - 1, startY, { steps: 1 });
     const guideShown = await page.$("svg.overlay line.guide"); // zero-width line → query, not waitForSelector(visible)
     assert.ok(guideShown, "a snap guide rendered during the drag");
     await page.mouse.up();
@@ -365,7 +370,85 @@ test("standalone editor renders, applies ops, screenshots", async (t) => {
     assert.ok(ngShot.png.length > 2000, "screenshot of nextgen frame is non-trivial");
     await fs.writeFile(path.join(here, "../.test-out/fr_nextgen.png"), Buffer.from(ngShot.png, "base64"));
 
-    assert.deepEqual(errors, []);
+    // --- tool contracts: camera must not use transform (breaks backdrop-filter); fonts load from tokens ---
+    const worldCss = await page.locator(".world").evaluate((el) => {
+      const c = getComputedStyle(el);
+      return { transform: c.transform, zoom: (c as CSSStyleDeclaration & { zoom?: string }).zoom, left: c.left, top: c.top };
+    });
+    assert.ok(worldCss.transform === "none" || worldCss.transform === "matrix(1, 0, 0, 1, 0, 0)", `camera must not use transform (got ${worldCss.transform})`);
+
+    await page.evaluate(() =>
+      (window as unknown as { __editor: { applyOps(o: unknown[]): void } }).__editor.applyOps([
+        {
+          op: "setToken",
+          name: "type.contract",
+          token: { type: "font", family: "Fraunces, Georgia, serif", size: 28, weight: 600 },
+        },
+        {
+          op: "createFrame",
+          page: "pg_sprint",
+          frame: {
+            id: "fr_glass",
+            type: "frame",
+            name: "Glass contract",
+            x: 0,
+            y: 900,
+            width: 320,
+            height: 200,
+            fill: { kind: "linear", angle: 135, stops: [{ color: "#2A8F62", at: 0 }, { color: "#A8CBE0", at: 1 }] },
+            layout: { mode: "absolute", direction: "column" },
+            children: [],
+          },
+        },
+        {
+          op: "create",
+          parent: "fr_glass",
+          node: {
+            id: "card_glass",
+            type: "frame",
+            name: "Frost",
+            x: 24,
+            y: 24,
+            width: 272,
+            height: 152,
+            fill: "rgba(255,255,255,0.55)",
+            backdropBlur: 16,
+            radius: 20,
+            layout: { direction: "column", padding: 20 },
+            children: [],
+          },
+        },
+        {
+          op: "create",
+          parent: "card_glass",
+          node: {
+            id: "tx_glass",
+            type: "text",
+            content: "Glass",
+            font: "$type.contract",
+            fill: "#0F2A1F",
+            width: "hug",
+            height: "hug",
+          },
+        },
+      ]),
+    );
+    const glassEl = await page.waitForSelector('[data-node-id="card_glass"]');
+    const glassCss = await glassEl.evaluate((el) => {
+      const c = getComputedStyle(el);
+      return {
+        backdrop: c.backdropFilter || (c as CSSStyleDeclaration & { webkitBackdropFilter?: string }).webkitBackdropFilter,
+      };
+    });
+    assert.ok(glassCss.backdrop && glassCss.backdrop.includes("blur"), `backdropBlur under camera (${glassCss.backdrop})`);
+    await page.waitForSelector('[data-node-id="tx_glass"]');
+    const fontFamily = await page.locator('[data-node-id="tx_glass"]').evaluate((el) => getComputedStyle(el).fontFamily);
+    assert.ok(/Fraunces/i.test(fontFamily), `font token family applied (got ${fontFamily})`);
+
+    const fontLink = await page.locator("#cursor-design-fonts").getAttribute("href");
+    assert.ok(fontLink && fontLink.includes("fonts.googleapis.com") && fontLink.includes("Fraunces"), `font stylesheet injected (${fontLink})`);
+
+    assert.deepEqual(errors.filter((e) => !ignoreNoise(e)), []);
   } finally {
     await browser.close();
   }

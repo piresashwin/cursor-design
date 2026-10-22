@@ -1,0 +1,3026 @@
+{
+  "schemaVersion": 1,
+  "name": "Meridian",
+  "tokens": {
+    "color.bg": {
+      "type": "color",
+      "value": "#F3F5F7",
+      "group": "color",
+      "description": "App canvas"
+    },
+    "color.surface": {
+      "type": "color",
+      "value": "#FFFFFF",
+      "group": "color"
+    },
+    "color.surface.raised": {
+      "type": "color",
+      "value": "#FAFBFC",
+      "group": "color"
+    },
+    "color.border": {
+      "type": "color",
+      "value": "#E2E6EB",
+      "group": "color"
+    },
+    "color.border.strong": {
+      "type": "color",
+      "value": "#C8CFD8",
+      "group": "color"
+    },
+    "color.text": {
+      "type": "color",
+      "value": "#15202B",
+      "group": "color"
+    },
+    "color.muted": {
+      "type": "color",
+      "value": "#5B6B7C",
+      "group": "color"
+    },
+    "color.primary": {
+      "type": "color",
+      "value": "#0F4C5C",
+      "group": "color",
+      "description": "Deep teal — Harbor direction"
+    },
+    "color.primary.hover": {
+      "type": "color",
+      "value": "#0A3A46",
+      "group": "color"
+    },
+    "color.onPrimary": {
+      "type": "color",
+      "value": "#FFFFFF",
+      "group": "color"
+    },
+    "color.accent": {
+      "type": "color",
+      "value": "#C47B2D",
+      "group": "color"
+    },
+    "color.onAccent": {
+      "type": "color",
+      "value": "#FFFFFF",
+      "group": "color"
+    },
+    "color.success": {
+      "type": "color",
+      "value": "#1B7A4E",
+      "group": "color"
+    },
+    "color.success.subtle": {
+      "type": "color",
+      "value": "#E6F5EE",
+      "group": "color"
+    },
+    "color.warning": {
+      "type": "color",
+      "value": "#9A6700",
+      "group": "color"
+    },
+    "color.warning.subtle": {
+      "type": "color",
+      "value": "#FFF4D6",
+      "group": "color"
+    },
+    "color.danger": {
+      "type": "color",
+      "value": "#B42318",
+      "group": "color"
+    },
+    "color.danger.subtle": {
+      "type": "color",
+      "value": "#FEECEC",
+      "group": "color"
+    },
+    "color.info": {
+      "type": "color",
+      "value": "#175CD3",
+      "group": "color"
+    },
+    "color.info.subtle": {
+      "type": "color",
+      "value": "#E8F1FC",
+      "group": "color"
+    },
+    "color.sidebar": {
+      "type": "color",
+      "value": "#0C2E38",
+      "group": "color"
+    },
+    "color.onSidebar": {
+      "type": "color",
+      "value": "#F3F7F8",
+      "group": "color"
+    },
+    "color.onSidebar.muted": {
+      "type": "color",
+      "value": "#8AA8B2",
+      "group": "color"
+    },
+    "color.focus": {
+      "type": "color",
+      "value": "#175CD3",
+      "group": "color"
+    },
+    "space.1": { "type": "number", "value": 4, "group": "space" },
+    "space.2": { "type": "number", "value": 8, "group": "space" },
+    "space.3": { "type": "number", "value": 12, "group": "space" },
+    "space.4": { "type": "number", "value": 16, "group": "space" },
+    "space.5": { "type": "number", "value": 20, "group": "space" },
+    "space.6": { "type": "number", "value": 24, "group": "space" },
+    "space.8": { "type": "number", "value": 32, "group": "space" },
+    "space.10": { "type": "number", "value": 40, "group": "space" },
+    "space.12": { "type": "number", "value": 48, "group": "space" },
+    "radius.sm": { "type": "number", "value": 4, "group": "radius" },
+    "radius.md": { "type": "number", "value": 6, "group": "radius" },
+    "radius.lg": { "type": "number", "value": 10, "group": "radius" },
+    "type.display": {
+      "type": "font",
+      "family": "Fraunces, Georgia, serif",
+      "size": 28,
+      "weight": 600,
+      "lineHeight": 1.2,
+      "group": "type"
+    },
+    "type.title": {
+      "type": "font",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "size": 20,
+      "weight": 600,
+      "lineHeight": 1.3,
+      "group": "type"
+    },
+    "type.heading": {
+      "type": "font",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 1.35,
+      "group": "type"
+    },
+    "type.body": {
+      "type": "font",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "size": 14,
+      "weight": 400,
+      "lineHeight": 1.45,
+      "group": "type"
+    },
+    "type.label": {
+      "type": "font",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "size": 13,
+      "weight": 600,
+      "lineHeight": 1.3,
+      "group": "type"
+    },
+    "type.caption": {
+      "type": "font",
+      "family": "Plus Jakarta Sans, system-ui, sans-serif",
+      "size": 12,
+      "weight": 400,
+      "lineHeight": 1.35,
+      "group": "type"
+    },
+    "type.mono": {
+      "type": "font",
+      "family": "IBM Plex Mono, ui-monospace, monospace",
+      "size": 12,
+      "weight": 500,
+      "lineHeight": 1.4,
+      "group": "type"
+    },
+    "shadow.sm": {
+      "type": "shadow",
+      "value": { "x": 0, "y": 1, "blur": 2, "spread": 0, "color": "rgba(21, 32, 43, 0.06)" },
+      "group": "shadow"
+    },
+    "shadow.md": {
+      "type": "shadow",
+      "value": { "x": 0, "y": 4, "blur": 12, "spread": -2, "color": "rgba(21, 32, 43, 0.1)" },
+      "group": "shadow"
+    },
+    "motion.fast": { "type": "number", "value": 160, "group": "motion" },
+    "motion.base": { "type": "number", "value": 220, "group": "motion" }
+  },
+  "folderRoot": ["pg_explore"],
+  "folders": {},
+  "pages": {
+    "pg_explore": {
+      "name": "Explore",
+      "frames": ["fr_harbor", "fr_ledger", "fr_grove"]
+    }
+  },
+  "nodes": {
+    "fr_harbor": {
+      "id": "fr_harbor",
+      "type": "frame",
+      "name": "Harbor",
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 800,
+      "fill": "#E8EEF0",
+      "clip": true,
+      "layout": { "direction": "row", "align": "stretch", "justify": "start" },
+      "children": ["hb_sidebar", "hb_main"]
+    },
+    "hb_sidebar": {
+      "id": "hb_sidebar",
+      "type": "frame",
+      "name": "Harbor sidebar",
+      "width": 240,
+      "height": "fill",
+      "fill": "#0C2E38",
+      "layout": {
+        "direction": "column",
+        "gap": 4,
+        "padding": [24, 16],
+        "align": "stretch"
+      },
+      "children": [
+        "hb_brand_row",
+        "hb_school_switch",
+        "hb_nav_gap",
+        "hb_nav_dash",
+        "hb_nav_students",
+        "hb_nav_attend",
+        "hb_nav_academic",
+        "hb_nav_fees",
+        "hb_side_spacer",
+        "hb_nav_settings"
+      ]
+    },
+    "hb_brand_row": {
+      "id": "hb_brand_row",
+      "type": "frame",
+      "name": "Brand row",
+      "width": "fill",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 10, "align": "center" },
+      "children": ["hb_brand_mark", "hb_brand_name"]
+    },
+    "hb_brand_mark": {
+      "id": "hb_brand_mark",
+      "type": "frame",
+      "name": "Brand mark",
+      "width": 28,
+      "height": 28,
+      "fill": "#1A6B7C",
+      "radius": 6,
+      "layout": { "direction": "row", "align": "center", "justify": "center" },
+      "children": ["hb_brand_letter"]
+    },
+    "hb_brand_letter": {
+      "id": "hb_brand_letter",
+      "type": "text",
+      "name": "M",
+      "content": "M",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 16, "weight": 600 },
+      "fill": "#F3F7F8",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_brand_name": {
+      "id": "hb_brand_name",
+      "type": "text",
+      "name": "Brand name",
+      "content": "Meridian",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 20, "weight": 600 },
+      "fill": "#F3F7F8",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_school_switch": {
+      "id": "hb_school_switch",
+      "type": "frame",
+      "name": "School switcher",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#0A2530",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [10, 10],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": ["hb_school_name", "hb_school_chev"]
+    },
+    "hb_school_name": {
+      "id": "hb_school_name",
+      "type": "text",
+      "name": "School name",
+      "content": "Northbridge Academy",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#8AA8B2",
+      "width": "fill",
+      "height": "hug"
+    },
+    "hb_school_chev": {
+      "id": "hb_school_chev",
+      "type": "icon",
+      "name": "chevrons-up-down",
+      "width": 14,
+      "height": 14,
+      "fill": "#8AA8B2"
+    },
+    "hb_nav_gap": {
+      "id": "hb_nav_gap",
+      "type": "frame",
+      "name": "Nav spacer",
+      "width": "fill",
+      "height": 16,
+      "layout": { "direction": "column" },
+      "children": []
+    },
+    "hb_nav_dash": {
+      "id": "hb_nav_dash",
+      "type": "frame",
+      "name": "Nav dashboard",
+      "width": "fill",
+      "height": 36,
+      "fill": "#1A6B7C",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_ic_dash", "hb_tx_dash"]
+    },
+    "hb_ic_dash": {
+      "id": "hb_ic_dash",
+      "type": "icon",
+      "name": "layout-dashboard",
+      "width": 16,
+      "height": 16,
+      "fill": "#F3F7F8"
+    },
+    "hb_tx_dash": {
+      "id": "hb_tx_dash",
+      "type": "text",
+      "name": "Dashboard label",
+      "content": "Dashboard",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 600 },
+      "fill": "#F3F7F8",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_nav_students": {
+      "id": "hb_nav_students",
+      "type": "frame",
+      "name": "Nav students",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_ic_students", "hb_tx_students"]
+    },
+    "hb_ic_students": {
+      "id": "hb_ic_students",
+      "type": "icon",
+      "name": "users",
+      "width": 16,
+      "height": 16,
+      "fill": "#8AA8B2"
+    },
+    "hb_tx_students": {
+      "id": "hb_tx_students",
+      "type": "text",
+      "name": "Students label",
+      "content": "Students",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#8AA8B2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_nav_attend": {
+      "id": "hb_nav_attend",
+      "type": "frame",
+      "name": "Nav attendance",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_ic_attend", "hb_tx_attend"]
+    },
+    "hb_ic_attend": {
+      "id": "hb_ic_attend",
+      "type": "icon",
+      "name": "clipboard-check",
+      "width": 16,
+      "height": 16,
+      "fill": "#8AA8B2"
+    },
+    "hb_tx_attend": {
+      "id": "hb_tx_attend",
+      "type": "text",
+      "name": "Attendance label",
+      "content": "Attendance",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#8AA8B2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_nav_academic": {
+      "id": "hb_nav_academic",
+      "type": "frame",
+      "name": "Nav academic",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_ic_academic", "hb_tx_academic"]
+    },
+    "hb_ic_academic": {
+      "id": "hb_ic_academic",
+      "type": "icon",
+      "name": "graduation-cap",
+      "width": 16,
+      "height": 16,
+      "fill": "#8AA8B2"
+    },
+    "hb_tx_academic": {
+      "id": "hb_tx_academic",
+      "type": "text",
+      "name": "Academic label",
+      "content": "Academic",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#8AA8B2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_nav_fees": {
+      "id": "hb_nav_fees",
+      "type": "frame",
+      "name": "Nav fees",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_ic_fees", "hb_tx_fees"]
+    },
+    "hb_ic_fees": {
+      "id": "hb_ic_fees",
+      "type": "icon",
+      "name": "wallet",
+      "width": 16,
+      "height": 16,
+      "fill": "#8AA8B2"
+    },
+    "hb_tx_fees": {
+      "id": "hb_tx_fees",
+      "type": "text",
+      "name": "Fees label",
+      "content": "Fees",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#8AA8B2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_side_spacer": {
+      "id": "hb_side_spacer",
+      "type": "frame",
+      "name": "Sidebar spacer",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "column" },
+      "children": []
+    },
+    "hb_nav_settings": {
+      "id": "hb_nav_settings",
+      "type": "frame",
+      "name": "Nav settings",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_ic_settings", "hb_tx_settings"]
+    },
+    "hb_ic_settings": {
+      "id": "hb_ic_settings",
+      "type": "icon",
+      "name": "settings",
+      "width": 16,
+      "height": 16,
+      "fill": "#8AA8B2"
+    },
+    "hb_tx_settings": {
+      "id": "hb_tx_settings",
+      "type": "text",
+      "name": "Settings label",
+      "content": "Settings",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#8AA8B2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_main": {
+      "id": "hb_main",
+      "type": "frame",
+      "name": "Harbor main",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "column", "align": "stretch" },
+      "children": ["hb_topbar", "hb_content"]
+    },
+    "hb_topbar": {
+      "id": "hb_topbar",
+      "type": "frame",
+      "name": "Top bar",
+      "width": "fill",
+      "height": 56,
+      "fill": "#FFFFFF",
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "row",
+        "gap": 16,
+        "padding": [0, 24],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": ["hb_search", "hb_top_actions"]
+    },
+    "hb_search": {
+      "id": "hb_search",
+      "type": "frame",
+      "name": "Search",
+      "width": 320,
+      "height": 36,
+      "fill": "#F3F5F7",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["hb_ic_search", "hb_tx_search"]
+    },
+    "hb_ic_search": {
+      "id": "hb_ic_search",
+      "type": "icon",
+      "name": "search",
+      "width": 14,
+      "height": 14,
+      "fill": "#5B6B7C"
+    },
+    "hb_tx_search": {
+      "id": "hb_tx_search",
+      "type": "text",
+      "name": "Search placeholder",
+      "content": "Search students, staff, invoices…",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 400 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_top_actions": {
+      "id": "hb_top_actions",
+      "type": "frame",
+      "name": "Top actions",
+      "width": "hug",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 12, "align": "center" },
+      "children": ["hb_year", "hb_bell", "hb_avatar"]
+    },
+    "hb_year": {
+      "id": "hb_year",
+      "type": "frame",
+      "name": "Year selector",
+      "width": "hug",
+      "height": 32,
+      "fill": "#F3F5F7",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 6,
+        "padding": [0, 10],
+        "align": "center"
+      },
+      "children": ["hb_tx_year", "hb_ic_year"]
+    },
+    "hb_tx_year": {
+      "id": "hb_tx_year",
+      "type": "text",
+      "name": "Year label",
+      "content": "2025–26 · Term 1",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_ic_year": {
+      "id": "hb_ic_year",
+      "type": "icon",
+      "name": "chevron-down",
+      "width": 14,
+      "height": 14,
+      "fill": "#5B6B7C"
+    },
+    "hb_bell": {
+      "id": "hb_bell",
+      "type": "icon",
+      "name": "bell",
+      "width": 18,
+      "height": 18,
+      "fill": "#5B6B7C"
+    },
+    "hb_avatar": {
+      "id": "hb_avatar",
+      "type": "avatar",
+      "name": "Principal avatar",
+      "initials": "AK",
+      "size": 32,
+      "fill": "#0F4C5C",
+      "textFill": "#FFFFFF"
+    },
+    "hb_content": {
+      "id": "hb_content",
+      "type": "frame",
+      "name": "Content",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "direction": "column",
+        "gap": 20,
+        "padding": [24, 28],
+        "align": "stretch"
+      },
+      "children": ["hb_page_head", "hb_variant_tag", "hb_kpi_row", "hb_lower"]
+    },
+    "hb_page_head": {
+      "id": "hb_page_head",
+      "type": "frame",
+      "name": "Page header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "align": "end",
+        "justify": "space-between"
+      },
+      "children": ["hb_page_titles", "hb_export_btn"]
+    },
+    "hb_page_titles": {
+      "id": "hb_page_titles",
+      "type": "frame",
+      "name": "Titles",
+      "width": "hug",
+      "height": "hug",
+      "layout": { "direction": "column", "gap": 4 },
+      "children": ["hb_crumb", "hb_h1"]
+    },
+    "hb_crumb": {
+      "id": "hb_crumb",
+      "type": "text",
+      "name": "Breadcrumb",
+      "content": "Principal · Overview",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_h1": {
+      "id": "hb_h1",
+      "type": "text",
+      "name": "Page title",
+      "content": "Good morning, Amina",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 26, "weight": 600 },
+      "fill": "#0F4C5C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_export_btn": {
+      "id": "hb_export_btn",
+      "type": "frame",
+      "name": "Export button",
+      "width": "hug",
+      "height": 36,
+      "fill": "#0F4C5C",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 14],
+        "align": "center",
+        "justify": "center"
+      },
+      "children": ["hb_tx_export"]
+    },
+    "hb_tx_export": {
+      "id": "hb_tx_export",
+      "type": "text",
+      "name": "Export label",
+      "content": "Export brief",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 600 },
+      "fill": "#FFFFFF",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_variant_tag": {
+      "id": "hb_variant_tag",
+      "type": "frame",
+      "name": "Variant tag",
+      "width": "hug",
+      "height": "hug",
+      "fill": "#D6E8EC",
+      "radius": 4,
+      "layout": { "direction": "row", "padding": [6, 10], "align": "center" },
+      "children": ["hb_tx_tag"]
+    },
+    "hb_tx_tag": {
+      "id": "hb_tx_tag",
+      "type": "text",
+      "name": "Tag text",
+      "content": "Harbor · Calm institutional · Dark teal rail · Serif brand",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 11, "weight": 600 },
+      "fill": "#0F4C5C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi_row": {
+      "id": "hb_kpi_row",
+      "type": "frame",
+      "name": "KPI row",
+      "width": "fill",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 16, "align": "stretch" },
+      "children": ["hb_kpi1", "hb_kpi2", "hb_kpi3", "hb_kpi4"]
+    },
+    "hb_kpi1": {
+      "id": "hb_kpi1",
+      "type": "frame",
+      "name": "KPI enrollment",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 8,
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "padding": [16, 16],
+        "align": "stretch"
+      },
+      "children": ["hb_kpi1_label", "hb_kpi1_value", "hb_kpi1_meta"]
+    },
+    "hb_kpi1_label": {
+      "id": "hb_kpi1_label",
+      "type": "text",
+      "name": "Enrollment label",
+      "content": "Enrollment",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi1_value": {
+      "id": "hb_kpi1_value",
+      "type": "text",
+      "name": "Enrollment value",
+      "content": "1,248",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 28, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi1_meta": {
+      "id": "hb_kpi1_meta",
+      "type": "text",
+      "name": "Enrollment meta",
+      "content": "+12 vs last term",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#1B7A4E",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi2": {
+      "id": "hb_kpi2",
+      "type": "frame",
+      "name": "KPI attendance",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 8,
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "padding": [16, 16],
+        "align": "stretch"
+      },
+      "children": ["hb_kpi2_label", "hb_kpi2_value", "hb_kpi2_meta"]
+    },
+    "hb_kpi2_label": {
+      "id": "hb_kpi2_label",
+      "type": "text",
+      "name": "Attendance label",
+      "content": "Today’s attendance",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi2_value": {
+      "id": "hb_kpi2_value",
+      "type": "text",
+      "name": "Attendance value",
+      "content": "94.2%",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 28, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi2_meta": {
+      "id": "hb_kpi2_meta",
+      "type": "text",
+      "name": "Attendance meta",
+      "content": "72 absent · 18 late",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi3": {
+      "id": "hb_kpi3",
+      "type": "frame",
+      "name": "KPI staff",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 8,
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "padding": [16, 16],
+        "align": "stretch"
+      },
+      "children": ["hb_kpi3_label", "hb_kpi3_value", "hb_kpi3_meta"]
+    },
+    "hb_kpi3_label": {
+      "id": "hb_kpi3_label",
+      "type": "text",
+      "name": "Staff label",
+      "content": "Staff present",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi3_value": {
+      "id": "hb_kpi3_value",
+      "type": "text",
+      "name": "Staff value",
+      "content": "86 / 91",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 28, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi3_meta": {
+      "id": "hb_kpi3_meta",
+      "type": "text",
+      "name": "Staff meta",
+      "content": "5 on leave",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#9A6700",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi4": {
+      "id": "hb_kpi4",
+      "type": "frame",
+      "name": "KPI fees",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 8,
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 8,
+        "padding": [16, 16],
+        "align": "stretch"
+      },
+      "children": ["hb_kpi4_label", "hb_kpi4_value", "hb_kpi4_meta"]
+    },
+    "hb_kpi4_label": {
+      "id": "hb_kpi4_label",
+      "type": "text",
+      "name": "Fees label",
+      "content": "Fees outstanding",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#5B6B7C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi4_value": {
+      "id": "hb_kpi4_value",
+      "type": "text",
+      "name": "Fees value",
+      "content": "$48.2k",
+      "font": { "family": "Fraunces, Georgia, serif", "size": 28, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_kpi4_meta": {
+      "id": "hb_kpi4_meta",
+      "type": "text",
+      "name": "Fees meta",
+      "content": "114 invoices overdue",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#B42318",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_lower": {
+      "id": "hb_lower",
+      "type": "frame",
+      "name": "Lower row",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "row", "gap": 16, "align": "stretch" },
+      "children": ["hb_attention", "hb_activity"]
+    },
+    "hb_attention": {
+      "id": "hb_attention",
+      "type": "frame",
+      "name": "Needs attention",
+      "width": "fill",
+      "height": "fill",
+      "fill": "#FFFFFF",
+      "radius": 8,
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 12,
+        "padding": [16, 16],
+        "align": "stretch"
+      },
+      "children": ["hb_att_title", "hb_att_row1", "hb_att_row2", "hb_att_row3"]
+    },
+    "hb_att_title": {
+      "id": "hb_att_title",
+      "type": "text",
+      "name": "Attention title",
+      "content": "Needs attention",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 14, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_att_row1": {
+      "id": "hb_att_row1",
+      "type": "frame",
+      "name": "Attention row 1",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFF4D6",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [10, 12],
+        "align": "center"
+      },
+      "children": ["hb_att1_dot", "hb_att1_text"]
+    },
+    "hb_att1_dot": {
+      "id": "hb_att1_dot",
+      "type": "ellipse",
+      "name": "Dot",
+      "width": 8,
+      "height": 8,
+      "fill": "#9A6700"
+    },
+    "hb_att1_text": {
+      "id": "hb_att1_text",
+      "type": "text",
+      "name": "Attention 1",
+      "content": "3 classes missing morning attendance",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#15202B",
+      "width": "fill",
+      "height": "hug"
+    },
+    "hb_att_row2": {
+      "id": "hb_att_row2",
+      "type": "frame",
+      "name": "Attention row 2",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FEECEC",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [10, 12],
+        "align": "center"
+      },
+      "children": ["hb_att2_dot", "hb_att2_text"]
+    },
+    "hb_att2_dot": {
+      "id": "hb_att2_dot",
+      "type": "ellipse",
+      "name": "Dot",
+      "width": 8,
+      "height": 8,
+      "fill": "#B42318"
+    },
+    "hb_att2_text": {
+      "id": "hb_att2_text",
+      "type": "text",
+      "name": "Attention 2",
+      "content": "Grade 9B — 8 students below 60% average",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#15202B",
+      "width": "fill",
+      "height": "hug"
+    },
+    "hb_att_row3": {
+      "id": "hb_att_row3",
+      "type": "frame",
+      "name": "Attention row 3",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#E8F1FC",
+      "radius": 6,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [10, 12],
+        "align": "center"
+      },
+      "children": ["hb_att3_dot", "hb_att3_text"]
+    },
+    "hb_att3_dot": {
+      "id": "hb_att3_dot",
+      "type": "ellipse",
+      "name": "Dot",
+      "width": 8,
+      "height": 8,
+      "fill": "#175CD3"
+    },
+    "hb_att3_text": {
+      "id": "hb_att3_text",
+      "type": "text",
+      "name": "Attention 3",
+      "content": "Parent meeting requests: 6 pending",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#15202B",
+      "width": "fill",
+      "height": "hug"
+    },
+    "hb_activity": {
+      "id": "hb_activity",
+      "type": "frame",
+      "name": "Recent activity",
+      "width": "fill",
+      "height": "fill",
+      "fill": "#FFFFFF",
+      "radius": 8,
+      "stroke": { "color": "#D5DEE3", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 12,
+        "padding": [16, 16],
+        "align": "stretch"
+      },
+      "children": ["hb_act_title", "hb_act1", "hb_act2", "hb_act3"]
+    },
+    "hb_act_title": {
+      "id": "hb_act_title",
+      "type": "text",
+      "name": "Activity title",
+      "content": "Recent activity",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 14, "weight": 600 },
+      "fill": "#15202B",
+      "width": "hug",
+      "height": "hug"
+    },
+    "hb_act1": {
+      "id": "hb_act1",
+      "type": "text",
+      "name": "Activity 1",
+      "content": "Ms. Rivera submitted Grade 7 Science midterms",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 400 },
+      "fill": "#15202B",
+      "width": "fill",
+      "height": "hug"
+    },
+    "hb_act2": {
+      "id": "hb_act2",
+      "type": "text",
+      "name": "Activity 2",
+      "content": "Finance posted 24 Term 1 invoices",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 400 },
+      "fill": "#15202B",
+      "width": "fill",
+      "height": "hug"
+    },
+    "hb_act3": {
+      "id": "hb_act3",
+      "type": "text",
+      "name": "Activity 3",
+      "content": "Announcement: Early dismissal Friday published",
+      "font": { "family": "Plus Jakarta Sans, system-ui, sans-serif", "size": 13, "weight": 400 },
+      "fill": "#15202B",
+      "width": "fill",
+      "height": "hug"
+    },
+
+    "fr_ledger": {
+      "id": "fr_ledger",
+      "type": "frame",
+      "name": "Ledger",
+      "x": 1360,
+      "y": 0,
+      "width": 1280,
+      "height": 800,
+      "fill": "#F0F1F3",
+      "clip": true,
+      "layout": { "direction": "row", "align": "stretch" },
+      "children": ["ld_sidebar", "ld_main"]
+    },
+    "ld_sidebar": {
+      "id": "ld_sidebar",
+      "type": "frame",
+      "name": "Ledger sidebar",
+      "width": 200,
+      "height": "fill",
+      "fill": "#FFFFFF",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 2,
+        "padding": [16, 10],
+        "align": "stretch"
+      },
+      "children": [
+        "ld_brand",
+        "ld_school",
+        "ld_gap",
+        "ld_nav_dash",
+        "ld_nav_students",
+        "ld_nav_attend",
+        "ld_nav_academic",
+        "ld_nav_fees",
+        "ld_spacer",
+        "ld_nav_settings"
+      ]
+    },
+    "ld_brand": {
+      "id": "ld_brand",
+      "type": "text",
+      "name": "Brand",
+      "content": "MERIDIAN",
+      "font": {
+        "family": "IBM Plex Sans, system-ui, sans-serif",
+        "size": 13,
+        "weight": 700,
+        "letterSpacing": 1.2
+      },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_school": {
+      "id": "ld_school",
+      "type": "text",
+      "name": "School",
+      "content": "Northbridge Academy ▾",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 500 },
+      "fill": "#6B7280",
+      "width": "fill",
+      "height": "hug"
+    },
+    "ld_gap": {
+      "id": "ld_gap",
+      "type": "frame",
+      "name": "Gap",
+      "width": "fill",
+      "height": 12,
+      "layout": { "direction": "column" },
+      "children": []
+    },
+    "ld_nav_dash": {
+      "id": "ld_nav_dash",
+      "type": "frame",
+      "name": "Nav dashboard",
+      "width": "fill",
+      "height": 30,
+      "fill": "#111827",
+      "radius": 3,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_dash", "ld_tx_dash"]
+    },
+    "ld_ic_dash": {
+      "id": "ld_ic_dash",
+      "type": "icon",
+      "name": "layout-dashboard",
+      "width": 14,
+      "height": 14,
+      "fill": "#FFFFFF"
+    },
+    "ld_tx_dash": {
+      "id": "ld_tx_dash",
+      "type": "text",
+      "name": "Dashboard",
+      "content": "Dashboard",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#FFFFFF",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_nav_students": {
+      "id": "ld_nav_students",
+      "type": "frame",
+      "name": "Nav students",
+      "width": "fill",
+      "height": 30,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_stu", "ld_tx_stu"]
+    },
+    "ld_ic_stu": {
+      "id": "ld_ic_stu",
+      "type": "icon",
+      "name": "users",
+      "width": 14,
+      "height": 14,
+      "fill": "#6B7280"
+    },
+    "ld_tx_stu": {
+      "id": "ld_tx_stu",
+      "type": "text",
+      "name": "Students",
+      "content": "Students",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#374151",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_nav_attend": {
+      "id": "ld_nav_attend",
+      "type": "frame",
+      "name": "Nav attendance",
+      "width": "fill",
+      "height": 30,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_att", "ld_tx_att"]
+    },
+    "ld_ic_att": {
+      "id": "ld_ic_att",
+      "type": "icon",
+      "name": "clipboard-check",
+      "width": 14,
+      "height": 14,
+      "fill": "#6B7280"
+    },
+    "ld_tx_att": {
+      "id": "ld_tx_att",
+      "type": "text",
+      "name": "Attendance",
+      "content": "Attendance",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#374151",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_nav_academic": {
+      "id": "ld_nav_academic",
+      "type": "frame",
+      "name": "Nav academic",
+      "width": "fill",
+      "height": 30,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_acad", "ld_tx_acad"]
+    },
+    "ld_ic_acad": {
+      "id": "ld_ic_acad",
+      "type": "icon",
+      "name": "graduation-cap",
+      "width": 14,
+      "height": 14,
+      "fill": "#6B7280"
+    },
+    "ld_tx_acad": {
+      "id": "ld_tx_acad",
+      "type": "text",
+      "name": "Academic",
+      "content": "Academic",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#374151",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_nav_fees": {
+      "id": "ld_nav_fees",
+      "type": "frame",
+      "name": "Nav fees",
+      "width": "fill",
+      "height": 30,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_fee", "ld_tx_fee"]
+    },
+    "ld_ic_fee": {
+      "id": "ld_ic_fee",
+      "type": "icon",
+      "name": "wallet",
+      "width": 14,
+      "height": 14,
+      "fill": "#6B7280"
+    },
+    "ld_tx_fee": {
+      "id": "ld_tx_fee",
+      "type": "text",
+      "name": "Fees",
+      "content": "Fees",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#374151",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_spacer": {
+      "id": "ld_spacer",
+      "type": "frame",
+      "name": "Spacer",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "column" },
+      "children": []
+    },
+    "ld_nav_settings": {
+      "id": "ld_nav_settings",
+      "type": "frame",
+      "name": "Nav settings",
+      "width": "fill",
+      "height": 30,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_set", "ld_tx_set"]
+    },
+    "ld_ic_set": {
+      "id": "ld_ic_set",
+      "type": "icon",
+      "name": "settings",
+      "width": 14,
+      "height": 14,
+      "fill": "#6B7280"
+    },
+    "ld_tx_set": {
+      "id": "ld_tx_set",
+      "type": "text",
+      "name": "Settings",
+      "content": "Settings",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#374151",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_main": {
+      "id": "ld_main",
+      "type": "frame",
+      "name": "Ledger main",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "column", "align": "stretch" },
+      "children": ["ld_topbar", "ld_content"]
+    },
+    "ld_topbar": {
+      "id": "ld_topbar",
+      "type": "frame",
+      "name": "Top bar",
+      "width": "fill",
+      "height": 44,
+      "fill": "#FFFFFF",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "layout": {
+        "direction": "row",
+        "gap": 12,
+        "padding": [0, 16],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": ["ld_search", "ld_top_right"]
+    },
+    "ld_search": {
+      "id": "ld_search",
+      "type": "frame",
+      "name": "Search",
+      "width": 280,
+      "height": 28,
+      "fill": "#F0F1F3",
+      "radius": 3,
+      "layout": {
+        "direction": "row",
+        "gap": 6,
+        "padding": [0, 8],
+        "align": "center"
+      },
+      "children": ["ld_ic_search", "ld_tx_search"]
+    },
+    "ld_ic_search": {
+      "id": "ld_ic_search",
+      "type": "icon",
+      "name": "search",
+      "width": 12,
+      "height": 12,
+      "fill": "#6B7280"
+    },
+    "ld_tx_search": {
+      "id": "ld_tx_search",
+      "type": "text",
+      "name": "Search",
+      "content": "Jump to student, class, invoice…",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 400 },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_top_right": {
+      "id": "ld_top_right",
+      "type": "frame",
+      "name": "Top right",
+      "width": "hug",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 10, "align": "center" },
+      "children": ["ld_year", "ld_bell", "ld_user"]
+    },
+    "ld_year": {
+      "id": "ld_year",
+      "type": "text",
+      "name": "Year",
+      "content": "AY 2025–26 · T1",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 11, "weight": 500 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_bell": {
+      "id": "ld_bell",
+      "type": "icon",
+      "name": "bell",
+      "width": 16,
+      "height": 16,
+      "fill": "#6B7280"
+    },
+    "ld_user": {
+      "id": "ld_user",
+      "type": "text",
+      "name": "User",
+      "content": "A. Khan",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_content": {
+      "id": "ld_content",
+      "type": "frame",
+      "name": "Content",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "direction": "column",
+        "gap": 12,
+        "padding": [14, 16],
+        "align": "stretch"
+      },
+      "children": ["ld_head", "ld_tag", "ld_metrics", "ld_table"]
+    },
+    "ld_head": {
+      "id": "ld_head",
+      "type": "frame",
+      "name": "Header",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": ["ld_title_block", "ld_actions"]
+    },
+    "ld_title_block": {
+      "id": "ld_title_block",
+      "type": "frame",
+      "name": "Title block",
+      "width": "hug",
+      "height": "hug",
+      "layout": { "direction": "column", "gap": 2 },
+      "children": ["ld_crumb", "ld_h1"]
+    },
+    "ld_crumb": {
+      "id": "ld_crumb",
+      "type": "text",
+      "name": "Crumb",
+      "content": "Principal / Overview",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 500 },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_h1": {
+      "id": "ld_h1",
+      "type": "text",
+      "name": "Title",
+      "content": "School operations — Tue 22 Oct",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 18, "weight": 650 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_actions": {
+      "id": "ld_actions",
+      "type": "frame",
+      "name": "Actions",
+      "width": "hug",
+      "height": 28,
+      "fill": "#111827",
+      "radius": 3,
+      "layout": {
+        "direction": "row",
+        "padding": [0, 10],
+        "align": "center",
+        "justify": "center"
+      },
+      "children": ["ld_tx_export"]
+    },
+    "ld_tx_export": {
+      "id": "ld_tx_export",
+      "type": "text",
+      "name": "Export",
+      "content": "Export CSV",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#FFFFFF",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_tag": {
+      "id": "ld_tag",
+      "type": "text",
+      "name": "Variant tag",
+      "content": "Ledger · Dense operational · Light chrome · Table-first · Mono accents",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 10, "weight": 500 },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_metrics": {
+      "id": "ld_metrics",
+      "type": "frame",
+      "name": "Metrics strip",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "radius": 3,
+      "layout": { "direction": "row", "align": "stretch" },
+      "children": ["ld_m1", "ld_m2", "ld_m3", "ld_m4"]
+    },
+    "ld_m1": {
+      "id": "ld_m1",
+      "type": "frame",
+      "name": "Metric 1",
+      "width": "fill",
+      "height": "hug",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 2,
+        "padding": [10, 12],
+        "align": "stretch"
+      },
+      "children": ["ld_m1l", "ld_m1v", "ld_m1s"]
+    },
+    "ld_m1l": {
+      "id": "ld_m1l",
+      "type": "text",
+      "name": "Label",
+      "content": "ENROLLMENT",
+      "font": {
+        "family": "IBM Plex Sans, system-ui, sans-serif",
+        "size": 10,
+        "weight": 600,
+        "letterSpacing": 0.6
+      },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m1v": {
+      "id": "ld_m1v",
+      "type": "text",
+      "name": "Value",
+      "content": "1,248",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 22, "weight": 600 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m1s": {
+      "id": "ld_m1s",
+      "type": "text",
+      "name": "Sub",
+      "content": "+12 term",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 500 },
+      "fill": "#059669",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m2": {
+      "id": "ld_m2",
+      "type": "frame",
+      "name": "Metric 2",
+      "width": "fill",
+      "height": "hug",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 2,
+        "padding": [10, 12],
+        "align": "stretch"
+      },
+      "children": ["ld_m2l", "ld_m2v", "ld_m2s"]
+    },
+    "ld_m2l": {
+      "id": "ld_m2l",
+      "type": "text",
+      "name": "Label",
+      "content": "ATTENDANCE",
+      "font": {
+        "family": "IBM Plex Sans, system-ui, sans-serif",
+        "size": 10,
+        "weight": 600,
+        "letterSpacing": 0.6
+      },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m2v": {
+      "id": "ld_m2v",
+      "type": "text",
+      "name": "Value",
+      "content": "94.2%",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 22, "weight": 600 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m2s": {
+      "id": "ld_m2s",
+      "type": "text",
+      "name": "Sub",
+      "content": "72 abs · 18 late",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 500 },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m3": {
+      "id": "ld_m3",
+      "type": "frame",
+      "name": "Metric 3",
+      "width": "fill",
+      "height": "hug",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "layout": {
+        "direction": "column",
+        "gap": 2,
+        "padding": [10, 12],
+        "align": "stretch"
+      },
+      "children": ["ld_m3l", "ld_m3v", "ld_m3s"]
+    },
+    "ld_m3l": {
+      "id": "ld_m3l",
+      "type": "text",
+      "name": "Label",
+      "content": "STAFF",
+      "font": {
+        "family": "IBM Plex Sans, system-ui, sans-serif",
+        "size": 10,
+        "weight": 600,
+        "letterSpacing": 0.6
+      },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m3v": {
+      "id": "ld_m3v",
+      "type": "text",
+      "name": "Value",
+      "content": "86/91",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 22, "weight": 600 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m3s": {
+      "id": "ld_m3s",
+      "type": "text",
+      "name": "Sub",
+      "content": "5 leave",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 500 },
+      "fill": "#B45309",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m4": {
+      "id": "ld_m4",
+      "type": "frame",
+      "name": "Metric 4",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 2,
+        "padding": [10, 12],
+        "align": "stretch"
+      },
+      "children": ["ld_m4l", "ld_m4v", "ld_m4s"]
+    },
+    "ld_m4l": {
+      "id": "ld_m4l",
+      "type": "text",
+      "name": "Label",
+      "content": "OUTSTANDING",
+      "font": {
+        "family": "IBM Plex Sans, system-ui, sans-serif",
+        "size": 10,
+        "weight": 600,
+        "letterSpacing": 0.6
+      },
+      "fill": "#6B7280",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m4v": {
+      "id": "ld_m4v",
+      "type": "text",
+      "name": "Value",
+      "content": "$48,210",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 22, "weight": 600 },
+      "fill": "#111827",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_m4s": {
+      "id": "ld_m4s",
+      "type": "text",
+      "name": "Sub",
+      "content": "114 overdue",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 500 },
+      "fill": "#DC2626",
+      "width": "hug",
+      "height": "hug"
+    },
+    "ld_table": {
+      "id": "ld_table",
+      "type": "frame",
+      "name": "Attention table",
+      "width": "fill",
+      "height": "fill",
+      "fill": "#FFFFFF",
+      "stroke": { "color": "#D8DCE2", "width": 1 },
+      "radius": 3,
+      "layout": { "direction": "column", "align": "stretch" },
+      "children": ["ld_th", "ld_tr1", "ld_tr2", "ld_tr3", "ld_tr4"]
+    },
+    "ld_th": {
+      "id": "ld_th",
+      "type": "frame",
+      "name": "Table header",
+      "width": "fill",
+      "height": 32,
+      "fill": "#F7F8FA",
+      "layout": {
+        "direction": "row",
+        "padding": [0, 12],
+        "align": "center",
+        "gap": 8
+      },
+      "children": ["ld_th1", "ld_th2", "ld_th3", "ld_th4"]
+    },
+    "ld_th1": {
+      "id": "ld_th1",
+      "type": "text",
+      "name": "Col priority",
+      "content": "Priority",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 600 },
+      "fill": "#6B7280",
+      "width": 80,
+      "height": "hug"
+    },
+    "ld_th2": {
+      "id": "ld_th2",
+      "type": "text",
+      "name": "Col item",
+      "content": "Item",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 600 },
+      "fill": "#6B7280",
+      "width": "fill",
+      "height": "hug"
+    },
+    "ld_th3": {
+      "id": "ld_th3",
+      "type": "text",
+      "name": "Col owner",
+      "content": "Owner",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 600 },
+      "fill": "#6B7280",
+      "width": 120,
+      "height": "hug"
+    },
+    "ld_th4": {
+      "id": "ld_th4",
+      "type": "text",
+      "name": "Col status",
+      "content": "Status",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 11, "weight": 600 },
+      "fill": "#6B7280",
+      "width": 90,
+      "height": "hug"
+    },
+    "ld_tr1": {
+      "id": "ld_tr1",
+      "type": "frame",
+      "name": "Row 1",
+      "width": "fill",
+      "height": 36,
+      "stroke": { "color": "#EEF0F3", "width": 1 },
+      "layout": {
+        "direction": "row",
+        "padding": [0, 12],
+        "align": "center",
+        "gap": 8
+      },
+      "children": ["ld_r1p", "ld_r1i", "ld_r1o", "ld_r1s"]
+    },
+    "ld_r1p": {
+      "id": "ld_r1p",
+      "type": "text",
+      "name": "P1",
+      "content": "High",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 11, "weight": 600 },
+      "fill": "#DC2626",
+      "width": 80,
+      "height": "hug"
+    },
+    "ld_r1i": {
+      "id": "ld_r1i",
+      "type": "text",
+      "name": "Item 1",
+      "content": "3 classes missing morning attendance",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#111827",
+      "width": "fill",
+      "height": "hug"
+    },
+    "ld_r1o": {
+      "id": "ld_r1o",
+      "type": "text",
+      "name": "Owner 1",
+      "content": "Year heads",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 400 },
+      "fill": "#6B7280",
+      "width": 120,
+      "height": "hug"
+    },
+    "ld_r1s": {
+      "id": "ld_r1s",
+      "type": "text",
+      "name": "Status 1",
+      "content": "Open",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#B45309",
+      "width": 90,
+      "height": "hug"
+    },
+    "ld_tr2": {
+      "id": "ld_tr2",
+      "type": "frame",
+      "name": "Row 2",
+      "width": "fill",
+      "height": 36,
+      "stroke": { "color": "#EEF0F3", "width": 1 },
+      "layout": {
+        "direction": "row",
+        "padding": [0, 12],
+        "align": "center",
+        "gap": 8
+      },
+      "children": ["ld_r2p", "ld_r2i", "ld_r2o", "ld_r2s"]
+    },
+    "ld_r2p": {
+      "id": "ld_r2p",
+      "type": "text",
+      "name": "P2",
+      "content": "High",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 11, "weight": 600 },
+      "fill": "#DC2626",
+      "width": 80,
+      "height": "hug"
+    },
+    "ld_r2i": {
+      "id": "ld_r2i",
+      "type": "text",
+      "name": "Item 2",
+      "content": "Grade 9B — 8 students below 60% average",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#111827",
+      "width": "fill",
+      "height": "hug"
+    },
+    "ld_r2o": {
+      "id": "ld_r2o",
+      "type": "text",
+      "name": "Owner 2",
+      "content": "Dept. Science",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 400 },
+      "fill": "#6B7280",
+      "width": 120,
+      "height": "hug"
+    },
+    "ld_r2s": {
+      "id": "ld_r2s",
+      "type": "text",
+      "name": "Status 2",
+      "content": "Open",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#B45309",
+      "width": 90,
+      "height": "hug"
+    },
+    "ld_tr3": {
+      "id": "ld_tr3",
+      "type": "frame",
+      "name": "Row 3",
+      "width": "fill",
+      "height": 36,
+      "stroke": { "color": "#EEF0F3", "width": 1 },
+      "layout": {
+        "direction": "row",
+        "padding": [0, 12],
+        "align": "center",
+        "gap": 8
+      },
+      "children": ["ld_r3p", "ld_r3i", "ld_r3o", "ld_r3s"]
+    },
+    "ld_r3p": {
+      "id": "ld_r3p",
+      "type": "text",
+      "name": "P3",
+      "content": "Med",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 11, "weight": 600 },
+      "fill": "#B45309",
+      "width": 80,
+      "height": "hug"
+    },
+    "ld_r3i": {
+      "id": "ld_r3i",
+      "type": "text",
+      "name": "Item 3",
+      "content": "Parent meeting requests pending",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#111827",
+      "width": "fill",
+      "height": "hug"
+    },
+    "ld_r3o": {
+      "id": "ld_r3o",
+      "type": "text",
+      "name": "Owner 3",
+      "content": "Counseling",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 400 },
+      "fill": "#6B7280",
+      "width": 120,
+      "height": "hug"
+    },
+    "ld_r3s": {
+      "id": "ld_r3s",
+      "type": "text",
+      "name": "Status 3",
+      "content": "6 open",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#2563EB",
+      "width": 90,
+      "height": "hug"
+    },
+    "ld_tr4": {
+      "id": "ld_tr4",
+      "type": "frame",
+      "name": "Row 4",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "direction": "row",
+        "padding": [0, 12],
+        "align": "center",
+        "gap": 8
+      },
+      "children": ["ld_r4p", "ld_r4i", "ld_r4o", "ld_r4s"]
+    },
+    "ld_r4p": {
+      "id": "ld_r4p",
+      "type": "text",
+      "name": "P4",
+      "content": "Med",
+      "font": { "family": "IBM Plex Mono, ui-monospace, monospace", "size": 11, "weight": 600 },
+      "fill": "#B45309",
+      "width": 80,
+      "height": "hug"
+    },
+    "ld_r4i": {
+      "id": "ld_r4i",
+      "type": "text",
+      "name": "Item 4",
+      "content": "114 fee invoices overdue > 30 days",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#111827",
+      "width": "fill",
+      "height": "hug"
+    },
+    "ld_r4o": {
+      "id": "ld_r4o",
+      "type": "text",
+      "name": "Owner 4",
+      "content": "Finance",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 400 },
+      "fill": "#6B7280",
+      "width": 120,
+      "height": "hug"
+    },
+    "ld_r4s": {
+      "id": "ld_r4s",
+      "type": "text",
+      "name": "Status 4",
+      "content": "Review",
+      "font": { "family": "IBM Plex Sans, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#DC2626",
+      "width": 90,
+      "height": "hug"
+    },
+
+    "fr_grove": {
+      "id": "fr_grove",
+      "type": "frame",
+      "name": "Grove",
+      "x": 2720,
+      "y": 0,
+      "width": 1280,
+      "height": 800,
+      "fill": "#F4F7F2",
+      "clip": true,
+      "layout": { "direction": "row", "align": "stretch" },
+      "children": ["gv_sidebar", "gv_main"]
+    },
+    "gv_sidebar": {
+      "id": "gv_sidebar",
+      "type": "frame",
+      "name": "Grove sidebar",
+      "width": 248,
+      "height": "fill",
+      "fill": "#2F4A3A",
+      "layout": {
+        "direction": "column",
+        "gap": 6,
+        "padding": [28, 18],
+        "align": "stretch"
+      },
+      "children": [
+        "gv_brand_row",
+        "gv_school",
+        "gv_gap",
+        "gv_nav_dash",
+        "gv_nav_students",
+        "gv_nav_attend",
+        "gv_nav_academic",
+        "gv_nav_fees",
+        "gv_spacer",
+        "gv_nav_settings"
+      ]
+    },
+    "gv_brand_row": {
+      "id": "gv_brand_row",
+      "type": "frame",
+      "name": "Brand row",
+      "width": "fill",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 10, "align": "center" },
+      "children": ["gv_mark", "gv_brand"]
+    },
+    "gv_mark": {
+      "id": "gv_mark",
+      "type": "ellipse",
+      "name": "Mark",
+      "width": 26,
+      "height": 26,
+      "fill": "#8FBC8F"
+    },
+    "gv_brand": {
+      "id": "gv_brand",
+      "type": "text",
+      "name": "Brand",
+      "content": "Meridian",
+      "font": { "family": "Literata, Georgia, serif", "size": 22, "weight": 600 },
+      "fill": "#F4F7F2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_school": {
+      "id": "gv_school",
+      "type": "frame",
+      "name": "School chip",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#3D5C4A",
+      "radius": 12,
+      "layout": {
+        "direction": "row",
+        "padding": [10, 12],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": ["gv_school_tx", "gv_school_ic"]
+    },
+    "gv_school_tx": {
+      "id": "gv_school_tx",
+      "type": "text",
+      "name": "School name",
+      "content": "Northbridge Academy",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 12, "weight": 500 },
+      "fill": "#C5D9CB",
+      "width": "fill",
+      "height": "hug"
+    },
+    "gv_school_ic": {
+      "id": "gv_school_ic",
+      "type": "icon",
+      "name": "chevrons-up-down",
+      "width": 14,
+      "height": 14,
+      "fill": "#C5D9CB"
+    },
+    "gv_gap": {
+      "id": "gv_gap",
+      "type": "frame",
+      "name": "Gap",
+      "width": "fill",
+      "height": 18,
+      "layout": { "direction": "column" },
+      "children": []
+    },
+    "gv_nav_dash": {
+      "id": "gv_nav_dash",
+      "type": "frame",
+      "name": "Nav dashboard",
+      "width": "fill",
+      "height": 40,
+      "fill": "#4A6B58",
+      "radius": 12,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["gv_ic_dash", "gv_tx_dash"]
+    },
+    "gv_ic_dash": {
+      "id": "gv_ic_dash",
+      "type": "icon",
+      "name": "layout-dashboard",
+      "width": 16,
+      "height": 16,
+      "fill": "#F4F7F2"
+    },
+    "gv_tx_dash": {
+      "id": "gv_tx_dash",
+      "type": "text",
+      "name": "Dashboard",
+      "content": "Dashboard",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 600 },
+      "fill": "#F4F7F2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_nav_students": {
+      "id": "gv_nav_students",
+      "type": "frame",
+      "name": "Nav students",
+      "width": "fill",
+      "height": 40,
+      "radius": 12,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["gv_ic_stu", "gv_tx_stu"]
+    },
+    "gv_ic_stu": {
+      "id": "gv_ic_stu",
+      "type": "icon",
+      "name": "users",
+      "width": 16,
+      "height": 16,
+      "fill": "#A8C4B0"
+    },
+    "gv_tx_stu": {
+      "id": "gv_tx_stu",
+      "type": "text",
+      "name": "Students",
+      "content": "Students",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#A8C4B0",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_nav_attend": {
+      "id": "gv_nav_attend",
+      "type": "frame",
+      "name": "Nav attendance",
+      "width": "fill",
+      "height": 40,
+      "radius": 12,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["gv_ic_att", "gv_tx_att"]
+    },
+    "gv_ic_att": {
+      "id": "gv_ic_att",
+      "type": "icon",
+      "name": "clipboard-check",
+      "width": 16,
+      "height": 16,
+      "fill": "#A8C4B0"
+    },
+    "gv_tx_att": {
+      "id": "gv_tx_att",
+      "type": "text",
+      "name": "Attendance",
+      "content": "Attendance",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#A8C4B0",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_nav_academic": {
+      "id": "gv_nav_academic",
+      "type": "frame",
+      "name": "Nav academic",
+      "width": "fill",
+      "height": 40,
+      "radius": 12,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["gv_ic_acad", "gv_tx_acad"]
+    },
+    "gv_ic_acad": {
+      "id": "gv_ic_acad",
+      "type": "icon",
+      "name": "graduation-cap",
+      "width": 16,
+      "height": 16,
+      "fill": "#A8C4B0"
+    },
+    "gv_tx_acad": {
+      "id": "gv_tx_acad",
+      "type": "text",
+      "name": "Academic",
+      "content": "Academic",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#A8C4B0",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_nav_fees": {
+      "id": "gv_nav_fees",
+      "type": "frame",
+      "name": "Nav fees",
+      "width": "fill",
+      "height": 40,
+      "radius": 12,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["gv_ic_fee", "gv_tx_fee"]
+    },
+    "gv_ic_fee": {
+      "id": "gv_ic_fee",
+      "type": "icon",
+      "name": "wallet",
+      "width": 16,
+      "height": 16,
+      "fill": "#A8C4B0"
+    },
+    "gv_tx_fee": {
+      "id": "gv_tx_fee",
+      "type": "text",
+      "name": "Fees",
+      "content": "Fees",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#A8C4B0",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_spacer": {
+      "id": "gv_spacer",
+      "type": "frame",
+      "name": "Spacer",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "column" },
+      "children": []
+    },
+    "gv_nav_settings": {
+      "id": "gv_nav_settings",
+      "type": "frame",
+      "name": "Nav settings",
+      "width": "fill",
+      "height": 40,
+      "layout": {
+        "direction": "row",
+        "gap": 10,
+        "padding": [0, 12],
+        "align": "center"
+      },
+      "children": ["gv_ic_set", "gv_tx_set"]
+    },
+    "gv_ic_set": {
+      "id": "gv_ic_set",
+      "type": "icon",
+      "name": "settings",
+      "width": 16,
+      "height": 16,
+      "fill": "#A8C4B0"
+    },
+    "gv_tx_set": {
+      "id": "gv_tx_set",
+      "type": "text",
+      "name": "Settings",
+      "content": "Settings",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#A8C4B0",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_main": {
+      "id": "gv_main",
+      "type": "frame",
+      "name": "Grove main",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "column", "align": "stretch" },
+      "children": ["gv_topbar", "gv_content"]
+    },
+    "gv_topbar": {
+      "id": "gv_topbar",
+      "type": "frame",
+      "name": "Top bar",
+      "width": "fill",
+      "height": 64,
+      "fill": "#FFFFFF",
+      "layout": {
+        "direction": "row",
+        "gap": 16,
+        "padding": [0, 28],
+        "align": "center",
+        "justify": "space-between"
+      },
+      "children": ["gv_search", "gv_top_right"]
+    },
+    "gv_search": {
+      "id": "gv_search",
+      "type": "frame",
+      "name": "Search",
+      "width": 340,
+      "height": 40,
+      "fill": "#EEF3EA",
+      "radius": 20,
+      "layout": {
+        "direction": "row",
+        "gap": 8,
+        "padding": [0, 16],
+        "align": "center"
+      },
+      "children": ["gv_ic_search", "gv_tx_search"]
+    },
+    "gv_ic_search": {
+      "id": "gv_ic_search",
+      "type": "icon",
+      "name": "search",
+      "width": 16,
+      "height": 16,
+      "fill": "#5C7363"
+    },
+    "gv_tx_search": {
+      "id": "gv_tx_search",
+      "type": "text",
+      "name": "Search",
+      "content": "Find a student or class…",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 400 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_top_right": {
+      "id": "gv_top_right",
+      "type": "frame",
+      "name": "Top right",
+      "width": "hug",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 14, "align": "center" },
+      "children": ["gv_year", "gv_bell", "gv_avatar"]
+    },
+    "gv_year": {
+      "id": "gv_year",
+      "type": "frame",
+      "name": "Year",
+      "width": "hug",
+      "height": 36,
+      "fill": "#EEF3EA",
+      "radius": 18,
+      "layout": {
+        "direction": "row",
+        "gap": 6,
+        "padding": [0, 14],
+        "align": "center"
+      },
+      "children": ["gv_tx_year"]
+    },
+    "gv_tx_year": {
+      "id": "gv_tx_year",
+      "type": "text",
+      "name": "Year text",
+      "content": "2025–26 · Term 1",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 600 },
+      "fill": "#2F4A3A",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_bell": {
+      "id": "gv_bell",
+      "type": "icon",
+      "name": "bell",
+      "width": 18,
+      "height": 18,
+      "fill": "#5C7363"
+    },
+    "gv_avatar": {
+      "id": "gv_avatar",
+      "type": "avatar",
+      "name": "Avatar",
+      "initials": "AK",
+      "size": 36,
+      "fill": "#4A6B58",
+      "textFill": "#F4F7F2"
+    },
+    "gv_content": {
+      "id": "gv_content",
+      "type": "frame",
+      "name": "Content",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "direction": "column",
+        "gap": 22,
+        "padding": [28, 32],
+        "align": "stretch"
+      },
+      "children": ["gv_page_head", "gv_tag", "gv_kpi_row", "gv_lower"]
+    },
+    "gv_page_head": {
+      "id": "gv_page_head",
+      "type": "frame",
+      "name": "Page head",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "row",
+        "align": "end",
+        "justify": "space-between"
+      },
+      "children": ["gv_titles", "gv_cta"]
+    },
+    "gv_titles": {
+      "id": "gv_titles",
+      "type": "frame",
+      "name": "Titles",
+      "width": "hug",
+      "height": "hug",
+      "layout": { "direction": "column", "gap": 6 },
+      "children": ["gv_crumb", "gv_h1"]
+    },
+    "gv_crumb": {
+      "id": "gv_crumb",
+      "type": "text",
+      "name": "Crumb",
+      "content": "Principal · Overview",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_h1": {
+      "id": "gv_h1",
+      "type": "text",
+      "name": "Title",
+      "content": "Good morning, Amina",
+      "font": { "family": "Literata, Georgia, serif", "size": 28, "weight": 600 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_cta": {
+      "id": "gv_cta",
+      "type": "frame",
+      "name": "CTA",
+      "width": "hug",
+      "height": 40,
+      "fill": "#2F4A3A",
+      "radius": 20,
+      "layout": {
+        "direction": "row",
+        "padding": [0, 18],
+        "align": "center",
+        "justify": "center"
+      },
+      "children": ["gv_cta_tx"]
+    },
+    "gv_cta_tx": {
+      "id": "gv_cta_tx",
+      "type": "text",
+      "name": "CTA label",
+      "content": "Share morning brief",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 600 },
+      "fill": "#F4F7F2",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_tag": {
+      "id": "gv_tag",
+      "type": "frame",
+      "name": "Tag",
+      "width": "hug",
+      "height": "hug",
+      "fill": "#DCE8D8",
+      "radius": 8,
+      "layout": { "direction": "row", "padding": [8, 12] },
+      "children": ["gv_tag_tx"]
+    },
+    "gv_tag_tx": {
+      "id": "gv_tag_tx",
+      "type": "text",
+      "name": "Tag text",
+      "content": "Grove · Soft education · Sage rail · Airy spacing · Rounded chrome",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 12, "weight": 600 },
+      "fill": "#2F4A3A",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_kpi_row": {
+      "id": "gv_kpi_row",
+      "type": "frame",
+      "name": "KPI row",
+      "width": "fill",
+      "height": "hug",
+      "layout": { "direction": "row", "gap": 18, "align": "stretch" },
+      "children": ["gv_k1", "gv_k2", "gv_k3", "gv_k4"]
+    },
+    "gv_k1": {
+      "id": "gv_k1",
+      "type": "frame",
+      "name": "KPI 1",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "layout": {
+        "direction": "column",
+        "gap": 10,
+        "padding": [20, 18],
+        "align": "stretch"
+      },
+      "children": ["gv_k1l", "gv_k1v", "gv_k1m"]
+    },
+    "gv_k1l": {
+      "id": "gv_k1l",
+      "type": "text",
+      "name": "Label",
+      "content": "Enrollment",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k1v": {
+      "id": "gv_k1v",
+      "type": "text",
+      "name": "Value",
+      "content": "1,248",
+      "font": { "family": "Literata, Georgia, serif", "size": 30, "weight": 600 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k1m": {
+      "id": "gv_k1m",
+      "type": "text",
+      "name": "Meta",
+      "content": "+12 vs last term",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#3D7A52",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k2": {
+      "id": "gv_k2",
+      "type": "frame",
+      "name": "KPI 2",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "layout": {
+        "direction": "column",
+        "gap": 10,
+        "padding": [20, 18],
+        "align": "stretch"
+      },
+      "children": ["gv_k2l", "gv_k2v", "gv_k2m"]
+    },
+    "gv_k2l": {
+      "id": "gv_k2l",
+      "type": "text",
+      "name": "Label",
+      "content": "Today’s attendance",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k2v": {
+      "id": "gv_k2v",
+      "type": "text",
+      "name": "Value",
+      "content": "94.2%",
+      "font": { "family": "Literata, Georgia, serif", "size": 30, "weight": 600 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k2m": {
+      "id": "gv_k2m",
+      "type": "text",
+      "name": "Meta",
+      "content": "72 absent · 18 late",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k3": {
+      "id": "gv_k3",
+      "type": "frame",
+      "name": "KPI 3",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "layout": {
+        "direction": "column",
+        "gap": 10,
+        "padding": [20, 18],
+        "align": "stretch"
+      },
+      "children": ["gv_k3l", "gv_k3v", "gv_k3m"]
+    },
+    "gv_k3l": {
+      "id": "gv_k3l",
+      "type": "text",
+      "name": "Label",
+      "content": "Staff present",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k3v": {
+      "id": "gv_k3v",
+      "type": "text",
+      "name": "Value",
+      "content": "86 / 91",
+      "font": { "family": "Literata, Georgia, serif", "size": 30, "weight": 600 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k3m": {
+      "id": "gv_k3m",
+      "type": "text",
+      "name": "Meta",
+      "content": "5 on leave",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#9A6700",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k4": {
+      "id": "gv_k4",
+      "type": "frame",
+      "name": "KPI 4",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "layout": {
+        "direction": "column",
+        "gap": 10,
+        "padding": [20, 18],
+        "align": "stretch"
+      },
+      "children": ["gv_k4l", "gv_k4v", "gv_k4m"]
+    },
+    "gv_k4l": {
+      "id": "gv_k4l",
+      "type": "text",
+      "name": "Label",
+      "content": "Fees outstanding",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#5C7363",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k4v": {
+      "id": "gv_k4v",
+      "type": "text",
+      "name": "Value",
+      "content": "$48.2k",
+      "font": { "family": "Literata, Georgia, serif", "size": 30, "weight": 600 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_k4m": {
+      "id": "gv_k4m",
+      "type": "text",
+      "name": "Meta",
+      "content": "114 invoices overdue",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 13, "weight": 500 },
+      "fill": "#B42318",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_lower": {
+      "id": "gv_lower",
+      "type": "frame",
+      "name": "Lower",
+      "width": "fill",
+      "height": "fill",
+      "layout": { "direction": "row", "gap": 18, "align": "stretch" },
+      "children": ["gv_attention", "gv_activity"]
+    },
+    "gv_attention": {
+      "id": "gv_attention",
+      "type": "frame",
+      "name": "Attention",
+      "width": "fill",
+      "height": "fill",
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "layout": {
+        "direction": "column",
+        "gap": 14,
+        "padding": [20, 20],
+        "align": "stretch"
+      },
+      "children": ["gv_att_t", "gv_a1", "gv_a2", "gv_a3"]
+    },
+    "gv_att_t": {
+      "id": "gv_att_t",
+      "type": "text",
+      "name": "Title",
+      "content": "Needs attention",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 15, "weight": 650 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_a1": {
+      "id": "gv_a1",
+      "type": "frame",
+      "name": "Item 1",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#F7F1E4",
+      "radius": 12,
+      "layout": { "direction": "row", "gap": 10, "padding": [12, 14], "align": "center" },
+      "children": ["gv_a1d", "gv_a1t"]
+    },
+    "gv_a1d": {
+      "id": "gv_a1d",
+      "type": "ellipse",
+      "name": "Dot",
+      "width": 8,
+      "height": 8,
+      "fill": "#9A6700"
+    },
+    "gv_a1t": {
+      "id": "gv_a1t",
+      "type": "text",
+      "name": "Text",
+      "content": "3 classes missing morning attendance",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#24382C",
+      "width": "fill",
+      "height": "hug"
+    },
+    "gv_a2": {
+      "id": "gv_a2",
+      "type": "frame",
+      "name": "Item 2",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#F8EAEA",
+      "radius": 12,
+      "layout": { "direction": "row", "gap": 10, "padding": [12, 14], "align": "center" },
+      "children": ["gv_a2d", "gv_a2t"]
+    },
+    "gv_a2d": {
+      "id": "gv_a2d",
+      "type": "ellipse",
+      "name": "Dot",
+      "width": 8,
+      "height": 8,
+      "fill": "#B42318"
+    },
+    "gv_a2t": {
+      "id": "gv_a2t",
+      "type": "text",
+      "name": "Text",
+      "content": "Grade 9B — 8 students below 60% average",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#24382C",
+      "width": "fill",
+      "height": "hug"
+    },
+    "gv_a3": {
+      "id": "gv_a3",
+      "type": "frame",
+      "name": "Item 3",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#EAF1F8",
+      "radius": 12,
+      "layout": { "direction": "row", "gap": 10, "padding": [12, 14], "align": "center" },
+      "children": ["gv_a3d", "gv_a3t"]
+    },
+    "gv_a3d": {
+      "id": "gv_a3d",
+      "type": "ellipse",
+      "name": "Dot",
+      "width": 8,
+      "height": 8,
+      "fill": "#175CD3"
+    },
+    "gv_a3t": {
+      "id": "gv_a3t",
+      "type": "text",
+      "name": "Text",
+      "content": "Parent meeting requests: 6 pending",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 500 },
+      "fill": "#24382C",
+      "width": "fill",
+      "height": "hug"
+    },
+    "gv_activity": {
+      "id": "gv_activity",
+      "type": "frame",
+      "name": "Activity",
+      "width": "fill",
+      "height": "fill",
+      "fill": "#FFFFFF",
+      "radius": 16,
+      "layout": {
+        "direction": "column",
+        "gap": 14,
+        "padding": [20, 20],
+        "align": "stretch"
+      },
+      "children": ["gv_act_t", "gv_act1", "gv_act2", "gv_act3"]
+    },
+    "gv_act_t": {
+      "id": "gv_act_t",
+      "type": "text",
+      "name": "Title",
+      "content": "Recent activity",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 15, "weight": 650 },
+      "fill": "#24382C",
+      "width": "hug",
+      "height": "hug"
+    },
+    "gv_act1": {
+      "id": "gv_act1",
+      "type": "text",
+      "name": "Act 1",
+      "content": "Ms. Rivera submitted Grade 7 Science midterms",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 400 },
+      "fill": "#24382C",
+      "width": "fill",
+      "height": "hug"
+    },
+    "gv_act2": {
+      "id": "gv_act2",
+      "type": "text",
+      "name": "Act 2",
+      "content": "Finance posted 24 Term 1 invoices",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 400 },
+      "fill": "#24382C",
+      "width": "fill",
+      "height": "hug"
+    },
+    "gv_act3": {
+      "id": "gv_act3",
+      "type": "text",
+      "name": "Act 3",
+      "content": "Announcement: Early dismissal Friday published",
+      "font": { "family": "Source Sans 3, system-ui, sans-serif", "size": 14, "weight": 400 },
+      "fill": "#24382C",
+      "width": "fill",
+      "height": "hug"
+    }
+  }
+}

@@ -225,6 +225,26 @@ test("1c.1 expressiveness: gradient fill, per-corner radius, shadow, shadow toke
   assert.ok(validate(bad.doc).length >= 1, "schema validation flags the one-stop gradient");
 });
 
+test("layout margin accepts CSS auto in 4-value shorthand", () => {
+  const r = applyOps(sampleDoc(), [
+    {
+      op: "create",
+      parent: "fr_login",
+      node: {
+        id: "fr_push_end",
+        type: "frame",
+        width: "hug",
+        height: "hug",
+        layout: { direction: "column", margin: [0, 0, 0, "auto"] },
+        children: [],
+      },
+    },
+  ]);
+  assert.equal(r.errors, undefined);
+  assert.deepEqual(validate(r.doc), []);
+  assert.deepEqual((r.doc.nodes.fr_push_end as { layout?: { margin?: unknown } }).layout?.margin, [0, 0, 0, "auto"]);
+});
+
 test("1c.0 composition: absolute layout, image/layered fill, zIndex, backdropBlur, transform, negative margin", () => {
   const doc = sampleDoc();
   // sample already includes fr_hero cinematic card

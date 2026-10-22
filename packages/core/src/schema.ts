@@ -129,10 +129,12 @@ export const TokenSchema = z.discriminatedUnion("type", [
 ]);
 
 const numOrRef = z.union([z.number(), tokenRef]);
+/** Padding/margin edge: number, `$token`, or CSS `auto`. */
+const spacingValue = z.union([numOrRef, z.literal("auto")]);
 const padding = z.union([
-  numOrRef,
-  z.tuple([numOrRef, numOrRef]),
-  z.tuple([numOrRef, numOrRef, numOrRef, numOrRef]),
+  spacingValue,
+  z.tuple([spacingValue, spacingValue]),
+  z.tuple([spacingValue, spacingValue, spacingValue, spacingValue]),
 ]);
 
 export const LayoutSchema = z.object({
@@ -140,9 +142,13 @@ export const LayoutSchema = z.object({
   direction: z.enum(["row", "column"]),
   gap: z.union([z.number(), tokenRef]).optional(),
   padding: padding.optional(),
-  margin: padding.optional(), // negatives allowed (number values)
+  margin: padding.optional(), // negatives + "auto" allowed
   align: z.enum(["start", "center", "end", "stretch"]).optional(),
-  justify: z.enum(["start", "center", "end", "space-between"]).optional(),
+  // Agents often emit space_between; normalize to CSS/flex space-between.
+  justify: z.preprocess(
+    (v) => (v === "space_between" ? "space-between" : v),
+    z.enum(["start", "center", "end", "space-between"]).optional(),
+  ),
   wrap: z.boolean().optional(),
 });
 
@@ -186,7 +192,8 @@ export const NodeSchema = z.discriminatedUnion("type", [
     layout: LayoutSchema.optional(),
     clip: z.boolean().optional(),
     overflow: z.enum(["visible", "hidden", "scroll", "auto"]).optional(),
-    children: z.array(z.string()),
+    // Agents often omit empty children on leaf frames (e.g. heat cells); default so docs still open.
+    children: z.array(z.string()).default([]),
     preset: z.string().optional(),
   }),
   z.object({ ...base, type: z.literal("rect") }),
@@ -311,6 +318,35 @@ export const AnnotationSchema = z.object({
   createdAt: z.string().optional(),
 });
 
+export const TimelineChannelSchema = z.enum([
+  "opacity",
+  "transform.x",
+  "transform.y",
+  "transform.scale",
+  "transform.rotate",
+]);
+
+export const TimelineKeySchema = z.object({
+  t: z.number().min(0).max(1),
+  value: z.number(),
+  ease: z.enum(["linear", "ease-out", "ease-in-out"]).optional(),
+});
+
+export const TimelineTrackSchema = z.object({
+  nodeId: z.string().min(1),
+  channel: TimelineChannelSchema,
+  keys: z.array(TimelineKeySchema).min(1),
+});
+
+export const TimelineSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().optional(),
+  frameId: z.string().min(1),
+  duration: z.number().positive(),
+  loop: z.boolean().optional(),
+  tracks: z.array(TimelineTrackSchema),
+});
+
 export const DocSchema = z.object({
   schemaVersion: z.literal(1),
   name: z.string(),
@@ -321,6 +357,7 @@ export const DocSchema = z.object({
   nodes: z.record(NodeSchema),
   components: z.record(ComponentDefSchema).optional(),
   annotations: z.record(AnnotationSchema).optional(),
+  timelines: z.record(TimelineSchema).optional(),
 });
 
 export const OpSchema = z.discriminatedUnion("op", [
@@ -354,6 +391,8 @@ export const OpSchema = z.discriminatedUnion("op", [
   }),
   /** Create/update/delete a component definition (`component: null` deletes). */
   z.object({ op: z.literal("setComponent"), id: z.string(), component: ComponentDefSchema.nullable() }),
+  /** Create/update/delete a timeline (`timeline: null` deletes). */
+  z.object({ op: z.literal("setTimeline"), id: z.string(), timeline: TimelineSchema.nullable() }),
 ]);
 
 export type Op = z.infer<typeof OpSchema>;
@@ -379,4 +418,5 @@ upsertAnnotation{ op:"upsertAnnotation", id?, annotation:{nodeId, body, status} 
 deleteAnnotation{ op:"deleteAnnotation", ids:[...] }
 createComponent { op:"createComponent", id?, name, root:<frameId>, props?, variants? }  // detach frame → component
 setComponent    { op:"setComponent", id, component:<ComponentDef|null> }               // update/delete def
+setTimeline     { op:"setTimeline", id, timeline:<Timeline|null> }                     // keyframe motion on a frame
 `.trim();

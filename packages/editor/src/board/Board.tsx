@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { indexParents, type Doc, type FrameNode, type Op } from "@cursor-design/core";
 import { NodeView } from "./NodeView";
 
@@ -104,19 +104,37 @@ export function Board({ doc, pageId, selection, onSelect, apply }: Props) {
     fitPage();
   }, [pageId, fitPage]);
 
+  /**
+   * Selection overlay lives inside `.world` (document space). CSS `zoom` scales that
+   * subtree visually; getBoundingClientRect returns zoomed screen px, so divide by the
+   * effective zoom to get stable layout boxes that track the camera.
+   */
   const measure = useCallback(() => {
     const vp = viewportRef.current;
-    if (!vp) return;
-    const vr = vp.getBoundingClientRect();
+    const world = vp?.querySelector<HTMLElement>(".world");
+    if (!vp || !world) return;
+    const wr = world.getBoundingClientRect();
+    const z =
+      (world as HTMLElement & { currentCSSZoom?: number }).currentCSSZoom ||
+      Number.parseFloat(getComputedStyle(world).zoom) ||
+      view.z ||
+      1;
     const out: Rect[] = [];
     for (const id of selection) {
       const el = vp.querySelector<HTMLElement>(`[data-node-id="${CSS.escape(id)}"]`);
       if (!el) continue;
       const r = el.getBoundingClientRect();
-      out.push({ id, x: r.left - vr.left, y: r.top - vr.top, w: r.width, h: r.height, notes: noteCount(id) });
+      out.push({
+        id,
+        x: (r.left - wr.left) / z,
+        y: (r.top - wr.top) / z,
+        w: r.width / z,
+        h: r.height / z,
+        notes: noteCount(id),
+      });
     }
     setRects(out);
-  }, [selection, noteCount]);
+  }, [selection, noteCount, view.z]);
 
   useLayoutEffect(() => {
     measure();
@@ -280,7 +298,8 @@ export function Board({ doc, pageId, selection, onSelect, apply }: Props) {
     }
     const el = viewportRef.current!.querySelector<HTMLElement>(`[data-node-id="${CSS.escape(d.id)}"]`);
     if (!el) return;
-    const t = 6 / view.z;
+    // Screen-px threshold → document space. Slightly wider than 6 so CSS-zoom cameras still snap.
+    const t = 12 / view.z;
     if (d.kind === "move") {
       let nx = d.ox + dx / view.z, ny = d.oy + dy / view.z;
       const sx = snap([nx, nx + d.w / 2, nx + d.w], d.tx, t);
@@ -355,10 +374,14 @@ export function Board({ doc, pageId, selection, onSelect, apply }: Props) {
   };
 
   const single = selection.length === 1;
-  const vp = viewportRef.current?.getBoundingClientRect();
-  const guideX = guides.x !== null && vp ? view.x + guides.x * view.z : null;
-  const guideY = guides.y !== null && vp ? view.y + guides.y * view.z : null;
+  const guideX = guides.x;
+  const guideY = guides.y;
   const pct = Math.round(view.z * 100);
+  // Keep chrome (stroke / handles) ~constant on screen while the overlay zooms with .world
+  const invZ = 1 / Math.max(0.05, view.z);
+  const handle = 8 * invZ;
+  const handleHalf = handle / 2;
+  const pinR = 9 * invZ;
 
   return (
     <main
@@ -377,7 +400,12 @@ export function Board({ doc, pageId, selection, onSelect, apply }: Props) {
           <span>Ask Cursor to build a frame here.</span>
         </div>
       )}
-      <div className="world" style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.z})` }}>
+      {/*
+        Camera uses left/top + CSS zoom — not transform:scale. An ancestor transform
+        becomes a Chromium backdrop root and silently breaks document backdropBlur.
+        Selection overlay is inside .world so boxes track zoom with the nodes.
+      */}
+      <div className="world" style={{ left: view.x, top: view.y, zoom: view.z } as CSSProperties}>
         {frames.map((f) => (
           <NodeView key={f} doc={doc} id={f} topLevel selected={new Set(selection)} onPick={onPick} />
         ))}
@@ -385,36 +413,52 @@ export function Board({ doc, pageId, selection, onSelect, apply }: Props) {
           const n = doc.nodes[f];
           if (!n) return null;
           return (
-            <div key={`${f}-label`} className="frame-label" style={{ left: n.x ?? 0, top: (n.y ?? 0) - 22 / view.z, transform: `scale(${1 / view.z})`, transformOrigin: "left bottom" }} onClick={(e) => onPick(f, e)}>
+            <div
+              key={`${f}-label`}
+              className="frame-label"
+              style={{ left: n.x ?? 0, top: (n.y ?? 0) - 22 / view.z, zoom: 1 / view.z } as CSSProperties}
+              onClick={(e) => onPick(f, e)}
+            >
               {n.name ?? f} <span>{typeof n.width === "number" && typeof n.height === "number" ? `${n.width} × ${n.height}` : ""}</span>
             </div>
           );
         })}
+        <svg className="overlay" style={{ overflow: "visible" }}>
+          {guideX !== null && <line className="guide" x1={guideX} y1={-1e5} x2={guideX} y2={1e5} strokeWidth={invZ} />}
+          {guideY !== null && <line className="guide" x1={-1e5} y1={guideY} x2={1e5} y2={guideY} strokeWidth={invZ} />}
+          {rects.map((r) => (
+            <g key={r.id}>
+              <rect x={r.x} y={r.y} width={r.w} height={r.h} className="sel" style={{ strokeWidth: 1.5 * invZ }} />
+              {single && !panning &&
+                (["nw", "ne", "sw", "se"] as Corner[]).map((c) => {
+                  const hx = c === "nw" || c === "sw" ? r.x : r.x + r.w;
+                  const hy = c === "nw" || c === "ne" ? r.y : r.y + r.h;
+                  return (
+                    <rect
+                      key={c}
+                      x={hx - handleHalf}
+                      y={hy - handleHalf}
+                      width={handle}
+                      height={handle}
+                      className="handle"
+                      data-corner={c}
+                      style={{ strokeWidth: invZ }}
+                      onPointerDown={(e) => startResize(r.id, c, e)}
+                    />
+                  );
+                })}
+              {r.notes > 0 && (
+                <g className="pin" onClick={(e) => { e.stopPropagation(); if (!panning) onSelect([r.id]); }}>
+                  <circle cx={r.x + r.w - 2} cy={r.y + 2} r={pinR} />
+                  <text x={r.x + r.w - 2} y={r.y + 2} dy="0.35em" textAnchor="middle" style={{ fontSize: 10 * invZ }}>
+                    {r.notes}
+                  </text>
+                </g>
+              )}
+            </g>
+          ))}
+        </svg>
       </div>
-      <svg className="overlay">
-        {guideX !== null && <line className="guide" x1={guideX} y1={0} x2={guideX} y2="100%" />}
-        {guideY !== null && <line className="guide" x1={0} y1={guideY} x2="100%" y2={guideY} />}
-        {rects.map((r) => (
-          <g key={r.id}>
-            <rect x={r.x} y={r.y} width={r.w} height={r.h} className="sel" />
-            {single && !panning &&
-              (["nw", "ne", "sw", "se"] as Corner[]).map((c) => {
-                const hx = c === "nw" || c === "sw" ? r.x : r.x + r.w;
-                const hy = c === "nw" || c === "ne" ? r.y : r.y + r.h;
-                return (
-                  <rect key={c} x={hx - 4} y={hy - 4} width={8} height={8} className="handle" data-corner={c}
-                    onPointerDown={(e) => startResize(r.id, c, e)} />
-                );
-              })}
-            {r.notes > 0 && (
-              <g className="pin" onClick={(e) => { e.stopPropagation(); if (!panning) onSelect([r.id]); }}>
-                <circle cx={r.x + r.w - 2} cy={r.y + 2} r={9} />
-                <text x={r.x + r.w - 2} y={r.y + 2} dy="0.35em" textAnchor="middle">{r.notes}</text>
-              </g>
-            )}
-          </g>
-        ))}
-      </svg>
 
       <div className="board-tools" role="toolbar" aria-label="Pointer tools" onPointerDown={(e) => e.stopPropagation()}>
         <button type="button" className={`tool ${tool === "select" && !spaceDown ? "active" : ""}`} title="Select (V)" aria-pressed={tool === "select"} onClick={() => setTool("select")}>

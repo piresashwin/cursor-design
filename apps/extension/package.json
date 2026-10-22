@@ -45,6 +45,10 @@
         "title": "Cursor Design: Reconnect MCP server"
       },
       {
+        "command": "cursorDesign.diagnoseMcp",
+        "title": "Cursor Design: Diagnose MCP (local round-trip)"
+      },
+      {
         "command": "cursorDesign.copyMcpConfig",
         "title": "Cursor Design: Copy MCP config (mcp.json entry)"
       },
@@ -63,6 +67,10 @@
       {
         "command": "cursorDesign.installSkill",
         "title": "Cursor Design: Install agent skill into ~/.cursor (fallback)"
+      },
+      {
+        "command": "cursorDesign.openPreview",
+        "title": "Cursor Design: Open preview in browser"
       }
     ],
     "configuration": {
@@ -73,10 +81,20 @@
           "default": 48731,
           "description": "Preferred local port for the MCP server (127.0.0.1). 0 = ephemeral. Falls back to ephemeral if busy."
         },
+        "cursorDesign.mcpToken": {
+          "type": "string",
+          "default": "",
+          "description": "Optional fixed bearer token for the MCP server. Empty = persist a random token in extension global state (stable across reloads)."
+        },
         "cursorDesign.autoRegister": {
           "type": "boolean",
           "default": true,
           "description": "Register the MCP server with Cursor automatically on activation (vscode.cursor.mcp.registerServer)."
+        },
+        "cursorDesign.writeMcpJson": {
+          "type": "boolean",
+          "default": true,
+          "description": "On MCP start, write/update .cursor/mcp.json in the workspace so Agent chats can reach the design tools."
         },
         "cursorDesign.autoSaveAgentEdits": {
           "type": "boolean",

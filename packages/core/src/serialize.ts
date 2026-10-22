@@ -1,7 +1,7 @@
 import type { Doc } from "./types";
 import { DocSchema } from "./schema";
 
-const TOP_ORDER = ["schemaVersion", "name", "tokens", "folderRoot", "folders", "pages", "nodes", "components", "annotations"];
+const TOP_ORDER = ["schemaVersion", "name", "tokens", "folderRoot", "folders", "pages", "nodes", "components", "annotations", "timelines"];
 const NODE_ORDER = [
   "id", "type", "name", "visible", "x", "y", "width", "height", "layout", "clip", "overflow",
   "fill", "stroke", "radius", "shadow", "opacity", "zIndex", "backdropBlur", "blur", "mixBlendMode",
@@ -46,6 +46,7 @@ export function serialize(doc: Doc): string {
   d.pages = sortedMap(doc.pages);
   d.nodes = sortedMap(doc.nodes, (n) => orderKeys(n as unknown as Record<string, unknown>, NODE_ORDER));
   if (doc.annotations) d.annotations = sortedMap(doc.annotations);
+  if (doc.timelines) d.timelines = sortedMap(doc.timelines);
   return JSON.stringify(d, null, 2) + "\n";
 }
 
@@ -78,6 +79,35 @@ export function validate(doc: unknown): string[] {
       }
     for (const [id, n] of Object.entries(d.nodes))
       if (n.type === "frame") for (const c of n.children) if (!d.nodes[c]) errs.push(`frame ${id} references unknown child ${c}`);
+    if (d.timelines) {
+      for (const [id, tl] of Object.entries(d.timelines)) {
+        if (tl.id !== id) errs.push(`timeline ${id} id mismatch`);
+        const frame = d.nodes[tl.frameId];
+        if (!frame || frame.type !== "frame") errs.push(`timeline ${id} frameId ${tl.frameId} is not a frame`);
+        else {
+          const { nodeParent } = (() => {
+            const nodeParent: Record<string, string> = {};
+            for (const [nid, n] of Object.entries(d.nodes)) {
+              if (n.type === "frame") for (const c of n.children) nodeParent[c] = nid;
+            }
+            return { nodeParent };
+          })();
+          for (const track of tl.tracks) {
+            if (!d.nodes[track.nodeId]) {
+              errs.push(`timeline ${id} unknown node ${track.nodeId}`);
+              continue;
+            }
+            let cur: string | undefined = track.nodeId;
+            let under = track.nodeId === tl.frameId;
+            while (cur && !under) {
+              if (cur === tl.frameId) under = true;
+              cur = nodeParent[cur];
+            }
+            if (!under) errs.push(`timeline ${id} node ${track.nodeId} not under frame ${tl.frameId}`);
+          }
+        }
+      }
+    }
     return errs;
   }
   return r.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`);

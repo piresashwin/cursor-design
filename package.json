@@ -6,12 +6,13 @@
   "license": "MIT",
   "packageManager": "pnpm@11.9.0",
   "scripts": {
-    "build": "pnpm -r --filter './packages/*' --filter './apps/*' run build",
+    "build": "pnpm -r run build",
     "test": "pnpm -r run test",
     "typecheck": "pnpm -r run typecheck",
     "package": "pnpm --filter @cursor-design/extension run package",
     "dev:cursor": "bash scripts/dev-cursor.sh",
-    "install:cursor": "/Applications/Cursor.app/Contents/Resources/app/bin/cursor --install-extension cursor-design.vsix"
+    "install:cursor": "/Applications/Cursor.app/Contents/Resources/app/bin/cursor --install-extension cursor-design.vsix",
+    "install:cursor:windows": "cursor --install-extension cursor-design.vsix"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

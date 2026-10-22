@@ -55,6 +55,9 @@ export function inspectNode(doc: Doc, nodeId: string, depth = 4): InspectReport 
   collectDescendantIds(doc, nodeId, depth, allowed);
 
   const rootRect = root.getBoundingClientRect();
+  // Board camera uses CSS zoom (not transform). getBoundingClientRect is in zoomed
+  // viewport px; report document-space bounds for the agent.
+  const zoom = (root as HTMLElement & { currentCSSZoom?: number }).currentCSSZoom || 1;
   const nodes: InspectBox[] = [];
 
   const els = root.querySelectorAll<HTMLElement>("[data-node-id]");
@@ -72,10 +75,10 @@ export function inspectNode(doc: Doc, nodeId: string, depth = 4): InspectReport 
       id,
       type: n?.type ?? el.dataset.nodeType,
       name: n?.name,
-      x: r.left - rootRect.left,
-      y: r.top - rootRect.top,
-      w: r.width,
-      h: r.height,
+      x: (r.left - rootRect.left) / zoom,
+      y: (r.top - rootRect.top) / zoom,
+      w: r.width / zoom,
+      h: r.height / zoom,
       style: {
         display: cs.display,
         flexDirection: cs.flexDirection,
@@ -103,5 +106,5 @@ export function inspectNode(doc: Doc, nodeId: string, depth = 4): InspectReport 
     nodes.push(box);
   }
 
-  return analyzeLayout(nodeId, rootRect.width, rootRect.height, nodes);
+  return analyzeLayout(nodeId, rootRect.width / zoom, rootRect.height / zoom, nodes);
 }

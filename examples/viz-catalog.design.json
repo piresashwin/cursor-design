@@ -1,0 +1,2698 @@
+{
+  "schemaVersion": 1,
+  "name": "Viz Catalog",
+  "tokens": {
+    "color.accent": {
+      "description": "Teal",
+      "group": "color",
+      "type": "color",
+      "value": "#0F6E6A"
+    },
+    "color.accent.soft": {
+      "group": "color",
+      "type": "color",
+      "value": "#D8F0EE"
+    },
+    "color.bg": {
+      "group": "color",
+      "type": "color",
+      "value": "#EEF1F3"
+    },
+    "color.border": {
+      "group": "color",
+      "type": "color",
+      "value": "#D5DDE4"
+    },
+    "color.heat.1": {
+      "group": "color",
+      "type": "color",
+      "value": "#E8F5F3"
+    },
+    "color.heat.2": {
+      "group": "color",
+      "type": "color",
+      "value": "#A8D9D4"
+    },
+    "color.heat.3": {
+      "group": "color",
+      "type": "color",
+      "value": "#4FA8A1"
+    },
+    "color.heat.4": {
+      "group": "color",
+      "type": "color",
+      "value": "#0F6E6A"
+    },
+    "color.heat.5": {
+      "group": "color",
+      "type": "color",
+      "value": "#084744"
+    },
+    "color.ink": {
+      "group": "color",
+      "type": "color",
+      "value": "#14202A"
+    },
+    "color.muted": {
+      "group": "color",
+      "type": "color",
+      "value": "#5A6B78"
+    },
+    "color.series2": {
+      "group": "color",
+      "type": "color",
+      "value": "#C45C26"
+    },
+    "color.series3": {
+      "group": "color",
+      "type": "color",
+      "value": "#2B5A9E"
+    },
+    "color.surface": {
+      "group": "color",
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "radius.lg": {
+      "group": "radius",
+      "type": "number",
+      "value": 14
+    },
+    "radius.md": {
+      "group": "radius",
+      "type": "number",
+      "value": 10
+    },
+    "radius.sm": {
+      "group": "radius",
+      "type": "number",
+      "value": 6
+    },
+    "shadow.card": {
+      "group": "shadow",
+      "type": "shadow",
+      "value": {
+        "blur": 16,
+        "color": "rgba(20,32,42,0.1)",
+        "spread": -4,
+        "x": 0,
+        "y": 4
+      }
+    },
+    "space.2": {
+      "group": "space",
+      "type": "number",
+      "value": 8
+    },
+    "space.3": {
+      "group": "space",
+      "type": "number",
+      "value": 12
+    },
+    "space.4": {
+      "group": "space",
+      "type": "number",
+      "value": 16
+    },
+    "space.5": {
+      "group": "space",
+      "type": "number",
+      "value": 20
+    },
+    "space.6": {
+      "group": "space",
+      "type": "number",
+      "value": 24
+    },
+    "space.8": {
+      "group": "space",
+      "type": "number",
+      "value": 32
+    },
+    "type.body": {
+      "family": "IBM Plex Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.4,
+      "size": 13,
+      "type": "font",
+      "weight": 400
+    },
+    "type.caption": {
+      "family": "IBM Plex Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 11,
+      "type": "font",
+      "weight": 500
+    },
+    "type.display": {
+      "family": "Fraunces, Georgia, serif",
+      "group": "type",
+      "lineHeight": 1.15,
+      "size": 36,
+      "type": "font",
+      "weight": 600
+    },
+    "type.kpi": {
+      "family": "Fraunces, Georgia, serif",
+      "group": "type",
+      "lineHeight": 1.05,
+      "size": 40,
+      "type": "font",
+      "weight": 600
+    },
+    "type.label": {
+      "family": "IBM Plex Sans, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 12,
+      "type": "font",
+      "weight": 600
+    },
+    "type.title": {
+      "family": "Fraunces, Georgia, serif",
+      "group": "type",
+      "lineHeight": 1.25,
+      "size": 20,
+      "type": "font",
+      "weight": 600
+    }
+  },
+  "folderRoot": [
+    "pg_catalog"
+  ],
+  "folders": {},
+  "pages": {
+    "pg_catalog": {
+      "frames": [
+        "fr_cover",
+        "fr_kpi",
+        "fr_progress",
+        "fr_ranked",
+        "fr_donut",
+        "fr_segments",
+        "fr_bar",
+        "fr_line",
+        "fr_area",
+        "fr_stacked",
+        "fr_chrome",
+        "fr_multiples",
+        "fr_heat",
+        "fr_skeleton"
+      ],
+      "name": "Catalog"
+    }
+  },
+  "nodes": {
+    "card_sm_1": {
+      "id": "card_sm_1",
+      "type": "frame",
+      "name": "Multiple Pier",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6,
+        "padding": 12
+      },
+      "fill": "$color.accent.soft",
+      "radius": "$radius.md",
+      "children": [
+        "tx_sm_1",
+        "ch_sm_1"
+      ]
+    },
+    "card_sm_2": {
+      "id": "card_sm_2",
+      "type": "frame",
+      "name": "Multiple Market",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6,
+        "padding": 12
+      },
+      "fill": "$color.accent.soft",
+      "radius": "$radius.md",
+      "children": [
+        "tx_sm_2",
+        "ch_sm_2"
+      ]
+    },
+    "card_sm_3": {
+      "id": "card_sm_3",
+      "type": "frame",
+      "name": "Multiple Grove",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6,
+        "padding": 12
+      },
+      "fill": "$color.accent.soft",
+      "radius": "$radius.md",
+      "children": [
+        "tx_sm_3",
+        "ch_sm_3"
+      ]
+    },
+    "ch_area": {
+      "id": "ch_area",
+      "type": "chart",
+      "name": "Area chart",
+      "width": "fill",
+      "height": 200,
+      "chart": {
+        "kind": "area",
+        "labels": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun"
+        ],
+        "options": {
+          "chrome": "minimal",
+          "fillOpacity": 0.22,
+          "strokeWidth": 2,
+          "valueLabels": "last"
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "name": "kWh",
+            "values": [
+              120,
+              140,
+              135,
+              168,
+              190,
+              210
+            ]
+          }
+        ]
+      }
+    },
+    "ch_bar": {
+      "id": "ch_bar",
+      "type": "chart",
+      "name": "Bar chart",
+      "width": "fill",
+      "height": 200,
+      "chart": {
+        "kind": "bar",
+        "labels": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ],
+        "options": {
+          "chrome": "minimal",
+          "goal": 650,
+          "highlight": 5,
+          "rounded": true,
+          "valueLabels": "last"
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "name": "Trips",
+            "values": [
+              420,
+              510,
+              480,
+              620,
+              700,
+              860,
+              740
+            ]
+          }
+        ]
+      }
+    },
+    "ch_donut": {
+      "id": "ch_donut",
+      "type": "chart",
+      "name": "Donut",
+      "width": "fill",
+      "height": 160,
+      "chart": {
+        "kind": "donut",
+        "labels": [
+          "E-bike",
+          "Classic",
+          "Cargo"
+        ],
+        "options": {
+          "chrome": "minimal",
+          "legend": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "name": "Fleet",
+            "values": [
+              48,
+              32,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    "ch_full": {
+      "id": "ch_full",
+      "type": "chart",
+      "name": "Chrome full",
+      "width": "fill",
+      "height": "fill",
+      "chart": {
+        "kind": "bar",
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "options": {
+          "chrome": "full",
+          "rounded": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              3,
+              7,
+              5,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "ch_kpi_spark": {
+      "id": "ch_kpi_spark",
+      "type": "chart",
+      "name": "KPI sparkline",
+      "width": "fill",
+      "height": 64,
+      "chart": {
+        "kind": "sparkline",
+        "options": {
+          "fill": true,
+          "fillOpacity": 0.18,
+          "strokeWidth": 2
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              4,
+              5,
+              4,
+              7,
+              6,
+              9,
+              8,
+              11,
+              10,
+              13,
+              12,
+              14
+            ]
+          }
+        ]
+      }
+    },
+    "ch_line": {
+      "id": "ch_line",
+      "type": "chart",
+      "name": "Line chart",
+      "width": "fill",
+      "height": 200,
+      "chart": {
+        "kind": "line",
+        "labels": [
+          "W1",
+          "W2",
+          "W3",
+          "W4",
+          "W5",
+          "W6",
+          "W7",
+          "W8"
+        ],
+        "options": {
+          "chrome": "minimal",
+          "showDots": true,
+          "strokeWidth": 2.5,
+          "valueLabels": "last"
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "name": "Cohort A",
+            "values": [
+              100,
+              82,
+              71,
+              64,
+              58,
+              54,
+              51,
+              49
+            ]
+          },
+          {
+            "color": "$color.series2",
+            "name": "Cohort B",
+            "values": [
+              100,
+              88,
+              79,
+              74,
+              70,
+              67,
+              65,
+              63
+            ]
+          }
+        ]
+      }
+    },
+    "ch_minimal": {
+      "id": "ch_minimal",
+      "type": "chart",
+      "name": "Chrome minimal",
+      "width": "fill",
+      "height": "fill",
+      "chart": {
+        "kind": "bar",
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "options": {
+          "chrome": "minimal",
+          "rounded": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              3,
+              7,
+              5,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "ch_none": {
+      "id": "ch_none",
+      "type": "chart",
+      "name": "Chrome none",
+      "width": "fill",
+      "height": "fill",
+      "chart": {
+        "kind": "bar",
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "options": {
+          "chrome": "none",
+          "rounded": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              3,
+              7,
+              5,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "ch_sm_1": {
+      "id": "ch_sm_1",
+      "type": "chart",
+      "name": "Spark Pier",
+      "width": "fill",
+      "height": "fill",
+      "chart": {
+        "kind": "sparkline",
+        "options": {
+          "chrome": "none",
+          "fill": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              2,
+              3,
+              2,
+              5,
+              4,
+              6,
+              7,
+              6
+            ]
+          }
+        ]
+      }
+    },
+    "ch_sm_2": {
+      "id": "ch_sm_2",
+      "type": "chart",
+      "name": "Spark Market",
+      "width": "fill",
+      "height": "fill",
+      "chart": {
+        "kind": "sparkline",
+        "options": {
+          "chrome": "none",
+          "fill": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              5,
+              4,
+              6,
+              5,
+              8,
+              7,
+              9,
+              11
+            ]
+          }
+        ]
+      }
+    },
+    "ch_sm_3": {
+      "id": "ch_sm_3",
+      "type": "chart",
+      "name": "Spark Grove",
+      "width": "fill",
+      "height": "fill",
+      "chart": {
+        "kind": "sparkline",
+        "options": {
+          "chrome": "none",
+          "fill": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "values": [
+              8,
+              7,
+              7,
+              6,
+              5,
+              6,
+              4,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "ch_stacked": {
+      "id": "ch_stacked",
+      "type": "chart",
+      "name": "Stacked bar",
+      "width": "fill",
+      "height": 200,
+      "chart": {
+        "kind": "bar",
+        "labels": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri"
+        ],
+        "options": {
+          "chrome": "minimal",
+          "rounded": true,
+          "stacked": true
+        },
+        "series": [
+          {
+            "color": "$color.accent",
+            "name": "Day",
+            "values": [
+              120,
+              140,
+              130,
+              160,
+              180
+            ]
+          },
+          {
+            "color": "$color.series3",
+            "name": "Pass",
+            "values": [
+              80,
+              90,
+              85,
+              100,
+              110
+            ]
+          },
+          {
+            "color": "$color.series2",
+            "name": "Payg",
+            "values": [
+              40,
+              55,
+              48,
+              62,
+              70
+            ]
+          }
+        ]
+      }
+    },
+    "col_chrome_full": {
+      "id": "col_chrome_full",
+      "type": "frame",
+      "name": "Chrome full col",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_cf_label",
+        "ch_full"
+      ]
+    },
+    "col_chrome_min": {
+      "id": "col_chrome_min",
+      "type": "frame",
+      "name": "Chrome minimal col",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_cm_label",
+        "ch_minimal"
+      ]
+    },
+    "col_chrome_none": {
+      "id": "col_chrome_none",
+      "type": "frame",
+      "name": "Chrome none col",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 6
+      },
+      "children": [
+        "tx_cn_label",
+        "ch_none"
+      ]
+    },
+    "col_pr_linear": {
+      "id": "col_pr_linear",
+      "type": "frame",
+      "name": "Linear column",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 8
+      },
+      "children": [
+        "tx_pr_lin_label",
+        "pr_linear",
+        "tx_pr_lin_pct"
+      ]
+    },
+    "dot_dn_1": {
+      "id": "dot_dn_1",
+      "type": "ellipse",
+      "name": "Dot e-bike",
+      "width": 8,
+      "height": 8,
+      "fill": "$color.accent"
+    },
+    "dot_dn_2": {
+      "id": "dot_dn_2",
+      "type": "ellipse",
+      "name": "Dot classic",
+      "width": 8,
+      "height": 8,
+      "fill": "$color.series2"
+    },
+    "dot_dn_3": {
+      "id": "dot_dn_3",
+      "type": "ellipse",
+      "name": "Dot cargo",
+      "width": 8,
+      "height": 8,
+      "fill": "$color.series3"
+    },
+    "fr_area": {
+      "id": "fr_area",
+      "type": "frame",
+      "name": "Area Chart",
+      "x": 0,
+      "y": 940,
+      "width": 400,
+      "height": 340,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_ar_tag",
+        "tx_ar_title",
+        "ch_area",
+        "tx_ar_hint"
+      ]
+    },
+    "fr_bar": {
+      "id": "fr_bar",
+      "type": "frame",
+      "name": "Bar Chart",
+      "x": 840,
+      "y": 560,
+      "width": 400,
+      "height": 340,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_bar_tag",
+        "tx_bar_title",
+        "ch_bar",
+        "tx_bar_hint"
+      ]
+    },
+    "fr_chrome": {
+      "id": "fr_chrome",
+      "type": "frame",
+      "name": "Chrome Variants",
+      "x": 880,
+      "y": 940,
+      "width": 720,
+      "height": 340,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_ch_tag",
+        "tx_ch_title",
+        "row_chrome",
+        "tx_ch_hint"
+      ]
+    },
+    "fr_cover": {
+      "id": "fr_cover",
+      "type": "frame",
+      "name": "Cover",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 520,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.4",
+        "justify": "end",
+        "padding": [
+          "$space.8",
+          "$space.6"
+        ]
+      },
+      "clip": true,
+      "fill": "$color.ink",
+      "children": [
+        "tx_cover_kicker",
+        "tx_cover_title",
+        "tx_cover_sub"
+      ]
+    },
+    "fr_donut": {
+      "id": "fr_donut",
+      "type": "frame",
+      "name": "Donut Chart",
+      "x": 0,
+      "y": 560,
+      "width": 360,
+      "height": 340,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_dn_tag",
+        "tx_dn_title",
+        "ch_donut",
+        "row_dn_legend",
+        "tx_dn_hint"
+      ]
+    },
+    "fr_heat": {
+      "id": "fr_heat",
+      "type": "frame",
+      "name": "Heat Matrix",
+      "x": 560,
+      "y": 1320,
+      "width": 420,
+      "height": 300,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_ht_tag",
+        "tx_ht_title",
+        "grid_heat",
+        "tx_ht_hint"
+      ]
+    },
+    "fr_kpi": {
+      "id": "fr_kpi",
+      "type": "frame",
+      "name": "KPI + Sparkline",
+      "x": 460,
+      "y": 0,
+      "width": 360,
+      "height": 280,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_kpi_tag",
+        "tx_kpi_label",
+        "row_kpi_value",
+        "ch_kpi_spark",
+        "tx_kpi_hint"
+      ]
+    },
+    "fr_line": {
+      "id": "fr_line",
+      "type": "frame",
+      "name": "Line Chart",
+      "x": 1280,
+      "y": 560,
+      "width": 400,
+      "height": 340,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_ln_tag",
+        "tx_ln_title",
+        "ch_line",
+        "tx_ln_hint"
+      ]
+    },
+    "fr_multiples": {
+      "id": "fr_multiples",
+      "type": "frame",
+      "name": "Small Multiples",
+      "x": 0,
+      "y": 1320,
+      "width": 520,
+      "height": 300,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_sm_tag",
+        "tx_sm_title",
+        "row_sm",
+        "tx_sm_hint"
+      ]
+    },
+    "fr_progress": {
+      "id": "fr_progress",
+      "type": "frame",
+      "name": "Progress Gauges",
+      "x": 860,
+      "y": 0,
+      "width": 360,
+      "height": 280,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.4",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_pr_tag",
+        "tx_pr_title",
+        "row_pr_gauges",
+        "tx_pr_hint"
+      ]
+    },
+    "fr_ranked": {
+      "id": "fr_ranked",
+      "type": "frame",
+      "name": "Ranked List",
+      "x": 1260,
+      "y": 0,
+      "width": 360,
+      "height": 320,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_rk_tag",
+        "tx_rk_title",
+        "row_rk_1",
+        "row_rk_2",
+        "row_rk_3",
+        "row_rk_4",
+        "tx_rk_hint"
+      ]
+    },
+    "fr_segments": {
+      "id": "fr_segments",
+      "type": "frame",
+      "name": "Segment Stack",
+      "x": 400,
+      "y": 560,
+      "width": 400,
+      "height": 260,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_sg_tag",
+        "tx_sg_title",
+        "row_sg_bar",
+        "row_sg_legend",
+        "tx_sg_hint"
+      ]
+    },
+    "fr_skeleton": {
+      "id": "fr_skeleton",
+      "type": "frame",
+      "name": "Skeleton Loading",
+      "x": 1020,
+      "y": 1320,
+      "width": 360,
+      "height": 300,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_sk_tag",
+        "tx_sk_title",
+        "row_sk",
+        "sk_text",
+        "sk_rect",
+        "tx_sk_hint"
+      ]
+    },
+    "fr_stacked": {
+      "id": "fr_stacked",
+      "type": "frame",
+      "name": "Stacked Bar",
+      "x": 440,
+      "y": 940,
+      "width": 400,
+      "height": 340,
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "clip": true,
+      "fill": "$color.surface",
+      "radius": "$radius.lg",
+      "shadow": "$shadow.card",
+      "children": [
+        "tx_st_tag",
+        "tx_st_title",
+        "ch_stacked",
+        "tx_st_hint"
+      ]
+    },
+    "grid_heat": {
+      "id": "grid_heat",
+      "type": "frame",
+      "name": "Heat grid",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 4
+      },
+      "children": [
+        "heat_r1",
+        "heat_r2",
+        "heat_r3",
+        "heat_r4"
+      ]
+    },
+    "h11": {
+      "id": "h11",
+      "type": "frame",
+      "name": "H11",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.1",
+      "radius": 4,
+      "children": []
+    },
+    "h12": {
+      "id": "h12",
+      "type": "frame",
+      "name": "H12",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h13": {
+      "id": "h13",
+      "type": "frame",
+      "name": "H13",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h14": {
+      "id": "h14",
+      "type": "frame",
+      "name": "H14",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.4",
+      "radius": 4,
+      "children": []
+    },
+    "h15": {
+      "id": "h15",
+      "type": "frame",
+      "name": "H15",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.5",
+      "radius": 4,
+      "children": []
+    },
+    "h16": {
+      "id": "h16",
+      "type": "frame",
+      "name": "H16",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h17": {
+      "id": "h17",
+      "type": "frame",
+      "name": "H17",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h21": {
+      "id": "h21",
+      "type": "frame",
+      "name": "H21",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h22": {
+      "id": "h22",
+      "type": "frame",
+      "name": "H22",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h23": {
+      "id": "h23",
+      "type": "frame",
+      "name": "H23",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.4",
+      "radius": 4,
+      "children": []
+    },
+    "h24": {
+      "id": "h24",
+      "type": "frame",
+      "name": "H24",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.5",
+      "radius": 4,
+      "children": []
+    },
+    "h25": {
+      "id": "h25",
+      "type": "frame",
+      "name": "H25",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.4",
+      "radius": 4,
+      "children": []
+    },
+    "h26": {
+      "id": "h26",
+      "type": "frame",
+      "name": "H26",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h27": {
+      "id": "h27",
+      "type": "frame",
+      "name": "H27",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.1",
+      "radius": 4,
+      "children": []
+    },
+    "h31": {
+      "id": "h31",
+      "type": "frame",
+      "name": "H31",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.1",
+      "radius": 4,
+      "children": []
+    },
+    "h32": {
+      "id": "h32",
+      "type": "frame",
+      "name": "H32",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.1",
+      "radius": 4,
+      "children": []
+    },
+    "h33": {
+      "id": "h33",
+      "type": "frame",
+      "name": "H33",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h34": {
+      "id": "h34",
+      "type": "frame",
+      "name": "H34",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h35": {
+      "id": "h35",
+      "type": "frame",
+      "name": "H35",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.4",
+      "radius": 4,
+      "children": []
+    },
+    "h36": {
+      "id": "h36",
+      "type": "frame",
+      "name": "H36",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h37": {
+      "id": "h37",
+      "type": "frame",
+      "name": "H37",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.1",
+      "radius": 4,
+      "children": []
+    },
+    "h41": {
+      "id": "h41",
+      "type": "frame",
+      "name": "H41",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h42": {
+      "id": "h42",
+      "type": "frame",
+      "name": "H42",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h43": {
+      "id": "h43",
+      "type": "frame",
+      "name": "H43",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h44": {
+      "id": "h44",
+      "type": "frame",
+      "name": "H44",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.1",
+      "radius": 4,
+      "children": []
+    },
+    "h45": {
+      "id": "h45",
+      "type": "frame",
+      "name": "H45",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.2",
+      "radius": 4,
+      "children": []
+    },
+    "h46": {
+      "id": "h46",
+      "type": "frame",
+      "name": "H46",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.3",
+      "radius": 4,
+      "children": []
+    },
+    "h47": {
+      "id": "h47",
+      "type": "frame",
+      "name": "H47",
+      "width": "fill",
+      "height": "fill",
+      "fill": "$color.heat.4",
+      "radius": 4,
+      "children": []
+    },
+    "heat_r1": {
+      "id": "heat_r1",
+      "type": "frame",
+      "name": "Heat row 1",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 4
+      },
+      "children": [
+        "h11",
+        "h12",
+        "h13",
+        "h14",
+        "h15",
+        "h16",
+        "h17"
+      ]
+    },
+    "heat_r2": {
+      "id": "heat_r2",
+      "type": "frame",
+      "name": "Heat row 2",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 4
+      },
+      "children": [
+        "h21",
+        "h22",
+        "h23",
+        "h24",
+        "h25",
+        "h26",
+        "h27"
+      ]
+    },
+    "heat_r3": {
+      "id": "heat_r3",
+      "type": "frame",
+      "name": "Heat row 3",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 4
+      },
+      "children": [
+        "h31",
+        "h32",
+        "h33",
+        "h34",
+        "h35",
+        "h36",
+        "h37"
+      ]
+    },
+    "heat_r4": {
+      "id": "heat_r4",
+      "type": "frame",
+      "name": "Heat row 4",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 4
+      },
+      "children": [
+        "h41",
+        "h42",
+        "h43",
+        "h44",
+        "h45",
+        "h46",
+        "h47"
+      ]
+    },
+    "lg_dn_1": {
+      "id": "lg_dn_1",
+      "type": "frame",
+      "name": "Legend e-bike",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 6
+      },
+      "children": [
+        "dot_dn_1",
+        "tx_dn_1"
+      ]
+    },
+    "lg_dn_2": {
+      "id": "lg_dn_2",
+      "type": "frame",
+      "name": "Legend classic",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 6
+      },
+      "children": [
+        "dot_dn_2",
+        "tx_dn_2"
+      ]
+    },
+    "lg_dn_3": {
+      "id": "lg_dn_3",
+      "type": "frame",
+      "name": "Legend cargo",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 6
+      },
+      "children": [
+        "dot_dn_3",
+        "tx_dn_3"
+      ]
+    },
+    "pr_circular": {
+      "id": "pr_circular",
+      "type": "progress",
+      "name": "Circular progress",
+      "width": 88,
+      "height": 88,
+      "fill": "$color.border",
+      "strokeWidth": 8,
+      "kind": "circular",
+      "value": 0.86,
+      "barFill": "$color.accent",
+      "label": true
+    },
+    "pr_linear": {
+      "id": "pr_linear",
+      "type": "progress",
+      "name": "Linear progress",
+      "width": "fill",
+      "height": 12,
+      "fill": "$color.border",
+      "radius": 6,
+      "kind": "linear",
+      "value": 0.72,
+      "barFill": "$color.accent",
+      "label": true
+    },
+    "pr_rk_1": {
+      "id": "pr_rk_1",
+      "type": "progress",
+      "name": "Rank 1 bar",
+      "width": "fill",
+      "height": 6,
+      "fill": "$color.border",
+      "radius": 3,
+      "kind": "linear",
+      "value": 1,
+      "barFill": "$color.accent"
+    },
+    "pr_rk_2": {
+      "id": "pr_rk_2",
+      "type": "progress",
+      "name": "Rank 2 bar",
+      "width": "fill",
+      "height": 6,
+      "fill": "$color.border",
+      "radius": 3,
+      "kind": "linear",
+      "value": 0.74,
+      "barFill": "$color.accent"
+    },
+    "pr_rk_3": {
+      "id": "pr_rk_3",
+      "type": "progress",
+      "name": "Rank 3 bar",
+      "width": "fill",
+      "height": 6,
+      "fill": "$color.border",
+      "radius": 3,
+      "kind": "linear",
+      "value": 0.58,
+      "barFill": "$color.accent"
+    },
+    "pr_rk_4": {
+      "id": "pr_rk_4",
+      "type": "progress",
+      "name": "Rank 4 bar",
+      "width": "fill",
+      "height": 6,
+      "fill": "$color.border",
+      "radius": 3,
+      "kind": "linear",
+      "value": 0.35,
+      "barFill": "$color.accent"
+    },
+    "row_chrome": {
+      "id": "row_chrome",
+      "type": "frame",
+      "name": "Chrome row",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 16
+      },
+      "children": [
+        "col_chrome_full",
+        "col_chrome_min",
+        "col_chrome_none"
+      ]
+    },
+    "row_dn_legend": {
+      "id": "row_dn_legend",
+      "type": "frame",
+      "name": "Donut legend",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 16
+      },
+      "children": [
+        "lg_dn_1",
+        "lg_dn_2",
+        "lg_dn_3"
+      ]
+    },
+    "row_kpi_value": {
+      "id": "row_kpi_value",
+      "type": "frame",
+      "name": "KPI value row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "end",
+        "direction": "row",
+        "gap": 10
+      },
+      "children": [
+        "tx_kpi_num",
+        "tx_kpi_delta"
+      ]
+    },
+    "row_pr_gauges": {
+      "id": "row_pr_gauges",
+      "type": "frame",
+      "name": "Gauge row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 20
+      },
+      "children": [
+        "col_pr_linear",
+        "pr_circular"
+      ]
+    },
+    "row_rk_1": {
+      "id": "row_rk_1",
+      "type": "frame",
+      "name": "Rank row 1",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 4
+      },
+      "children": [
+        "row_rk_1_meta",
+        "pr_rk_1"
+      ]
+    },
+    "row_rk_1_meta": {
+      "id": "row_rk_1_meta",
+      "type": "frame",
+      "name": "Rank 1 meta",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_rk_1_name",
+        "tx_rk_1_val"
+      ]
+    },
+    "row_rk_2": {
+      "id": "row_rk_2",
+      "type": "frame",
+      "name": "Rank row 2",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 4
+      },
+      "children": [
+        "row_rk_2_meta",
+        "pr_rk_2"
+      ]
+    },
+    "row_rk_2_meta": {
+      "id": "row_rk_2_meta",
+      "type": "frame",
+      "name": "Rank 2 meta",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_rk_2_name",
+        "tx_rk_2_val"
+      ]
+    },
+    "row_rk_3": {
+      "id": "row_rk_3",
+      "type": "frame",
+      "name": "Rank row 3",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 4
+      },
+      "children": [
+        "row_rk_3_meta",
+        "pr_rk_3"
+      ]
+    },
+    "row_rk_3_meta": {
+      "id": "row_rk_3_meta",
+      "type": "frame",
+      "name": "Rank 3 meta",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_rk_3_name",
+        "tx_rk_3_val"
+      ]
+    },
+    "row_rk_4": {
+      "id": "row_rk_4",
+      "type": "frame",
+      "name": "Rank row 4",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": 4
+      },
+      "children": [
+        "row_rk_4_meta",
+        "pr_rk_4"
+      ]
+    },
+    "row_rk_4_meta": {
+      "id": "row_rk_4_meta",
+      "type": "frame",
+      "name": "Rank 4 meta",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "space-between"
+      },
+      "children": [
+        "tx_rk_4_name",
+        "tx_rk_4_val"
+      ]
+    },
+    "row_sg_bar": {
+      "id": "row_sg_bar",
+      "type": "frame",
+      "name": "Segment bar",
+      "width": "fill",
+      "height": 28,
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 2
+      },
+      "clip": true,
+      "radius": 8,
+      "children": [
+        "sg_a",
+        "sg_b",
+        "sg_c"
+      ]
+    },
+    "row_sg_legend": {
+      "id": "row_sg_legend",
+      "type": "frame",
+      "name": "Segment legend",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 16
+      },
+      "children": [
+        "tx_sg_leg_a",
+        "tx_sg_leg_b",
+        "tx_sg_leg_c"
+      ]
+    },
+    "row_sk": {
+      "id": "row_sk",
+      "type": "frame",
+      "name": "Skeleton row",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": 12
+      },
+      "children": [
+        "sk_circle",
+        "sk_text_side"
+      ]
+    },
+    "row_sm": {
+      "id": "row_sm",
+      "type": "frame",
+      "name": "Multiples row",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": 12
+      },
+      "children": [
+        "card_sm_1",
+        "card_sm_2",
+        "card_sm_3"
+      ]
+    },
+    "sg_a": {
+      "id": "sg_a",
+      "type": "frame",
+      "name": "Segment A",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center"
+      },
+      "fill": "$color.accent",
+      "children": [
+        "tx_sg_a"
+      ]
+    },
+    "sg_b": {
+      "id": "sg_b",
+      "type": "frame",
+      "name": "Segment B",
+      "width": 110,
+      "height": "fill",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center"
+      },
+      "fill": "$color.series2",
+      "children": [
+        "tx_sg_b"
+      ]
+    },
+    "sg_c": {
+      "id": "sg_c",
+      "type": "frame",
+      "name": "Segment C",
+      "width": 72,
+      "height": "fill",
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center"
+      },
+      "fill": "$color.series3",
+      "children": [
+        "tx_sg_c"
+      ]
+    },
+    "sk_circle": {
+      "id": "sk_circle",
+      "type": "skeleton",
+      "name": "Skeleton circle",
+      "width": 48,
+      "height": 48,
+      "fill": "$color.border",
+      "kind": "circle",
+      "animated": true
+    },
+    "sk_rect": {
+      "id": "sk_rect",
+      "type": "skeleton",
+      "name": "Skeleton rect",
+      "width": "fill",
+      "height": 72,
+      "fill": "$color.border",
+      "radius": "$radius.md",
+      "kind": "rect",
+      "animated": true
+    },
+    "sk_text": {
+      "id": "sk_text",
+      "type": "skeleton",
+      "name": "Skeleton text block",
+      "width": "fill",
+      "height": 56,
+      "fill": "$color.border",
+      "kind": "text",
+      "lines": 3,
+      "animated": true
+    },
+    "sk_text_side": {
+      "id": "sk_text_side",
+      "type": "skeleton",
+      "name": "Skeleton side text",
+      "width": "fill",
+      "height": 40,
+      "fill": "$color.border",
+      "kind": "text",
+      "lines": 2,
+      "animated": true
+    },
+    "tx_ar_hint": {
+      "id": "tx_ar_hint",
+      "type": "text",
+      "name": "Area hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Same as line, with filled volume emphasis.",
+      "font": "$type.caption"
+    },
+    "tx_ar_tag": {
+      "id": "tx_ar_tag",
+      "type": "text",
+      "name": "Area tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "08 · CHART · AREA",
+      "font": "$type.caption"
+    },
+    "tx_ar_title": {
+      "id": "tx_ar_title",
+      "type": "text",
+      "name": "Area title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Energy used (kWh)",
+      "font": "$type.title"
+    },
+    "tx_bar_hint": {
+      "id": "tx_bar_hint",
+      "type": "text",
+      "name": "Bar hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "minimal chrome · rounded · goal line · highlight Sat · last value label",
+      "font": "$type.caption"
+    },
+    "tx_bar_tag": {
+      "id": "tx_bar_tag",
+      "type": "text",
+      "name": "Bar tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "06 · CHART · BAR",
+      "font": "$type.caption"
+    },
+    "tx_bar_title": {
+      "id": "tx_bar_title",
+      "type": "text",
+      "name": "Bar title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Trips by weekday",
+      "font": "$type.title"
+    },
+    "tx_cf_label": {
+      "id": "tx_cf_label",
+      "type": "text",
+      "name": "Full label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "full — axes + grid",
+      "font": "$type.caption"
+    },
+    "tx_ch_hint": {
+      "id": "tx_ch_hint",
+      "type": "text",
+      "name": "Chrome hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Operate → minimal · Persuade / embedded cards → none · Classic reports → full",
+      "font": "$type.caption"
+    },
+    "tx_ch_tag": {
+      "id": "tx_ch_tag",
+      "type": "text",
+      "name": "Chrome tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "10 · OPTIONS · CHROME",
+      "font": "$type.caption"
+    },
+    "tx_ch_title": {
+      "id": "tx_ch_title",
+      "type": "text",
+      "name": "Chrome title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "full · minimal · none",
+      "font": "$type.title"
+    },
+    "tx_cm_label": {
+      "id": "tx_cm_label",
+      "type": "text",
+      "name": "Minimal label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "minimal — labels only",
+      "font": "$type.caption"
+    },
+    "tx_cn_label": {
+      "id": "tx_cn_label",
+      "type": "text",
+      "name": "None label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "none — bare marks",
+      "font": "$type.caption"
+    },
+    "tx_cover_kicker": {
+      "id": "tx_cover_kicker",
+      "type": "text",
+      "name": "Cover kicker",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent.soft",
+      "content": "CURSOR DESIGN",
+      "font": "$type.caption",
+      "textTransform": "uppercase"
+    },
+    "tx_cover_sub": {
+      "id": "tx_cover_sub",
+      "type": "text",
+      "name": "Cover subtitle",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#A8B6C0",
+      "content": "Native charts, progress, and composed patterns — every variation the canvas supports.",
+      "font": "$type.body"
+    },
+    "tx_cover_title": {
+      "id": "tx_cover_title",
+      "type": "text",
+      "name": "Cover title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "content": "Viz catalog",
+      "font": "$type.display"
+    },
+    "tx_dn_1": {
+      "id": "tx_dn_1",
+      "type": "text",
+      "name": "E-bike 48%",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "E-bike 48%",
+      "font": "$type.caption"
+    },
+    "tx_dn_2": {
+      "id": "tx_dn_2",
+      "type": "text",
+      "name": "Classic 32%",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Classic 32%",
+      "font": "$type.caption"
+    },
+    "tx_dn_3": {
+      "id": "tx_dn_3",
+      "type": "text",
+      "name": "Cargo 20%",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Cargo 20%",
+      "font": "$type.caption"
+    },
+    "tx_dn_hint": {
+      "id": "tx_dn_hint",
+      "type": "text",
+      "name": "Donut hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Part-of-whole with ≤5 slices. Never use for time series.",
+      "font": "$type.caption"
+    },
+    "tx_dn_tag": {
+      "id": "tx_dn_tag",
+      "type": "text",
+      "name": "Donut tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "04 · CHART · DONUT",
+      "font": "$type.caption"
+    },
+    "tx_dn_title": {
+      "id": "tx_dn_title",
+      "type": "text",
+      "name": "Donut title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Fleet mix",
+      "font": "$type.title"
+    },
+    "tx_ht_hint": {
+      "id": "tx_ht_hint",
+      "type": "text",
+      "name": "Heat hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "No chart kind — compose a frame grid with stepped token fills.",
+      "font": "$type.caption"
+    },
+    "tx_ht_tag": {
+      "id": "tx_ht_tag",
+      "type": "text",
+      "name": "Heat tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "12 · COMPOSED · HEAT",
+      "font": "$type.caption"
+    },
+    "tx_ht_title": {
+      "id": "tx_ht_title",
+      "type": "text",
+      "name": "Heat title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Demand by hour × day",
+      "font": "$type.title"
+    },
+    "tx_kpi_delta": {
+      "id": "tx_kpi_delta",
+      "type": "text",
+      "name": "KPI delta",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "+8.2%",
+      "font": "$type.label"
+    },
+    "tx_kpi_hint": {
+      "id": "tx_kpi_hint",
+      "type": "text",
+      "name": "KPI hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Big number + sparkline (no axes). Best for a single KPI with trend.",
+      "font": "$type.caption"
+    },
+    "tx_kpi_label": {
+      "id": "tx_kpi_label",
+      "type": "text",
+      "name": "KPI label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Weekly active riders",
+      "font": "$type.label"
+    },
+    "tx_kpi_num": {
+      "id": "tx_kpi_num",
+      "type": "text",
+      "name": "KPI number",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "12.4k",
+      "font": "$type.kpi"
+    },
+    "tx_kpi_tag": {
+      "id": "tx_kpi_tag",
+      "type": "text",
+      "name": "KPI tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "01 · COMPOSED",
+      "font": "$type.caption"
+    },
+    "tx_ln_hint": {
+      "id": "tx_ln_hint",
+      "type": "text",
+      "name": "Line hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Multi-series time trend with scale. Dots + last labels.",
+      "font": "$type.caption"
+    },
+    "tx_ln_tag": {
+      "id": "tx_ln_tag",
+      "type": "text",
+      "name": "Line tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "07 · CHART · LINE",
+      "font": "$type.caption"
+    },
+    "tx_ln_title": {
+      "id": "tx_ln_title",
+      "type": "text",
+      "name": "Line title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Retention over weeks",
+      "font": "$type.title"
+    },
+    "tx_pr_hint": {
+      "id": "tx_pr_hint",
+      "type": "text",
+      "name": "Progress hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Use for 0–100% completion or score — not a donut of fake categories.",
+      "font": "$type.caption"
+    },
+    "tx_pr_lin_label": {
+      "id": "tx_pr_lin_label",
+      "type": "text",
+      "name": "Quota label",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Quota filled",
+      "font": "$type.label"
+    },
+    "tx_pr_lin_pct": {
+      "id": "tx_pr_lin_pct",
+      "type": "text",
+      "name": "Quota pct",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "72% of monthly target",
+      "font": "$type.caption"
+    },
+    "tx_pr_tag": {
+      "id": "tx_pr_tag",
+      "type": "text",
+      "name": "Progress tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "02 · PROGRESS NODE",
+      "font": "$type.caption"
+    },
+    "tx_pr_title": {
+      "id": "tx_pr_title",
+      "type": "text",
+      "name": "Progress title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Linear + circular",
+      "font": "$type.title"
+    },
+    "tx_rk_1_name": {
+      "id": "tx_rk_1_name",
+      "type": "text",
+      "name": "Harbor Loop",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Harbor Loop",
+      "font": "$type.label"
+    },
+    "tx_rk_1_val": {
+      "id": "tx_rk_1_val",
+      "type": "text",
+      "name": "Rank 1 value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "2,840",
+      "font": "$type.caption"
+    },
+    "tx_rk_2_name": {
+      "id": "tx_rk_2_name",
+      "type": "text",
+      "name": "Ridge Trail",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Ridge Trail",
+      "font": "$type.label"
+    },
+    "tx_rk_2_val": {
+      "id": "tx_rk_2_val",
+      "type": "text",
+      "name": "Rank 2 value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "2,110",
+      "font": "$type.caption"
+    },
+    "tx_rk_3_name": {
+      "id": "tx_rk_3_name",
+      "type": "text",
+      "name": "Canal Path",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Canal Path",
+      "font": "$type.label"
+    },
+    "tx_rk_3_val": {
+      "id": "tx_rk_3_val",
+      "type": "text",
+      "name": "Rank 3 value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "1,640",
+      "font": "$type.caption"
+    },
+    "tx_rk_4_name": {
+      "id": "tx_rk_4_name",
+      "type": "text",
+      "name": "South Pier",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "South Pier",
+      "font": "$type.label"
+    },
+    "tx_rk_4_val": {
+      "id": "tx_rk_4_val",
+      "type": "text",
+      "name": "Rank 4 value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "980",
+      "font": "$type.caption"
+    },
+    "tx_rk_hint": {
+      "id": "tx_rk_hint",
+      "type": "text",
+      "name": "Rank hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Label + linear progress. Prefer over categorical bars when labels matter.",
+      "font": "$type.caption"
+    },
+    "tx_rk_tag": {
+      "id": "tx_rk_tag",
+      "type": "text",
+      "name": "Rank tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "03 · COMPOSED",
+      "font": "$type.caption"
+    },
+    "tx_rk_title": {
+      "id": "tx_rk_title",
+      "type": "text",
+      "name": "Rank title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Top routes",
+      "font": "$type.title"
+    },
+    "tx_sg_a": {
+      "id": "tx_sg_a",
+      "type": "text",
+      "name": "48%",
+      "width": "hug",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "content": "48%",
+      "font": "$type.caption"
+    },
+    "tx_sg_b": {
+      "id": "tx_sg_b",
+      "type": "text",
+      "name": "32%",
+      "width": "hug",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "content": "32%",
+      "font": "$type.caption"
+    },
+    "tx_sg_c": {
+      "id": "tx_sg_c",
+      "type": "text",
+      "name": "20%",
+      "width": "hug",
+      "height": "hug",
+      "fill": "#FFFFFF",
+      "content": "20%",
+      "font": "$type.caption"
+    },
+    "tx_sg_hint": {
+      "id": "tx_sg_hint",
+      "type": "text",
+      "name": "Segment hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Labeled horizontal stack — donut alternative when you want inline labels.",
+      "font": "$type.caption"
+    },
+    "tx_sg_leg_a": {
+      "id": "tx_sg_leg_a",
+      "type": "text",
+      "name": "Leg e-bike",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "E-bike",
+      "font": "$type.caption"
+    },
+    "tx_sg_leg_b": {
+      "id": "tx_sg_leg_b",
+      "type": "text",
+      "name": "Leg classic",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Classic",
+      "font": "$type.caption"
+    },
+    "tx_sg_leg_c": {
+      "id": "tx_sg_leg_c",
+      "type": "text",
+      "name": "Leg cargo",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Cargo",
+      "font": "$type.caption"
+    },
+    "tx_sg_tag": {
+      "id": "tx_sg_tag",
+      "type": "text",
+      "name": "Segment tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "05 · COMPOSED",
+      "font": "$type.caption"
+    },
+    "tx_sg_title": {
+      "id": "tx_sg_title",
+      "type": "text",
+      "name": "Segment title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Horizontal segments",
+      "font": "$type.title"
+    },
+    "tx_sk_hint": {
+      "id": "tx_sk_hint",
+      "type": "text",
+      "name": "Skeleton hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "circle · text · rect — use while loading, never a fake chart.",
+      "font": "$type.caption"
+    },
+    "tx_sk_tag": {
+      "id": "tx_sk_tag",
+      "type": "text",
+      "name": "Skeleton tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "13 · SKELETON NODE",
+      "font": "$type.caption"
+    },
+    "tx_sk_title": {
+      "id": "tx_sk_title",
+      "type": "text",
+      "name": "Skeleton title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Loading placeholders",
+      "font": "$type.title"
+    },
+    "tx_sm_1": {
+      "id": "tx_sm_1",
+      "type": "text",
+      "name": "Pier North",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Pier North",
+      "font": "$type.label"
+    },
+    "tx_sm_2": {
+      "id": "tx_sm_2",
+      "type": "text",
+      "name": "Market Sq",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Market Sq",
+      "font": "$type.label"
+    },
+    "tx_sm_3": {
+      "id": "tx_sm_3",
+      "type": "text",
+      "name": "Grove Gate",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Grove Gate",
+      "font": "$type.label"
+    },
+    "tx_sm_hint": {
+      "id": "tx_sm_hint",
+      "type": "text",
+      "name": "Multiples hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Prefer several sparklines over one crowded multi-series line when comparing entities.",
+      "font": "$type.caption"
+    },
+    "tx_sm_tag": {
+      "id": "tx_sm_tag",
+      "type": "text",
+      "name": "Multiples tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "11 · COMPOSED · SMALL MULTIPLES",
+      "font": "$type.caption"
+    },
+    "tx_sm_title": {
+      "id": "tx_sm_title",
+      "type": "text",
+      "name": "Multiples title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Stations side by side",
+      "font": "$type.title"
+    },
+    "tx_st_hint": {
+      "id": "tx_st_hint",
+      "type": "text",
+      "name": "Stacked hint",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "options.stacked: true on bar or area for composition over time.",
+      "font": "$type.caption"
+    },
+    "tx_st_tag": {
+      "id": "tx_st_tag",
+      "type": "text",
+      "name": "Stacked tag",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.accent",
+      "content": "09 · CHART · STACKED BAR",
+      "font": "$type.caption"
+    },
+    "tx_st_title": {
+      "id": "tx_st_title",
+      "type": "text",
+      "name": "Stacked title",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.ink",
+      "content": "Trips by plan",
+      "font": "$type.title"
+    }
+  }
+}

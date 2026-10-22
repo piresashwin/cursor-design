@@ -11,4 +11,5 @@ export * from "./sample";
 export * from "./play";
 export * from "./inspect";
 export * from "./components";
+export * from "./timeline";
 export * from "./protocol";

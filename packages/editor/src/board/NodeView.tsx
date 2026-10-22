@@ -135,11 +135,20 @@ function shadowToCss(doc: Doc, sh: unknown): string[] {
   });
 }
 
+function spacingCss(doc: Doc, v: unknown): string {
+  const r = resolve(doc, v);
+  if (r === "auto") return "auto";
+  if (typeof r === "number") return `${r}px`;
+  if (typeof r === "string" && r === "auto") return "auto";
+  return `${r}px`;
+}
+
 function padCss(doc: Doc, p: unknown): string | undefined {
   if (p === undefined || p === null) return undefined;
   const r = resolve(doc, p);
+  if (r === "auto") return "auto";
   if (typeof r === "number") return `${r}px`;
-  if (Array.isArray(r)) return r.map((v) => `${resolve(doc, v)}px`).join(" ");
+  if (Array.isArray(r)) return r.map((v) => spacingCss(doc, v)).join(" ");
   return undefined;
 }
 
@@ -251,6 +260,11 @@ type Props = {
   absoluteChild?: boolean;
   /** Play mode: pin top-level frames at 0,0 inside the device chrome. */
   originZero?: boolean;
+  /**
+   * Play / browser preview: fill-sized flex regions scroll when content overflows
+   * (board edit mode keeps rest-pose clipping unless `overflow` is set).
+   */
+  playScroll?: boolean;
   /** Override `data-node-id` for hit-testing (instances expand to a virtual tree). */
   hitId?: string;
   selected: Set<string>;
@@ -324,7 +338,7 @@ function wrapWithVideos(style: CSSProperties, videos: VideoFill[], children: Rea
   );
 }
 
-export function NodeView({ doc, id, parentLayout, topLevel, absoluteChild, originZero, hitId, selected, onPick }: Props) {
+export function NodeView({ doc, id, parentLayout, topLevel, absoluteChild, originZero, playScroll, hitId, selected, onPick }: Props) {
   const n = doc.nodes[id] as Node | undefined;
   if (!n || n.visible === false) return null;
 
@@ -361,6 +375,7 @@ export function NodeView({ doc, id, parentLayout, topLevel, absoluteChild, origi
         topLevel={topLevel}
         absoluteChild={absoluteChild}
         originZero={originZero}
+        playScroll={playScroll}
         hitId={id}
         selected={selected}
         onPick={(_childId, e) => onPick(id, e)}
@@ -432,7 +447,10 @@ export function NodeView({ doc, id, parentLayout, topLevel, absoluteChild, origi
       if (m) s.margin = m;
     }
     if (frame.overflow) s.overflow = frame.overflow;
-    else if (frame.clip) s.overflow = "hidden";
+    else if (playScroll && !topLevel && !abs && (frame.height === "fill" || frame.width === "fill")) {
+      // Prototypes: fill panes (chat, lists, main columns) scroll instead of clipping.
+      s.overflow = "auto";
+    } else if (frame.clip) s.overflow = "hidden";
     if (videos.length && !s.overflow) s.overflow = "hidden";
 
     const kids = frame.children.map((c) => (
@@ -443,6 +461,7 @@ export function NodeView({ doc, id, parentLayout, topLevel, absoluteChild, origi
         parentLayout={l}
         absoluteChild={abs}
         originZero={originZero}
+        playScroll={playScroll}
         selected={selected}
         onPick={onPick}
       />

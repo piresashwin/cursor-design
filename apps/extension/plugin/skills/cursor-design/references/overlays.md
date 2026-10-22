@@ -30,7 +30,20 @@ Compose popups from frames. Use prototype links with `present:"overlay"` for Pla
 motion.fast: { type:"number", value:180, group:"motion" }
 motion.base: { type:"number", value:240, group:"motion" }
 ```
-Play enter classes map from `link.transition`. Prefer opacity + transform; avoid bounce/long timelines.
+Play enter classes map from `link.transition`. Prefer opacity + transform; avoid bounce.
+
+## Keyframe timelines
+Document-level `timelines` (not node props). Channels: `opacity`, `transform.x|y|scale|rotate` only.
+```
+{ op:"setTimeline", id:"tl_login_in", timeline:{
+  id:"tl_login_in", frameId:"fr_login", duration:800,
+  tracks:[
+    { nodeId:"tx_title", channel:"opacity", keys:[{t:0,value:0},{t:1,value:1,ease:"ease-out"}] },
+    { nodeId:"tx_title", channel:"transform.y", keys:[{t:0,value:16},{t:1,value:0}] }
+  ]
+}}
+```
+Plays in editor Play and **Cursor Design: Open preview in browser** (live SSE sync).
 
 ## Don’t
 - Invent `drawer` / `modal` / `menu` / `tooltip` node types.

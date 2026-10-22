@@ -79,13 +79,18 @@ button { cursor: pointer; border: none; background: none; }
   background-size: 24px 24px, 24px 24px, auto; }
 .board.tool-hand, .board.tool-hand * { cursor: grab !important; }
 .board.tool-hand.is-panning, .board.tool-hand.is-panning * { cursor: grabbing !important; }
-.world { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+/* Positioned via left/top; scaled via CSS zoom (not transform — see Board.tsx). */
+.world { position: absolute; left: 0; top: 0; }
 .board-empty { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; color: var(--muted); gap: 4px; pointer-events: none; }
 .frame-label { position: absolute; font-size: 11px; color: var(--muted); white-space: nowrap; cursor: pointer; user-select: none; }
 .frame-label span { opacity: .7; margin-left: 8px; font-variant-numeric: tabular-nums; }
-.overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.overlay .sel { fill: none; stroke: var(--focus); stroke-width: 1.5; }
-.overlay .handle { fill: #fff; stroke: var(--focus); stroke-width: 1; }
+/* Inside .world — document-space coords; overflow visible so guides can extend past artboards. */
+.overlay {
+  position: absolute; left: 0; top: 0; width: 0; height: 0;
+  pointer-events: none; overflow: visible;
+}
+.overlay .sel { fill: none; stroke: var(--focus); }
+.overlay .handle { fill: #fff; stroke: var(--focus); }
 
 .board-tools, .zoom-bar {
   position: absolute; bottom: 10px; z-index: 4;
@@ -191,8 +196,13 @@ button { cursor: pointer; border: none; background: none; }
 .play__bar { display: flex; align-items: center; gap: 8px; padding: 0 10px; border-bottom: 1px solid var(--line); background: var(--panel); }
 .play__title { font-weight: 700; letter-spacing: -0.02em; }
 .play__crumb { color: var(--muted); font-size: 11px; }
+.play__timeline { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.play__timeline input[type="range"] { width: 140px; accent-color: var(--accent, #2DD4A8); }
+.play__time { font-size: 10px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.play__badge { font-size: 10px; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
 .play__stage { min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; background: var(--board); }
 .play__device { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 24px 64px rgba(0,0,0,.45); background: #000; }
+.play__device .node { scrollbar-width: thin; }
 .play__layer { position: absolute; inset: 0; }
 .play__layer--base { z-index: 0; }
 .play__layer--overlay { z-index: 1; pointer-events: auto; }

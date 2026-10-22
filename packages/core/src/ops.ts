@@ -1,8 +1,9 @@
-import type { ComponentDef, Doc, Folder, FrameNode, Node, Page } from "./types";
+import type { ComponentDef, Doc, Folder, FrameNode, Node, Page, Timeline } from "./types";
 import { OpSchema, type Op } from "./schema";
 import { idFor } from "./ids";
 import { ensureNodeName } from "./naming";
 import { componentUsages } from "./components";
+import { isUnderFrame } from "./timeline";
 
 export type ValidationError = { op: number; message: string };
 export type ApplyResult = { doc: Doc; inverse: Op[]; changed: string[]; errors?: ValidationError[] };
@@ -500,6 +501,49 @@ export function applyOps(input: Doc, ops: Op[]): ApplyResult {
         doc.components[op.id] = clone(op.component);
         changed.add(op.id);
         inverse.unshift({ op: "setComponent", id: op.id, component: before });
+        break;
+      }
+      case "setTimeline": {
+        if (!doc.timelines) doc.timelines = {};
+        const before = doc.timelines[op.id] ? clone(doc.timelines[op.id]) : null;
+        if (op.timeline === null) {
+          if (!before) break;
+          delete doc.timelines[op.id];
+          changed.add(op.id);
+          inverse.unshift({ op: "setTimeline", id: op.id, timeline: before });
+          break;
+        }
+        const tl = op.timeline as Timeline;
+        if (tl.id !== op.id) {
+          fail(i, `setTimeline id mismatch (${op.id} vs ${tl.id})`);
+          break;
+        }
+        const frame = doc.nodes[tl.frameId];
+        if (!frame || frame.type !== "frame") {
+          fail(i, `timeline frameId ${tl.frameId} must be an existing frame`);
+          break;
+        }
+        for (const track of tl.tracks) {
+          if (!doc.nodes[track.nodeId]) {
+            fail(i, `timeline track references unknown node ${track.nodeId}`);
+            break;
+          }
+          if (!isUnderFrame(doc, tl.frameId, track.nodeId)) {
+            fail(i, `timeline track node ${track.nodeId} is not under frame ${tl.frameId}`);
+            break;
+          }
+          const ts = track.keys.map((k) => k.t);
+          for (let k = 1; k < ts.length; k++) {
+            if (ts[k] < ts[k - 1]) {
+              fail(i, `timeline track ${track.nodeId}/${track.channel} keys must be sorted by t`);
+              break;
+            }
+          }
+        }
+        if (errors.length) break;
+        doc.timelines[op.id] = clone(tl);
+        changed.add(op.id);
+        inverse.unshift({ op: "setTimeline", id: op.id, timeline: before });
         break;
       }
     }

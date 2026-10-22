@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "lucide-react": "0.468.0"
   }
 }

@@ -62,6 +62,19 @@ Dismiss: Back/Esc in Play, or a control with \`link:{ to:<baseFrameId>, present:
 
 **Motion tokens** (optional): \`motion.fast\` / \`motion.base\` as number ms (e.g. 180 / 240). Play uses CSS enter classes from \`link.transition\`; keep under ~300ms, ease-out. Prefer \`transform\` + \`opacity\` poses on the board for static mocks.
 
+**Keyframe timelines** (\`doc.timelines\`): animate only \`opacity\` and transform channels (\`transform.x|y|scale|rotate\`) on nodes under a frame. Bound via \`frameId\`; autoplay in Play / browser preview when that frame is base or overlay.
+
+\`\`\`
+setTimeline { op:"setTimeline", id:"tl_hero", timeline:{
+  id:"tl_hero", name?, frameId:"fr_home", duration:800, loop?,
+  tracks:[{ nodeId:"tx_title", channel:"opacity"|"transform.x"|"transform.y"|"transform.scale"|"transform.rotate",
+            keys:[{ t:0..1, value:number, ease?:"linear"|"ease-out"|"ease-in-out" }] }]
+}}
+setTimeline { op:"setTimeline", id:"tl_hero", timeline:null }  // delete
+\`\`\`
+
+Keys: \`t\` sorted in 0..1; values are absolute (opacity 0..1, x/y px, scale 1=100%, rotate degrees). Board edit mode shows rest pose; Play scrubber + Space toggles. Live browser: **Cursor Design: Open preview in browser** (hot-reloads on doc change).
+
 Name layers clearly: \`Modal scrim\`, \`Drawer panel\`, \`Menu · Share\`.
 `.trimStart();
 }

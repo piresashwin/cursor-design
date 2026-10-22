@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": 1,
+  "name": "Horizon",
+  "tokens": {
+    "color.bg": {
+      "group": "color",
+      "type": "color",
+      "value": "#F4F6F5"
+    },
+    "color.border": {
+      "group": "color",
+      "type": "color",
+      "value": "#E3E8E5"
+    },
+    "color.muted": {
+      "group": "color",
+      "type": "color",
+      "value": "#5C6B64"
+    },
+    "color.onPrimary": {
+      "group": "color",
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color.primary": {
+      "description": "Emerald accent",
+      "group": "color",
+      "type": "color",
+      "value": "#0F7A4A"
+    },
+    "color.primary.subtle": {
+      "group": "color",
+      "type": "color",
+      "value": "#E6F5EE"
+    },
+    "color.sidebar": {
+      "group": "color",
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color.surface": {
+      "group": "color",
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color.text": {
+      "group": "color",
+      "type": "color",
+      "value": "#1A2420"
+    },
+    "color.warn": {
+      "group": "color",
+      "type": "color",
+      "value": "#B45309"
+    },
+    "color.warn.subtle": {
+      "group": "color",
+      "type": "color",
+      "value": "#FFF7ED"
+    },
+    "radius.lg": {
+      "group": "radius",
+      "type": "number",
+      "value": 12
+    },
+    "radius.md": {
+      "group": "radius",
+      "type": "number",
+      "value": 8
+    },
+    "shadow.sm": {
+      "group": "shadow",
+      "type": "shadow",
+      "value": {
+        "blur": 2,
+        "color": "rgba(26,36,32,0.06)",
+        "spread": 0,
+        "x": 0,
+        "y": 1
+      }
+    },
+    "space.2": {
+      "group": "space",
+      "type": "number",
+      "value": 8
+    },
+    "space.3": {
+      "group": "space",
+      "type": "number",
+      "value": 12
+    },
+    "space.4": {
+      "group": "space",
+      "type": "number",
+      "value": 16
+    },
+    "space.5": {
+      "group": "space",
+      "type": "number",
+      "value": 20
+    },
+    "space.6": {
+      "group": "space",
+      "type": "number",
+      "value": 24
+    },
+    "space.8": {
+      "group": "space",
+      "type": "number",
+      "value": 32
+    },
+    "type.body": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.45,
+      "size": 14,
+      "type": "font",
+      "weight": 400
+    },
+    "type.caption": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.35,
+      "size": 12,
+      "type": "font",
+      "weight": 400
+    },
+    "type.display": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.2,
+      "size": 28,
+      "type": "font",
+      "weight": 600
+    },
+    "type.heading": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.35,
+      "size": 15,
+      "type": "font",
+      "weight": 600
+    },
+    "type.kpi": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.15,
+      "size": 26,
+      "type": "font",
+      "weight": 600
+    },
+    "type.label": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 13,
+      "type": "font",
+      "weight": 600
+    },
+    "type.title": {
+      "family": "Inter, system-ui, sans-serif",
+      "group": "type",
+      "lineHeight": 1.3,
+      "size": 20,
+      "type": "font",
+      "weight": 600
+    }
+  },
+  "folderRoot": [
+    "pg_app"
+  ],
+  "folders": {},
+  "pages": {
+    "pg_app": {
+      "frames": [
+        "fr_overview"
+      ],
+      "name": "App"
+    }
+  },
+  "nodes": {
+    "attn_0": {
+      "id": "attn_0",
+      "type": "frame",
+      "name": "2 absence alerts",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 4,
+        "padding": "$space.3"
+      },
+      "fill": "$color.warn.subtle",
+      "radius": "$radius.md",
+      "children": [
+        "tx_at_0",
+        "tx_ab_0"
+      ]
+    },
+    "attn_1": {
+      "id": "attn_1",
+      "type": "frame",
+      "name": "Fee reminder due",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 4,
+        "padding": "$space.3"
+      },
+      "fill": "$color.primary.subtle",
+      "radius": "$radius.md",
+      "children": [
+        "tx_at_1",
+        "tx_ab_1"
+      ]
+    },
+    "attn_2": {
+      "id": "attn_2",
+      "type": "frame",
+      "name": "Incident draft",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 4,
+        "padding": "$space.3"
+      },
+      "fill": "$color.warn.subtle",
+      "radius": "$radius.md",
+      "children": [
+        "tx_at_2",
+        "tx_ab_2"
+      ]
+    },
+    "btn_export": {
+      "id": "btn_export",
+      "type": "frame",
+      "name": "Export",
+      "width": "hug",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "justify": "center",
+        "padding": [
+          0,
+          14
+        ]
+      },
+      "fill": "$color.primary",
+      "radius": "$radius.md",
+      "children": [
+        "tx_export"
+      ]
+    },
+    "card_attn": {
+      "id": "card_attn",
+      "type": "frame",
+      "name": "Needs attention",
+      "width": 360,
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "tx_attn_h",
+        "attn_0",
+        "attn_1",
+        "attn_2"
+      ]
+    },
+    "card_today": {
+      "id": "card_today",
+      "type": "frame",
+      "name": "Today",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.3",
+        "padding": "$space.5"
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "children": [
+        "tx_today_h",
+        "sched_0",
+        "sched_1",
+        "sched_2",
+        "sched_3"
+      ]
+    },
+    "col_greet": {
+      "id": "col_greet",
+      "type": "frame",
+      "name": "Greeting",
+      "width": "hug",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 4
+      },
+      "children": [
+        "tx_hello",
+        "tx_date"
+      ]
+    },
+    "col_main": {
+      "id": "col_main",
+      "type": "frame",
+      "name": "Main",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.6",
+        "padding": [
+          "$space.8",
+          "$space.8"
+        ]
+      },
+      "overflow": "auto",
+      "children": [
+        "row_head",
+        "row_kpis",
+        "row_body"
+      ]
+    },
+    "fr_overview": {
+      "id": "fr_overview",
+      "type": "frame",
+      "name": "Overview",
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000,
+      "layout": {
+        "align": "stretch",
+        "direction": "row"
+      },
+      "clip": true,
+      "fill": "$color.bg",
+      "children": [
+        "nav_side",
+        "col_main"
+      ]
+    },
+    "kpi_0": {
+      "id": "kpi_0",
+      "type": "frame",
+      "name": "Enrollment",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 6,
+        "padding": "$space.5"
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "shadow": "$shadow.sm",
+      "children": [
+        "tx_kpi_l_0",
+        "tx_kpi_v_0",
+        "tx_kpi_m_0"
+      ]
+    },
+    "kpi_1": {
+      "id": "kpi_1",
+      "type": "frame",
+      "name": "Attendance",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 6,
+        "padding": "$space.5"
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "shadow": "$shadow.sm",
+      "children": [
+        "tx_kpi_l_1",
+        "tx_kpi_v_1",
+        "tx_kpi_m_1"
+      ]
+    },
+    "kpi_2": {
+      "id": "kpi_2",
+      "type": "frame",
+      "name": "Staff on site",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 6,
+        "padding": "$space.5"
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "shadow": "$shadow.sm",
+      "children": [
+        "tx_kpi_l_2",
+        "tx_kpi_v_2",
+        "tx_kpi_m_2"
+      ]
+    },
+    "kpi_3": {
+      "id": "kpi_3",
+      "type": "frame",
+      "name": "Outstanding fees",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "direction": "column",
+        "gap": 6,
+        "padding": "$space.5"
+      },
+      "fill": "$color.surface",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "radius": "$radius.lg",
+      "shadow": "$shadow.sm",
+      "children": [
+        "tx_kpi_l_3",
+        "tx_kpi_v_3",
+        "tx_kpi_m_3"
+      ]
+    },
+    "nav_0": {
+      "id": "nav_0",
+      "type": "frame",
+      "name": "Overview",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          "$space.3"
+        ]
+      },
+      "fill": "$color.primary.subtle",
+      "radius": "$radius.md",
+      "children": [
+        "tx_nav_0"
+      ]
+    },
+    "nav_1": {
+      "id": "nav_1",
+      "type": "frame",
+      "name": "Attendance",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          "$space.3"
+        ]
+      },
+      "fill": "transparent",
+      "radius": "$radius.md",
+      "children": [
+        "tx_nav_1"
+      ]
+    },
+    "nav_2": {
+      "id": "nav_2",
+      "type": "frame",
+      "name": "Students",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          "$space.3"
+        ]
+      },
+      "fill": "transparent",
+      "radius": "$radius.md",
+      "children": [
+        "tx_nav_2"
+      ]
+    },
+    "nav_3": {
+      "id": "nav_3",
+      "type": "frame",
+      "name": "Staff",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          "$space.3"
+        ]
+      },
+      "fill": "transparent",
+      "radius": "$radius.md",
+      "children": [
+        "tx_nav_3"
+      ]
+    },
+    "nav_4": {
+      "id": "nav_4",
+      "type": "frame",
+      "name": "Fees",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          "$space.3"
+        ]
+      },
+      "fill": "transparent",
+      "radius": "$radius.md",
+      "children": [
+        "tx_nav_4"
+      ]
+    },
+    "nav_5": {
+      "id": "nav_5",
+      "type": "frame",
+      "name": "Messages",
+      "width": "fill",
+      "height": 36,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "padding": [
+          0,
+          "$space.3"
+        ]
+      },
+      "fill": "transparent",
+      "radius": "$radius.md",
+      "children": [
+        "tx_nav_5"
+      ]
+    },
+    "nav_side": {
+      "id": "nav_side",
+      "type": "frame",
+      "name": "Sidebar",
+      "width": 224,
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "column",
+        "gap": "$space.2",
+        "padding": [
+          "$space.6",
+          "$space.4"
+        ]
+      },
+      "fill": "$color.sidebar",
+      "stroke": {
+        "color": "$color.border",
+        "width": 1
+      },
+      "children": [
+        "tx_brand",
+        "tx_brand_sub",
+        "sp_nav",
+        "nav_0",
+        "nav_1",
+        "nav_2",
+        "nav_3",
+        "nav_4",
+        "nav_5"
+      ]
+    },
+    "row_body": {
+      "id": "row_body",
+      "type": "frame",
+      "name": "Body",
+      "width": "fill",
+      "height": "fill",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "card_today",
+        "card_attn"
+      ]
+    },
+    "row_head": {
+      "id": "row_head",
+      "type": "frame",
+      "name": "Page head",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "end",
+        "direction": "row",
+        "justify": "space-between"
+      },
+      "children": [
+        "col_greet",
+        "btn_export"
+      ]
+    },
+    "row_kpis": {
+      "id": "row_kpis",
+      "type": "frame",
+      "name": "KPI strip",
+      "width": "fill",
+      "height": "hug",
+      "layout": {
+        "align": "stretch",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "kpi_0",
+        "kpi_1",
+        "kpi_2",
+        "kpi_3"
+      ]
+    },
+    "sched_0": {
+      "id": "sched_0",
+      "type": "frame",
+      "name": "Butterflies · Morning circle",
+      "width": "fill",
+      "height": 44,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_t_0",
+        "tx_s_0"
+      ]
+    },
+    "sched_1": {
+      "id": "sched_1",
+      "type": "frame",
+      "name": "Oaks · Outdoor play",
+      "width": "fill",
+      "height": 44,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_t_1",
+        "tx_s_1"
+      ]
+    },
+    "sched_2": {
+      "id": "sched_2",
+      "type": "frame",
+      "name": "All rooms · Lunch",
+      "width": "fill",
+      "height": 44,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_t_2",
+        "tx_s_2"
+      ]
+    },
+    "sched_3": {
+      "id": "sched_3",
+      "type": "frame",
+      "name": "Sunflowers · Parent pickup window",
+      "width": "fill",
+      "height": 44,
+      "layout": {
+        "align": "center",
+        "direction": "row",
+        "gap": "$space.4"
+      },
+      "children": [
+        "tx_t_3",
+        "tx_s_3"
+      ]
+    },
+    "sp_nav": {
+      "id": "sp_nav",
+      "type": "rect",
+      "name": "Spacer",
+      "width": "fill",
+      "height": 16,
+      "opacity": 0
+    },
+    "tx_ab_0": {
+      "id": "tx_ab_0",
+      "type": "text",
+      "name": "Butterflies · follow up with Chen family",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Butterflies · follow up with Chen family",
+      "font": "$type.caption"
+    },
+    "tx_ab_1": {
+      "id": "tx_ab_1",
+      "type": "text",
+      "name": "Rivera · $420 outstanding",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Rivera · $420 outstanding",
+      "font": "$type.caption"
+    },
+    "tx_ab_2": {
+      "id": "tx_ab_2",
+      "type": "text",
+      "name": "Awaiting review · Oaks room",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Awaiting review · Oaks room",
+      "font": "$type.caption"
+    },
+    "tx_at_0": {
+      "id": "tx_at_0",
+      "type": "text",
+      "name": "2 absence alerts",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "2 absence alerts",
+      "font": "$type.label"
+    },
+    "tx_at_1": {
+      "id": "tx_at_1",
+      "type": "text",
+      "name": "Fee reminder due",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Fee reminder due",
+      "font": "$type.label"
+    },
+    "tx_at_2": {
+      "id": "tx_at_2",
+      "type": "text",
+      "name": "Incident draft",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Incident draft",
+      "font": "$type.label"
+    },
+    "tx_attn_h": {
+      "id": "tx_attn_h",
+      "type": "text",
+      "name": "Heading",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Needs attention",
+      "font": "$type.heading"
+    },
+    "tx_brand": {
+      "id": "tx_brand",
+      "type": "text",
+      "name": "Brand",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.primary",
+      "content": "Horizon",
+      "font": "$type.title"
+    },
+    "tx_brand_sub": {
+      "id": "tx_brand_sub",
+      "type": "text",
+      "name": "School",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Northside Academy",
+      "font": "$type.caption"
+    },
+    "tx_date": {
+      "id": "tx_date",
+      "type": "text",
+      "name": "Date",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Thursday, 22 Oct · Spring term week 6",
+      "font": "$type.body"
+    },
+    "tx_export": {
+      "id": "tx_export",
+      "type": "text",
+      "name": "Label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.onPrimary",
+      "content": "Export report",
+      "font": "$type.label"
+    },
+    "tx_hello": {
+      "id": "tx_hello",
+      "type": "text",
+      "name": "Hello",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Good morning, Priya",
+      "font": "$type.display"
+    },
+    "tx_kpi_l_0": {
+      "id": "tx_kpi_l_0",
+      "type": "text",
+      "name": "Label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Enrollment",
+      "font": "$type.caption"
+    },
+    "tx_kpi_l_1": {
+      "id": "tx_kpi_l_1",
+      "type": "text",
+      "name": "Label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Attendance",
+      "font": "$type.caption"
+    },
+    "tx_kpi_l_2": {
+      "id": "tx_kpi_l_2",
+      "type": "text",
+      "name": "Label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Staff on site",
+      "font": "$type.caption"
+    },
+    "tx_kpi_l_3": {
+      "id": "tx_kpi_l_3",
+      "type": "text",
+      "name": "Label",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Outstanding fees",
+      "font": "$type.caption"
+    },
+    "tx_kpi_m_0": {
+      "id": "tx_kpi_m_0",
+      "type": "text",
+      "name": "Meta",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "+12 this term",
+      "font": "$type.caption"
+    },
+    "tx_kpi_m_1": {
+      "id": "tx_kpi_m_1",
+      "type": "text",
+      "name": "Meta",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "Today across rooms",
+      "font": "$type.caption"
+    },
+    "tx_kpi_m_2": {
+      "id": "tx_kpi_m_2",
+      "type": "text",
+      "name": "Meta",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.muted",
+      "content": "2 absences",
+      "font": "$type.caption"
+    },
+    "tx_kpi_m_3": {
+      "id": "tx_kpi_m_3",
+      "type": "text",
+      "name": "Meta",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.warn",
+      "content": "14 families",
+      "font": "$type.caption"
+    },
+    "tx_kpi_v_0": {
+      "id": "tx_kpi_v_0",
+      "type": "text",
+      "name": "Value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "428",
+      "font": "$type.kpi"
+    },
+    "tx_kpi_v_1": {
+      "id": "tx_kpi_v_1",
+      "type": "text",
+      "name": "Value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "96.4%",
+      "font": "$type.kpi"
+    },
+    "tx_kpi_v_2": {
+      "id": "tx_kpi_v_2",
+      "type": "text",
+      "name": "Value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "38",
+      "font": "$type.kpi"
+    },
+    "tx_kpi_v_3": {
+      "id": "tx_kpi_v_3",
+      "type": "text",
+      "name": "Value",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "$18.2k",
+      "font": "$type.kpi"
+    },
+    "tx_nav_0": {
+      "id": "tx_nav_0",
+      "type": "text",
+      "name": "Overview",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.primary",
+      "content": "Overview",
+      "font": "$type.label"
+    },
+    "tx_nav_1": {
+      "id": "tx_nav_1",
+      "type": "text",
+      "name": "Attendance",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Attendance",
+      "font": "$type.label"
+    },
+    "tx_nav_2": {
+      "id": "tx_nav_2",
+      "type": "text",
+      "name": "Students",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Students",
+      "font": "$type.label"
+    },
+    "tx_nav_3": {
+      "id": "tx_nav_3",
+      "type": "text",
+      "name": "Staff",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Staff",
+      "font": "$type.label"
+    },
+    "tx_nav_4": {
+      "id": "tx_nav_4",
+      "type": "text",
+      "name": "Fees",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Fees",
+      "font": "$type.label"
+    },
+    "tx_nav_5": {
+      "id": "tx_nav_5",
+      "type": "text",
+      "name": "Messages",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Messages",
+      "font": "$type.label"
+    },
+    "tx_s_0": {
+      "id": "tx_s_0",
+      "type": "text",
+      "name": "Butterflies · Morning circle",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Butterflies · Morning circle",
+      "font": "$type.body"
+    },
+    "tx_s_1": {
+      "id": "tx_s_1",
+      "type": "text",
+      "name": "Oaks · Outdoor play",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Oaks · Outdoor play",
+      "font": "$type.body"
+    },
+    "tx_s_2": {
+      "id": "tx_s_2",
+      "type": "text",
+      "name": "All rooms · Lunch",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "All rooms · Lunch",
+      "font": "$type.body"
+    },
+    "tx_s_3": {
+      "id": "tx_s_3",
+      "type": "text",
+      "name": "Sunflowers · Parent pickup window",
+      "width": "fill",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Sunflowers · Parent pickup window",
+      "font": "$type.body"
+    },
+    "tx_t_0": {
+      "id": "tx_t_0",
+      "type": "text",
+      "name": "08:30",
+      "width": 56,
+      "height": "hug",
+      "fill": "$color.primary",
+      "content": "08:30",
+      "font": "$type.label"
+    },
+    "tx_t_1": {
+      "id": "tx_t_1",
+      "type": "text",
+      "name": "10:00",
+      "width": 56,
+      "height": "hug",
+      "fill": "$color.primary",
+      "content": "10:00",
+      "font": "$type.label"
+    },
+    "tx_t_2": {
+      "id": "tx_t_2",
+      "type": "text",
+      "name": "12:15",
+      "width": 56,
+      "height": "hug",
+      "fill": "$color.primary",
+      "content": "12:15",
+      "font": "$type.label"
+    },
+    "tx_t_3": {
+      "id": "tx_t_3",
+      "type": "text",
+      "name": "15:00",
+      "width": 56,
+      "height": "hug",
+      "fill": "$color.primary",
+      "content": "15:00",
+      "font": "$type.label"
+    },
+    "tx_today_h": {
+      "id": "tx_today_h",
+      "type": "text",
+      "name": "Heading",
+      "width": "hug",
+      "height": "hug",
+      "fill": "$color.text",
+      "content": "Today across rooms",
+      "font": "$type.heading"
+    }
+  },
+  "annotations": {}
+}
